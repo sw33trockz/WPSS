@@ -158,7 +158,8 @@
 		<?php else:
 			?>
 			<div class="bt dp">
-				<div class="wrp">
+				
+<div class="wrp">
 					<?php if ( $post_template == "Narrow" ): ?>
 					<div class="bpd"><?php endif; ?>
 						<?php if ( $options['show_post_title'] != 0 ): ?>
@@ -321,23 +322,38 @@
 						</div>
 					</article>
 
-					<div class="clear"></div>
-
-					<?php
-					if ( thrive_check_bottom_focus_area() ):
-						thrive_render_top_focus_area( "bottom" );
-						?>
+					<?php if ( thrive_check_bottom_focus_area() ): ?>
+							<!-- Begin MailChimp Signup Form -->
+							<div id="mc_embed_signup">
+								<form action="//triathlon-fitness.us6.list-manage.com/subscribe/post?u=8fb981fea95ceb299d926164d&amp;id=47166fb13b" method="post"
+									id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+									<div id="mc_embed_signup_scroll">
+										<h1>Subscribe to Our Newsletter!</h1>
+										<div class="mc-field-group">
+												<input type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="Name">
+												<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+												<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+										</div>
+										<div id="mce-responses" class="clear">
+											<div class="response" id="mce-error-response" style="display:none"></div>
+											<div class="response" id="mce-success-response" style="display:none"></div>
+										</div>
+										<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+										<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8fb981fea95ceb299d926164d_47166fb13b" tabindex="-1" value=""></div>
+										
+									</div>
+									<div class="form_desc">Join 15,000 happy subscribers and we'll make sure you never miss a new post.</div>
+								</form>
+							</div>
+							<!--End mc_embed_signup-->
 					<?php endif; ?>
 
-					<div class="clear"></div>
-
-					<?php _thrive_render_bottom_related_posts( get_the_ID(), $options ); ?>
-
-					<div class="clear"></div>
-					
 					<?php if ( isset( $options['bottom_about_author'] ) && $options['bottom_about_author'] == 1 ): ?>
 						<?php get_template_part( 'authorbox' ); ?>
 					<?php endif; ?>
+
+					<?php _thrive_render_bottom_related_posts( get_the_ID(), $options ); ?>
+					<div class="clear"></div>
 
 					<?php if ( ! post_password_required() ) : ?>
 						<?php comments_template( '', true ); ?>

@@ -19,7 +19,6 @@ class Theme_Product extends TVE_Dash_Product_Abstract {
 		parent::__construct( $data );
 
 		$this->logoUrl = get_template_directory_uri() . '/images/logo.png';
-		$this->logoUrlWhite = get_template_directory_uri() . '/images/logo-white.png';
 
 		$this->description = __( 'The ultimate, perfomance focused magazine theme for WordPress.', 'thrive' );
 

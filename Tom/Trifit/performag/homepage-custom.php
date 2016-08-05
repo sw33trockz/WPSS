@@ -12,6 +12,15 @@ $options           = thrive_get_theme_options();
 			$featuredPosts = _thrive_get_homepage_featured_block_posts( 4, $block_options );
 			?>
 			<div class="bp">
+			<!-- Responsive Ad links below the Header -->
+			<div class="header_ad_link">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- Tri Fit responsive link unit -->
+				<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9002406242342564" data-ad-slot="4215488552" data-ad-format="link"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
 				<?php
 				for ( $index = 0; $index < 3; $index ++ ):
 					if ( isset( $featuredPosts[ $index ] ) && isset( $featuredPosts[ $index ]['ID'] ) ):

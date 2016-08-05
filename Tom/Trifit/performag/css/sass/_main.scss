@@ -4355,15 +4355,15 @@ span.fill-counter-label {
 .rve {
   display: block;
   position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 0px;
+  padding-bottom: 55%;
+  padding-top: 35px;
   height: 0;
   overflow: hidden;
   &.noc {
-    padding-top: 12px;
+    padding-top: 10px;
   }
   &.vim {
-    padding-top: 8px;
+    padding-top: 15px;
   }
 }
 .fwi {

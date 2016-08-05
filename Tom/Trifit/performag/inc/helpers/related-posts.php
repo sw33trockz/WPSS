@@ -65,13 +65,11 @@ function _thrive_get_related_posts( $postId, $method = 'json', $post_number = 10
 	$current_post = get_post( $postId );
 	//replace - with empty space so we can get more words
 	$title_words = explode( ' ', str_replace( '-', ' ', $current_post->post_title ) );
-	$args        = array(
+	$all_posts   = get_posts( array(
+		'posts_per_page'   => 500,
 		'category__not_in' => $ignoreCats,
 		'tag__not_in'      => $ignoreTags
-	);
-
-	$the_query = new WP_Query( $args );
-	$all_posts = $the_query->get_posts();
+	) );
 
 	$_MATCH_THRESHOLD = 1;
 	global $excluded_words;
@@ -118,7 +116,7 @@ function _thrive_get_related_posts( $postId, $method = 'json', $post_number = 10
 			'tag__not_in'      => $ignoreTags
 		);
 
-		$the_query       = new WP_Query( $args );
+		$the_query = new WP_Query( $args );
 		$the_query_posts = $the_query->get_posts();
 		if ( ! empty( $the_query_posts ) ) {
 
@@ -151,7 +149,7 @@ function _thrive_get_related_posts( $postId, $method = 'json', $post_number = 10
 			'tag__not_in'      => $ignoreTags
 		);
 
-		$the_query       = new WP_Query( $args );
+		$the_query = new WP_Query( $args );
 		$the_query_posts = $the_query->get_posts();
 		if ( ! empty( $the_query_posts ) ) {
 

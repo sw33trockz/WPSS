@@ -76,13 +76,12 @@ switch ( $header_type ) {
 		break;
 	case '#customize-control-thrivetheme_header_background_image, #customize-control-thrivetheme_header_image_type, #customize-control-thrivetheme_header_image_height':
 		switch ( get_theme_mod( 'thrivetheme_header_image_type' ) ) {
-			case 'centered':
-				$header_class = 'hic';
-				$header_style = 'background-image:url(' . get_theme_mod( 'thrivetheme_header_background_image' ) . '); height:' . get_theme_mod( 'thrivetheme_header_image_height' ) . 'px;';
-				break;
-			default:
 			case 'full':
 				$header_class = 'hif';
+				$header_style = 'background-image:url(' . get_theme_mod( 'thrivetheme_header_background_image' ) . '); height:' . get_theme_mod( 'thrivetheme_header_image_height' ) . 'px;';
+				break;
+			case 'centered':
+				$header_class = 'hic';
 				$header_style = 'background-image:url(' . get_theme_mod( 'thrivetheme_header_background_image' ) . '); height:' . get_theme_mod( 'thrivetheme_header_image_height' ) . 'px;';
 				break;
 		}
@@ -120,7 +119,7 @@ if ( display_social_sharing_block( $options, 'floating' ) ):
                                             <span>
                                                 <?php _e( "Share", 'thrive' ); ?>
                                             </span>
-									<span class="ct" style="display:none;">
+                                            <span class="ct" style="display:none;">
                                                 <?php echo $share_count->facebook; ?>
                                             </span>
 								</a>
@@ -143,7 +142,7 @@ if ( display_social_sharing_block( $options, 'floating' ) ):
                                             <span>
                                                 <?php _e( "Pin", 'thrive' ); ?>
                                             </span>
-									<span class="ct" style="display:none;">
+                                            <span class="ct" style="display:none;">
                                                 <?php echo $share_count->facebook; ?>
                                             </span>
 								</a>
@@ -157,7 +156,7 @@ if ( display_social_sharing_block( $options, 'floating' ) ):
                                             <span>
                                                 <?php _e( "Share", 'thrive' ); ?>
                                             </span>
-									<span class="ct" style="display:none;">
+                                            <span class="ct" style="display:none;">
                                                 <?php echo $share_count->plusone; ?>
                                             </span>
 								</a>
@@ -169,7 +168,7 @@ if ( display_social_sharing_block( $options, 'floating' ) ):
 								   href="https://www.linkedin.com/cws/share?url=<?php echo get_permalink( get_the_ID() ); ?>"
 								   onclick="return ThriveApp.open_share_popup(this.href, 545, 433);">
 									<span><?php _e( "Share", 'thrive' ); ?></span>
-									<span class="ct" style="display:none;">
+                                            <span class="ct" style="display:none;">
                                                 <?php echo $share_count->linkedin; ?>
                                             </span>
 								</a>
@@ -183,6 +182,20 @@ if ( display_social_sharing_block( $options, 'floating' ) ):
 <?php endif; ?>
 <div class="flex-cnt">
 	<header class="<?php echo $header_layout . ' ' . $header_class; ?>" style="<?php echo $header_style; ?>">
+						<!-- Adsense only viewed on homepage and category page -->
+						<?php if ( is_category() || is_front_page() ): ?>
+	<div class="header_ad">
+							<div class="outer-center_ad">
+								<div class="inner-center_ad">
+									<!-- tri fit dev large leaderbpard -->
+<ins class="adsbygoogle" style="display:inline-block;width:970px;height:250px" data-ad-client="ca-pub-9002406242342564" data-ad-slot="3266805753"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+								</div>
+							</div>
+							
+						</div>
+<div class="clear"></div>
+<?php endif; ?>
 		<?php if ( $header_class == "hic" ): ?>
 			<img class="tt-dmy" src="<?php echo get_theme_mod( 'thrivetheme_header_background_image' ); ?>"/>
 		<?php endif; ?>

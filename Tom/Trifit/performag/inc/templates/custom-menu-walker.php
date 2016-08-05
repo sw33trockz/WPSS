@@ -115,9 +115,9 @@ class thrive_custom_menu_walker extends Walker_Nav_Menu {
 					$item_output .= '<div class="mig" style="background-image: url(' . $image . ')"></div>';
 					$item_output .= '<b>' . $post->post_title . '</b>';
 
-					$item_output .= '</a></div>';
+					$item_output .= '</div>';
 				}
-				$item_output .= '</div></div>';
+				$item_output .= '</a></div></div>';
 			}
 			$item_output .= '</div>';
 		}

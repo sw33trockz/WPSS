@@ -13,6 +13,14 @@ $post_template     = _thrive_get_item_template( get_the_ID() );
 
 		<?php if ( $options['show_post_title'] != 0 ): ?>
 			<div class="bt dp">
+			<div class="header_ad_link_page">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- Tri Fit responsive link unit -->
+				<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9002406242342564" data-ad-slot="4215488552" data-ad-format="link"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
 				<div class="wrp">
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 				</div>

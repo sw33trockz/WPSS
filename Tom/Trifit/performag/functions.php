@@ -37,7 +37,7 @@ if ( ! function_exists( 'thrive_breadcrumbs' ) ) :
 			return;
 		}
 
-		$arrowImg = "<span> &nbsp;/&nbsp; </span>";
+		$arrowImg = "<span> &nbsp/&nbsp; </span>";
 
 		if ( get_option( 'show_on_front' ) == 'page' ) {
 			$posts_page_id  = get_option( 'page_for_posts' );
