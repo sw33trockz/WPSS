@@ -1,0 +1,157 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-07 16:06+0200\n"
+"PO-Revision-Date: 2012-05-07 16:06+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: comments.php:5
+msgid " Comments to "
+msgstr ""
+
+#: comments.php:34
+msgid "Prev Comments"
+msgstr ""
+
+#: comments.php:37
+msgid "Next Comments"
+msgstr ""
+
+#: functions.php:250
+#: header.php:6
+msgid "Results for "
+msgstr ""
+
+#: functions.php:256
+msgid "Page "
+msgstr ""
+
+#: functions.php:321
+msgid "Posted by "
+msgstr ""
+
+#: functions.php:475
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:477
+msgid "Edit"
+msgstr ""
+
+#: header.php:8
+msgid "Not found for "
+msgstr ""
+
+#: header.php:14
+#: header.php:20
+#: header.php:27
+#: header.php:43
+msgid "Page request could not be found."
+msgstr ""
+
+#: header.php:18
+msgid "Tag, "
+msgstr ""
+
+#: header.php:25
+msgid "Category, "
+msgstr ""
+
+#: header.php:34
+msgid "Daily Archives, "
+msgstr ""
+
+#: header.php:36
+msgid "Monthly Archives, "
+msgstr ""
+
+#: header.php:38
+msgid "Yearly Archives, "
+msgstr ""
+
+#: header.php:40
+msgid "Blog Archives"
+msgstr ""
+
+#: header.php:46
+msgid "You may find your requested page by searching."
+msgstr ""
+
+#: loop.php:75
+#: single.php:73
+#: includes/shortcodes.php:571
+msgid "No Comment"
+msgstr ""
+
+#: loop.php:75
+#: single.php:73
+#: includes/shortcodes.php:573
+msgid "1 Comment"
+msgstr ""
+
+#: loop.php:75
+#: single.php:73
+msgid "% Comments"
+msgstr ""
+
+#: loop.php:90
+#: includes/shortcodes.php:592
+msgid "READ MORE"
+msgstr ""
+
+#: includes/form-sender.php:16
+msgid "Please check your value for validation because your result of sum is incorrect."
+msgstr ""
+
+#: includes/form-sender.php:41
+msgid "Have got an error while sending e-mail."
+msgstr ""
+
+#: includes/shortcodes.php:119
+msgid "Submit"
+msgstr ""
+
+#: includes/shortcodes.php:366
+msgid "All"
+msgstr ""
+
+#: includes/shortcodes.php:575
+msgid "Comments"
+msgstr ""
+
+#: plugins/ajax-comment-posting/ajax-comment-posting.php:22
+msgid "Loading..."
+msgstr ""
+
+#: plugins/ajax-comment-posting/ajax-comment-posting.php:23
+msgid "Please enter your name."
+msgstr ""
+
+#: plugins/ajax-comment-posting/ajax-comment-posting.php:24
+msgid "Please enter your email address."
+msgstr ""
+
+#: plugins/ajax-comment-posting/ajax-comment-posting.php:25
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: plugins/ajax-comment-posting/ajax-comment-posting.php:26
+msgid "Please enter your comment."
+msgstr ""
+
+#: plugins/ajax-comment-posting/ajax-comment-posting.php:27
+msgid "Your comment has been added."
+msgstr ""
+
+#: plugins/ajax-comment-posting/ajax-comment-posting.php:28
+msgid "ACP error!"
+msgstr ""
+
