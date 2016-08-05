@@ -1,0 +1,4795 @@
+@media only screen and ( min-width: 1320px ) {
+/*===============================================
+
+	M O N I T O R
+	1320px/unlimited
+
+===============================================*//**/
+/**/}
+
+
+@media only screen and ( min-width: 960px ) and ( max-width: 1319px ) {
+/*===============================================
+
+	T A B L E T   /   L A P T O P
+	960px/1319px
+
+===============================================*//**/
+
+/*
+
+	1 - LAYOUT
+
+		- Header
+		- Content
+		- Footer
+
+	2 - MENU
+
+		- Primary
+		- Secondary
+
+	3 - SIDEBARS
+
+		- Sidebar
+		- Footer
+
+	5 - COMMON
+
+		- Titles
+		- Attachment
+		- Quotes
+		- Fieldset
+
+	6 - POSTS
+
+		- Featured
+
+	7 - WIDGETS
+
+	8 - BUDDYPRESS
+
+	9 - ICONS
+
+		- Social
+
+	10 - SHORTCODES
+
+	11 - POST
+
+	12 - SPECIAL
+
+	13 - PAGINATION
+
+	14 - ARCHIVE
+
+	15 - BBPRESS
+
+	16 - COMMENTS
+
+	17 - 404
+
+	18 - WOOCOMMERCE
+	
+	19 - FROMS
+
+*/
+
+	/*===========================================
+		L A Y O U T
+	===========================================*/
+
+	.boxed #layout {
+		max-width: 985px;
+	}
+
+	/*--- Header ------------------------------*/
+
+	#header {
+		padding-top: 25px;
+	}
+
+		#header-holder {
+			width: 935px;
+		}
+	
+			#logo {
+				width: 190px;
+				margin: 0 25px;
+			}
+	
+				#logo h2 {
+					max-width: 190px;
+				}
+	
+		#header-holder-2 {
+			width: 935px;
+		}
+
+	/*--- Content -----------------------------*/
+
+	#content-layout {
+		width: 935px;
+	}
+
+		#content-box {
+			padding-top: 25px;
+			padding-bottom: 25px;
+		}
+
+			/* If sidebar by right */
+			.sidebar-position-right #content-box,
+			.page-template-template-frontpage-php .sidebar-secondary-inactive.sidebar-position-none #content-box {
+				width: 610px;
+			}
+	
+			/* If sidebar by left */
+			.sidebar-position-left #content-box {
+				width: 610px;
+			}
+	
+	
+					/* For single */
+					div.post-single {
+						width: 465px;
+					}
+	
+					/* If sidebar none */
+					.sidebar-position-none div.post-single {
+						width: 790px;
+					}
+	
+			/* If sidebar by none */
+			.sidebar-position-none #content-box {
+				width: 610px;
+			}
+	
+				/* If single */
+				.single .sidebar-position-none #content-box {
+					width: auto;
+				}
+	
+				/* If the Secondary sidebar available */
+				.sidebar-secondary-available #content-box > div > div:first-child {
+					width: 359px;
+				}
+	
+					#article {
+						padding: 25px;
+					}
+
+			/* Frontpage v.2 */
+			#article-frontpage-2 {
+				margin-bottom: 25px;
+			}
+
+	/*--- Footer ------------------------------*/
+
+	#footer-holder {
+		width: 935px;
+	}
+
+		#copyrights-holder {
+			width: 885px;
+		}
+
+
+	/*===========================================
+		M E N U
+	===========================================*/
+
+	/*--- Primary -----------------------------*/
+
+	#menu {
+		width: 935px;
+	}
+
+		#menu-box {
+			width: 695px;
+		}
+
+			ul.menu > li > a {
+				font-size: 14px;
+				padding: 15px;
+			}
+
+				ul.menu > li > a > span.subline {
+					display: none;
+				}
+
+				ul.menu > li.hasUl > a {
+					padding-right: 35px;
+				}
+
+					.gecko ul.menu > li.hasUl > a:before {
+						margin-top: 0;
+					}
+
+					ul.menu > li > ul > li:first-child > a:after {
+						left: 8px;
+					}
+
+					ul.menu ul li a {
+						font-size: 12px;
+						padding: 10px;
+					}
+
+						ul.menu ul li.hasUl > a:before {
+							margin-top: 0.75em;
+						}
+
+						ul.menu ul li span.subline {
+							line-height: 1.352em;
+							margin-top: 0;
+						}
+
+	/*--- Secondary ---------------------------*/
+
+	#menu-2 {
+	}
+
+
+	/*===========================================
+		S I D E B A R S
+	===========================================*/
+
+	/*--- Sidebar -----------------------------*/
+
+	#sidebar {
+		padding: 25px 0 0;
+	}
+
+		.widget {
+			margin-bottom: 25px;
+		}
+
+	/*--- Ad Sidebars -------------------------*/
+
+	.sidebar-ad-a {
+		width: 935px;
+	}
+
+	.sidebar-ad-a .widget {
+		max-width: 885px;
+	}
+
+	.sidebar-ad-b .widget {
+		margin-bottom: 25px;
+	}
+
+	#sidebar-ad-c .sidebar-ad-c {
+		padding: 0;
+	}
+
+		.sidebar-ad-c .widget {
+			max-width: 935px;
+		}
+
+	/*--- Footer ------------------------------*/
+
+	.sidebar-footer > div {
+		margin-top: 25px;
+		margin-right: 25px;
+		margin-bottom: 25px;
+	}
+
+		/*- 1/3 + 1/3 + 1/3 -*/
+	
+		.footer-box-v1 .sidebar-footer {
+			width: 320px;
+		}
+	
+		.footer-box-v1 .sidebar-footer.last {
+			width: 295px;
+		}
+
+		/*- 1/4 + 1/4 + 1/2 -*/
+	
+		.footer-box-v2 .sidebar-footer {
+			width: 240px;
+		}
+		
+		.footer-box-v2 .sidebar-footer.last {
+			width: 455px;
+		}
+
+		/*- 1/4 + 1/2 + 1/4 -*/
+	
+		.footer-box-v3 .sidebar-footer {
+			width: 480px;
+		}
+		
+		.footer-box-v3 .sidebar-footer:first-child {
+			width: 240px;
+		}
+	
+		.footer-box-v3 .sidebar-footer.last {
+			width: 215px;
+		}
+
+	/*- 1/2 + 1/4 + 1/4 -*/
+
+	.footer-box-v4 .sidebar-footer {
+		width: 240px;
+	}
+	
+	.footer-box-v4 .sidebar-footer:first-child {
+		width: 480px;
+	}
+
+	.footer-box-v4 .sidebar-footer.last {
+		width: 215px;
+	}
+
+	/*- 1/4 + 1/4 + 1/4 + 1/4 -*/
+
+	.footer-box-v5 .sidebar-footer {
+		width: 240px;
+	}
+	
+	.footer-box-v5 .sidebar-footer.last {
+		width: 215px;
+	}
+
+	/*- 2/3 + 1/3 -*/
+
+	.footer-box-v6 .sidebar-footer {
+		width: 295px;
+	}
+
+	.footer-box-v6 .sidebar-footer:first-child {
+		width: 640px;
+	}
+
+	/*--- Frontpage Sidebars-------------------*/
+
+	#sidebar-homepage-box {
+	}
+
+		#sidebar-homepage-box .sidebar-homepage > div {
+			margin: 0 25px 25px 0;
+		}
+
+			/*- 1/4 + 1/4 + 1/4 + 1/4 -*/
+		
+			#sidebar-homepage-box .sidebar-homepage {
+				width: 240px;
+			}
+			
+			#sidebar-homepage-box .sidebar-homepage.last {
+				width: 215px;
+			}
+
+	/*===========================================
+		C O M M O N
+	===========================================*/
+
+	/*--- Titles -----------------------------*/
+
+	h1 {
+		font-size: 2.4em;
+	}
+
+	h2 {
+		font-size: 1.8em;
+	}
+
+	h3 {
+		font-size: 1.4em;
+	}
+
+	h4 {
+		font-size: 1.2em;
+	}
+
+	h5 {
+		font-size: 1em;
+	}
+
+	/*--- Attachment -------------------------*/
+
+	.wp-caption.alignleft {
+		margin-left: -30px;
+	}
+
+	.wp-caption.alignright {
+		margin-right: -30px;
+	}
+
+	/*--- Quotes -----------------------------*/
+
+	blockquote p {
+		line-height: 1.535em;
+	}
+
+	/*--- Fieldset ---------------------------*/
+
+	fieldset {
+		padding: 10px 15px;
+	}
+
+	/*===========================================
+		P O S T S
+	===========================================*/
+
+	.post-template {
+		margin-bottom: 25px;
+		padding-bottom: 25px;
+	}
+
+	/*--- Default -----------------------------*/
+
+	.post-default {
+		padding-top: 25px;
+		padding-bottom: 0;
+	}
+
+		.post-default:first-child {
+			padding-top: 0;
+		}
+	
+			.post-default .post-title {
+				font-size: 1.7em;
+			}
+	
+				.sticky.post-default .post-title:before {
+					margin: 0 0 0.5em;
+				}
+	
+			.post-default .meta {
+				margin-bottom: 2.post-default5px;
+			}
+	
+			.post-default .content-data {
+				padding: 25px;
+		}
+
+	/*--- Post t4 -----------------------------*/
+
+	.post-t4 {
+		padding-bottom: 0;
+		overflow: hidden;
+	}
+
+	.sidebar-secondary-available .post-t4 {
+		padding: 0;
+	}
+
+		.sidebar-secondary-available .post-t4 .thumb-wrapper {
+			margin: 0;
+		}
+
+			.sidebar-secondary-available .post-t4 .thumb-wrapper a.post-thumb {
+				overflow: visible;
+			}
+
+				.sidebar-secondary-available .post-t4 .thumb-wrapper a.post-thumb:hover {
+					margin-left: -20px;
+					opacity: 1;
+				}
+
+					.sidebar-secondary-available .post-t4 a.post-thumb:before,
+					.sidebar-secondary-available .post-t4 a.post-thumb:hover:before,
+					.sidebar-secondary-available .post-t4 a.post-thumb:after,
+					.sidebar-secondary-available .post-t4 a.post-thumb:hover:after {
+						left: 310px;
+						font-size: 28px;
+						opacity: 1;
+						transition: all 250ms cubic-bezier(0, 0.5, 0.5, 1);
+					}
+
+						.sidebar-secondary-available .post-t4 a.post-thumb:after {
+							background: rgba(0,0,0,0.1);
+						}
+	
+							.dark .sidebar-secondary-available .post-t4 a.post-thumb:after {
+								background: rgba(255,255,255,0.1);
+							}
+	
+						.sidebar-secondary-available .post-t4 a.post-thumb:hover:before {
+							left: 320px;
+						}
+
+						.sidebar-secondary-available .post-t4 a.post-thumb:hover:after {
+							left: 320px;
+							background: #FB9351;
+						}
+
+		.sidebar-secondary-available .post-t4 .meta {
+			position: relative;
+			bottom: auto;
+			height: auto;
+			margin: 20px 0 0 25px;
+		}
+
+		.sidebar-secondary-available .post-t4 h3 {
+			margin: 10px 50px 25px 25px;
+			padding: 0;
+		}
+
+			.sidebar-secondary-available .post-t4-no-thumb h3 {
+				font-size: 1.35em;
+				font-weight: normal;
+			}
+
+			.sidebar-secondary-available .post-t4 h3.post-title-short {
+				margin-bottom: 5px;
+			}
+
+				.sidebar-secondary-available .post-t4 h3.post-title-short a {
+					max-height: none;
+					-webkit-line-clamp: 10; /* Chrome */
+				}
+
+		.sidebar-secondary-available .post-t4 p {
+			max-height: none;
+			-webkit-line-clamp: 10; /* Chrome */
+			padding: 0 25px 25px 25px;
+			overflow: visible;
+		}
+
+		/* W/out thumbnail */
+		.post-t4-no-thumb {
+			min-height: 50px;
+			padding-bottom: 50px;
+		}
+	
+			.post-t4-no-thumb h3 {
+				font-size: 1.35em;
+				line-height: 1.35em;
+				font-weight: normal;
+				padding-bottom: 0;
+			}
+
+		/* On frontpage */
+		#posts-t4 .post-t4 {
+			width: 168px;
+		}
+
+			#posts-t4 .post-t4 h3 {
+				font-size: 1.2em;
+				max-height: 6.5em;
+				padding-top: 20px;
+			}
+
+		#posts-t4 .post-t4-no-thumb {
+			width: 430px;
+		}
+
+			#posts-t4 .post-t4-no-thumb h3 {
+				font-size: 1.9em;
+				padding-top: 15px;
+			}
+
+	/*--- Highlighted -------------------------*/
+
+	.posts-highlighted {
+		margin-bottom: 25px;
+		padding-bottom: 0;
+	}
+
+		div.posts-highlighted a.post-thumb {
+			height: 255px;
+		}
+
+			.sidebar-secondary-inactive div.posts-highlighted a.post-thumb {
+				height: 434px;
+			}
+
+		.posts-highlighted-details h1 {
+			font-size: 1.8em;
+			font-weight: normal;
+		}
+
+	/*--- Featured ----------------------------*/
+
+	#posts-featured {
+		width: 935px;
+	}
+
+		.posts-featured-wrapper {
+			width: 215px;
+			margin-right: 25px;
+			margin-bottom: 25px;
+		}
+
+			.posts-featured-wrapper a.post-thumb {
+				height: 147px;
+			}
+
+				.posts-featured-wrapper h3 {
+					font-size: 14px;
+				}
+
+					.posts-featured-wrapper h3:before {
+						font-size: 24px;
+					}
+
+			.posts-featured-wrapper .ico16-comment-2 {
+				display: none;
+			}
+
+	/*--- Related -----------------------------*/
+
+	.posts-related-wrapper {
+		padding-top: 25px;
+	}
+
+		.posts-related-wrapper h6 {
+			font-size: 1.7em;
+			padding-bottom: 25px;
+		}
+
+		.posts-related-wrapper div.posts-related-post-wrapper {
+			width: 220px;
+		}
+
+			.sidebar-position-left .posts-related-wrapper div.posts-related-post-wrapper,
+			.sidebar-position-right .posts-related-wrapper div.posts-related-post-wrapper {
+				margin: 0 0 0 auto;
+			}
+
+			.sidebar-position-left .posts-related-wrapper table td:first-child div.posts-related-post-wrapper,
+			.sidebar-position-right .posts-related-wrapper table td:first-child div.posts-related-post-wrapper {
+				margin: 0 auto 0 0;
+			}
+
+				.posts-related-wrapper div.posts-related-post-wrapper a.post-thumb {
+					height: 151px;
+				}
+
+					.posts-related-wrapper div.posts-related-post-wrapper a.post-thumb:before,
+					.posts-related-wrapper div.posts-related-post-wrapper a.post-thumb:after {
+						font-size: 24px;
+					}
+
+				.posts-related-wrapper div.posts-related-post-wrapper > div h5 {
+					font-size: 1em;
+				}
+
+
+	/*===========================================
+		W I D G E T S
+	===========================================*/
+
+	/* none */
+
+
+	/*===========================================
+		B U D D Y P R E S S
+	===========================================*/
+
+	#activity-filter-select > label:first-child {
+		display: none;
+	}
+
+	#buddypress .activity-list li.load-more {
+		padding-top: 25px;
+	}
+
+	#item-nav {
+		margin-bottom: 25px;
+	}
+
+	.single-item #item-header-content,
+	.bp-user #item-header {
+		padding-bottom: 5px;
+	}
+
+	#buddypress div#subnav {
+		font-size: 12px;
+	}
+
+		#buddypress div.item-list-tabs ul li.last select {
+			font-size: 12px;
+			max-width: 150px;
+			padding-top: 8px;
+			padding-bottom: 8px;
+		}
+
+	#buddypress div.item-list-tabs,
+	#search-groups-form input,
+	#buddypress div.dir-search input[type="text"],
+	#buddypress div.message-search input[type="text"],
+	#buddypress input[type="submit"],
+	#buddypress input[type="button"],
+	#buddypress input[type="reset"],
+	#buddypress button.submit {
+		font-size: 12px;
+	}
+
+		#buddypress input[type="submit"],
+		#buddypress input[type="button"],
+		#buddypress input[type="reset"],
+		#buddypress button.submit {
+			padding-top: 0.8em;
+			padding-bottom: 0.8em;
+		}
+
+	/*-- Search form --------------------------*/
+
+	#buddypress div.dir-search input[type="text"],
+	#buddypress div.message-search input[type="text"] {
+		padding: 0.8em 1em;
+	}
+
+	#buddypress div.message-search input[type="text"],
+	#buddypress #search-members-form input[type="text"] {
+		font-size: 12px;
+		padding-top: 0.8em;
+		padding-bottom: 0.8em;
+	}
+
+	/*--- Profile -----------------------------*/
+
+	#item-header-avatar > a img {
+		width: 125px;
+		height: 125px;
+	}
+
+
+	/*===========================================
+		I C O N S
+	===========================================*/
+
+	/*--- Social ------------------------------*/
+
+	.icons-social {
+		width: auto;
+		margin-right: 5px;
+	}
+
+
+	/*===========================================
+		S H O R T C O D E S
+	===========================================*/
+
+	/*--- Icon Box ----------------------------*/
+
+	.st_icon_box_16:before {
+		top: 0.55em;
+	}
+
+	.st_icon_box_32:before {
+		top: 0.15em;
+	}
+
+	/*--- Pull Quotes -------------------------*/
+
+	.pullquote {
+		line-height: 1.535;
+		margin-bottom: 10px;
+		padding: 10px 15px 15px;
+	}
+
+		.pullquote-left {
+			margin-right: 10px;
+		}
+
+		.pullquote-right {
+			margin-left: 10px;
+		}
+
+	/*--- Notice ------------------------------*/
+
+	.notice {
+		padding: 25px 35px 15px;
+	}
+
+	.notice-frontpage {
+		padding: 50px;
+	}
+
+	/*--- Tabs --------------------------------*/
+
+	.st-ul li {
+		padding: 5px 15px;
+	}
+
+	.st-tabs {
+		padding: 15px;
+	}
+
+	/*--- Separator OR ------------------------*/
+
+	.separator-or {
+		margin-bottom: 25px;
+	}
+
+
+	/*===========================================
+		P O S T
+	===========================================*/
+
+	h1.post-title {
+		font-size: 2.3em;
+		letter-spacing: -0.03em;
+		margin-bottom: 0;
+	}
+
+	.page-title {
+		font-size: 2.3em;
+		letter-spacing: -0.03em;
+		margin-bottom: 25px;
+	}
+
+	#pre_next_post {
+		font-size: 1em;
+		line-height: 1.54em;
+		margin-top: 25px;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+		#pre_next_post .p:before,
+		#pre_next_post .n:before {
+			top: 0.2em;
+		}
+
+
+	/*===========================================
+		S P E C I A L
+	===========================================*/
+
+	.alignleft {
+		margin-right: 10px;
+	}
+
+	.alignright {
+		margin-left: 10px;
+	}
+
+
+	/*===========================================
+		P A G I N A T I O N
+	===========================================*/
+
+	/*--- Page pagination ---------------------*/
+
+	.page-pagination {
+		margin: 25px 0;
+	}
+
+
+	/*===========================================
+		A R C H I V E
+	===========================================*/
+
+	#term {
+		margin-bottom: 25px;
+	}
+
+
+	/*===========================================
+		B B P R E S S
+	===========================================*/
+
+	#bbpress-forums li.bbp-header,
+	#bbpress-forums li.bbp-body ul.forum,
+	#bbpress-forums li.bbp-body ul.topic {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	#bbpress-forums > #subscription-toggle {
+		margin-bottom: 25px;
+	}
+
+
+	/*===========================================
+		C O M M E N T S
+	===========================================*/
+
+	.comments-title {
+		padding-top: 25px;
+	}
+
+	#respond {
+		padding-top: 0;
+	}
+
+
+	/*===========================================
+		4 0 4
+	===========================================*/
+
+	#content-404.notice {
+		margin-bottom: 25px;
+	}
+
+
+	/*===========================================
+		W O O C O M M E R C E
+	===========================================*/
+
+	/*--- 22.2 - Catalog ----------------------*/
+
+	body.woocommerce ul.products li.product {
+		width: 186px;
+		margin: 0 25px 25px 0;
+	}
+
+		body.woocommerce ul.products li.product.last {
+			margin-right: 0;
+		}
+
+			.st-woo-hover {
+				height: 186px;
+			}
+
+				.woocommerce.columns-2 .st-woo-hover { /* for shortcode */
+					height: 269px;
+				}
+
+					.sidebar-position-none .woocommerce.columns-2 .st-woo-hover { /* for shortcode */
+						height: 425px;
+					}
+
+				.woocommerce.columns-3 .st-woo-hover { /* for shortcode */
+					height: 173px;
+				}
+
+					.sidebar-position-none .woocommerce.columns-3 .st-woo-hover { /* for shortcode */
+						height: 272px;
+					}
+
+				.woocommerce.columns-4 .st-woo-hover { /* for shortcode */
+					height: 125px;
+				}
+
+					.sidebar-position-none .woocommerce.columns-4 .st-woo-hover { /* for shortcode */
+						height: 195px;
+					}
+
+						.woocommerce ul.products li.product h3,
+						.woocommerce-page ul.products li.product h3 {
+							font-size: 1.2em;
+							font-weight: normal;
+						}
+
+	/*--- 22.3 - Single -----------------------*/
+
+	.woocommerce #content div.product,
+	.woocommerce div.product,
+	.woocommerce-page #content div.product,
+	.woocommerce-page div.product {
+		margin-bottom: 25px;
+		padding: 25px;
+	}
+
+		/* Images */
+		.woocommerce #content div.product div.images,
+		.woocommerce div.product div.images,
+		.woocommerce-page #content div.product div.images,
+		.woocommerce-page div.product div.images {
+			width: 255px;
+			margin: 0 0 25px;
+		}
+
+		.woocommerce #content div.product div.thumbnails a,
+		.woocommerce div.product div.thumbnails a,
+		.woocommerce-page #content div.product div.thumbnails a,
+		.woocommerce-page div.product div.thumbnails a {
+			width: 85px;
+		}
+
+		.woocommerce span.onsale,
+		.woocommerce-page span.onsale {
+			left: 25px;
+		}
+
+		/* Summary */
+		.woocommerce #content div.product div.summary,
+		.woocommerce div.product div.summary,
+		.woocommerce-page #content div.product div.summary,
+		.woocommerce-page div.product div.summary {
+			width: 280px;
+			margin: 0 0 25px;
+		}
+
+		/* Upsell */
+		.st-woo-upsells h2 {
+			margin-bottom: 25px;
+		}
+
+		/* Related */
+		.st-woo-related h2 {
+			margin-bottom: 25px;
+		}
+
+		/* Tabs */
+		.woocommerce-tabs > div > h2:first-child,
+		#reviews #comments h2 {
+			padding-top: 0;
+		}
+
+	/*--- 22.13 - Cart ------------------------*/
+
+	.woocommerce table.shop_table,
+	.woocommerce-page table.shop_table {
+		margin-bottom: 25px;
+	}
+
+	.woocommerce .cart-collaterals .cross-sells,
+	.woocommerce-page .cart-collaterals .cross-sells {
+		width: 397px;
+	}
+
+		.st-woo-cross h2,
+		.cart_totals h2,
+		.shipping_calculator h2 {
+			margin-bottom: 25px;
+		}
+
+		.woocommerce .cart-collaterals .cross-sells ul.products li,
+		.woocommerce-page .cart-collaterals .cross-sells ul.products li {
+			width: 186px;
+		}
+
+	.woocommerce .cart-collaterals .cart_totals,
+	.woocommerce-page .cart-collaterals .cart_totals,
+	.woocommerce .cart-collaterals .shipping_calculator,
+	.woocommerce-page .cart-collaterals .shipping_calculator {
+		width: 513px;
+	}
+
+		.cart_totals {
+			margin-bottom: 25px;
+		}
+
+
+	/*===========================================
+		F O R M S
+	===========================================*/
+
+	/* none */
+
+
+/**/}
+
+
+@media only screen and ( min-width: 640px ) and ( max-width: 959px ) {
+/*===============================================
+
+	T A B L E T   V
+	640px/959px
+
+===============================================*//**/
+
+/*
+
+	1 - LAYOUT
+
+		- Header
+		- Content
+		- Footer
+
+	2 - MENU
+
+		- Primary
+		- Secondary
+
+	3 - SIDEBARS
+
+		- Sidebar
+		- Footer
+		- Ad sidebars
+		- Frontpage Sidebars
+
+	5 - COMMON
+
+		- Titles
+		- Attachment
+		- Quotes
+		- Fieldset
+
+	6 - POSTS
+
+		- Featured
+
+	7 - WIDGETS
+
+	8 - BUDDYPRESS
+
+	9 - ICONS
+
+		- Social
+
+	10 - SHORTCODES
+
+	11 - POST
+
+	12 - SPECIAL
+
+	13 - PAGINATION
+
+	14 - ARCHIVE
+
+	15 - BBPRESS
+
+	16 - COMMENTS
+
+	17 - 404
+
+	18 - WOOCOMMERCE
+	
+	19 - FORMS
+
+*/
+
+	/*===========================================
+		L A Y O U T
+	===========================================*/
+
+	.boxed #layout {
+		max-width: 690px;
+	}
+
+	/*--- Header ------------------------------*/
+
+	#header {
+		padding-top: 0;
+	}
+
+		#header-holder {
+			width: auto;
+		}
+	
+			#logo {
+				float: none;
+				width: auto;
+				height: auto;
+				margin: 0 auto;
+				padding: 25px 0;
+			}
+	
+				#logo h2 {
+					max-width: 640px;
+					margin: 0;
+					text-align: center;
+				}
+	
+					#logo h2 img {
+						margin: 0 auto;
+					}
+
+		#header-holder-2 {
+			width: auto;
+		}
+
+	/*--- Content -----------------------------*/
+
+	#content-layout {
+		width: 640px;
+		margin: 0 auto;
+	}
+
+		#content-holder #content-box {
+			float: none;
+			width: auto;
+		}
+
+			#content-box {
+				min-height: 100px;
+				padding: 25px 0;
+			}
+
+				.sidebar-secondary-available #content-box > div > div:first-child {
+					width: 389px;
+				}
+
+		#content-holder div.post-single {
+			float: none;
+			width: 640px;
+			margin: 0;
+		}
+
+		/* Frontpage v.2 */
+		#article-frontpage-2 {
+			margin-bottom: 25px;
+		}
+
+	/*--- Footer ------------------------------*/
+
+	#footer-holder {
+		width: 640px;
+		padding-top: 25px;
+	}
+
+		#footer-box {
+			margin-right: -50px;
+		}
+
+	#copyrights-holder {
+		width: auto;
+	}
+
+		#copyrights-box * {
+			line-height: 1.575em;
+		}
+
+			#copyrights-box > div {
+				width: 100%;
+				text-align: center;
+			}
+
+
+	/*===========================================
+		M E N U
+	===========================================*/
+
+	/*--- Primary -----------------------------*/
+
+	#menu-select {
+		display: block;
+	}
+
+	#menu {
+		float: none;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+		#menu > div {
+			display: block;
+		}
+
+			#menu-box {
+				width: 640px;
+				height: auto;
+				margin: 0 auto;
+			}
+	
+				ul.menu {
+					display: none;
+				}
+
+	/*--- Secondary ---------------------------*/
+
+	#menu-2 {
+		display: table;
+		margin: 0 auto;
+	}
+
+		ul.menu-2 > li.hasUl > a {
+			padding-right: 15px;
+		}
+
+			ul.menu-2 > li.hasUl > a:before {
+				display: none;
+			}
+
+
+	/*===========================================
+		S I D E B A R S
+	===========================================*/
+
+	/*--- Sidebar -----------------------------*/
+
+	#content-holder #sidebar {
+		float: none;
+		width: auto;
+		margin-right: -25px;
+		padding: 0;
+	}
+
+		#content-holder .sidebar {
+			margin: 0;
+		}
+
+			.widget {
+				margin-bottom: 25px;
+			}
+
+			#content-holder #sidebar .sidebar .widget {
+				float: left;
+				width: 257px;
+				margin-right: 25px;
+			}
+
+				#content-holder #sidebar .sidebar .widget_text {
+					width: 307px;
+				}
+
+	#content-holder div.sidebar-post {
+		width: 640px;
+		margin: 25px 0 0;
+		padding-top: 25px;
+		border-top: 5px solid rgba(0,0,0,0.05);
+	}
+
+		.dark #content-holder div.sidebar-post {
+			border-top-color: rgba(255,255,255,0.05);
+		}
+
+			.sidebar-post,
+			.sidebar-post div {
+				font-size: inherit;
+			}
+		
+			#stickyDiv {
+				float: right;
+				position: relative !important;
+				top: auto !important;
+				width: 308px;
+			}
+	
+				#stickyDiv > div {
+					margin: 0 0 25px;
+				}
+
+	/*--- Footer ------------------------------*/
+
+	#footer-box .sidebar-footer,
+	#footer-box .sidebar-footer.last {
+		width: 332px;
+	}
+
+		#footer-box .sidebar-footer > div,
+		#footer-box .sidebar-footer.last > div {
+			margin: 0 25px 0 0;
+		}
+
+	/*--- Ad sidebars -------------------------*/
+
+	.sidebar-ad-b,
+	#sidebar-ad-c {
+		width: 100%;
+	}
+
+		.sidebar-ad-a .widget,
+		#sidebar-ad-c .widget {
+			display: block;
+			width: auto;
+			margin: 0 25px;
+		}
+
+	.sidebar-ad-b .widget {
+		margin-bottom: 25px;
+	}
+
+	/*--- Frontpage Sidebars-------------------*/
+
+	#sidebar-homepage-box {
+	}
+
+		#sidebar-homepage-box .sidebar-homepage > div {
+			margin: 0 25px 25px 0;
+		}
+
+			/*- 1/4 + 1/4 + 1/4 + 1/4 -*/
+		
+			#sidebar-homepage-box .sidebar-homepage,
+			#sidebar-homepage-box .sidebar-homepage.last {
+				width: 307px;
+				margin-bottom: 0;
+			}
+
+			#sidebar-homepage-box .sidebar-homepage.even {
+				float: right;
+			}
+
+				#sidebar-homepage-box .sidebar-homepage > div {
+					margin: 0 0 25px;
+				}
+
+	/*===========================================
+		C O M M O N
+	===========================================*/
+
+	/*--- Titles -----------------------------*/
+
+	h1 {
+		font-size: 2.285em;
+	}
+
+	h2 {
+		font-size: 1.7em;
+	}
+
+	h3 {
+		font-size: 1.35em;
+	}
+
+	h4 {
+		font-size: 1.15em;
+	}
+
+	h5 {
+		font-size: 1em;
+	}
+
+	/*--- Attachment -------------------------*/
+
+	.wp-caption.alignleft {
+		margin-left: -30px;
+	}
+
+	.wp-caption.alignright {
+		margin-right: -30px;
+	}
+
+	/*--- Quotes -----------------------------*/
+
+	blockquote p {
+		line-height: 1.535em;
+	}
+
+	/*--- Fieldset ---------------------------*/
+
+	fieldset {
+		padding: 10px 15px;
+	}
+
+
+	/*===========================================
+		P O S T S
+	===========================================*/
+
+	.post-template {
+		margin-bottom: 25px;
+		padding-bottom: 25px;
+	}
+
+	/*--- Default -----------------------------*/
+
+	.post-default {
+		padding-top: 25px;
+		padding-bottom: 0;
+	}
+
+		.post-default:first-child {
+			padding-top: 0;
+		}
+	
+			.post-default .post-title {
+				font-size: 1.7em;
+			}
+	
+				.sticky.post-default .post-title:before {
+					margin: 0 0 0.5em;
+				}
+	
+			.post-default .meta {
+				margin-bottom: 2.post-default5px;
+			}
+	
+			.post-default .content-data {
+				padding: 25px;
+		}
+
+	/*--- Post t4 -----------------------------*/
+
+	.post-t4 {
+		padding-bottom: 0;
+		overflow: hidden;
+	}
+
+	.sidebar-secondary-available .post-t4 {
+		padding: 0;
+	}
+
+		.sidebar-secondary-available .post-t4 .thumb-wrapper {
+			margin: 0;
+		}
+
+			.sidebar-secondary-available .post-t4 .thumb-wrapper a.post-thumb {
+				overflow: visible;
+			}
+
+				.sidebar-secondary-available .post-t4 .thumb-wrapper a.post-thumb:hover {
+					opacity: 1;
+					margin-left: -20px;
+				}
+
+					.sidebar-secondary-available .post-t4 a.post-thumb:before,
+					.sidebar-secondary-available .post-t4 a.post-thumb:hover:before,
+					.sidebar-secondary-available .post-t4 a.post-thumb:after,
+					.sidebar-secondary-available .post-t4 a.post-thumb:hover:after {
+						left: 324px;
+						opacity: 1;
+						transition: all 250ms cubic-bezier(0, 0.5, 0.5, 1);
+					}
+
+						.sidebar-secondary-available .post-t4 a.post-thumb:after {
+							background: rgba(0,0,0,0.1);
+						}
+	
+							.dark .sidebar-secondary-available .post-t4 a.post-thumb:after {
+								background: rgba(255,255,255,0.1);
+							}
+	
+						.sidebar-secondary-available .post-t4 a.post-thumb:hover:before {
+							font-size: 42px;
+							left: 334px;
+						}
+
+						.sidebar-secondary-available .post-t4 a.post-thumb:hover:after {
+							font-size: 40px;
+							left: 334px;
+						}
+
+		.sidebar-secondary-available .post-t4 .meta {
+			position: relative;
+			bottom: auto;
+			height: auto;
+			margin: 20px 0 0 25px;
+		}
+
+		.sidebar-secondary-available .post-t4 h3 {
+			margin: 10px 50px 25px 25px;
+			padding: 0;
+		}
+
+			.sidebar-secondary-available .post-t4-no-thumb h3 {
+				font-size: 1.35em;
+			}
+
+			.sidebar-secondary-available .post-t4 h3.post-title-short {
+				margin-bottom: 5px;
+			}
+
+				.sidebar-secondary-available .post-t4 h3.post-title-short a {
+					max-height: none;
+					-webkit-line-clamp: 10; /* Chrome */
+				}
+
+		.sidebar-secondary-available .post-t4 p {
+			max-height: none;
+			-webkit-line-clamp: 10; /* Chrome */
+			padding: 0 25px 25px 25px;
+			overflow: visible;
+		}
+
+		/* W/out thumbnail */
+		.post-t4-no-thumb {
+			min-height: 50px;
+			padding-bottom: 50px;
+		}
+	
+			.post-t4-no-thumb h3 {
+				font-size: 1.35em;
+				font-weight: normal;
+				line-height: 1.35em;
+				padding-bottom: 0;
+			}
+
+		/* On frontpage */
+		#posts-t4 .post-t4 {
+			float: none;
+			width: 353px;
+			height: auto;
+		}
+
+			#posts-t4 .post-t4-no-thumb {
+				width: 615px;
+			}
+
+				#posts-t4 .post-t4-no-thumb h3 {
+					max-height: none;
+					font-size: 2.2em;
+					font-weight: 300;
+					margin-bottom: 55px;
+					border-bottom: 0;
+					background: none;
+				}
+
+
+	/*--- Highlighted -------------------------*/
+
+	.posts-highlighted {
+		margin-bottom: 25px;
+		padding-bottom: 0;
+	}
+
+		div.posts-highlighted a.post-thumb {
+			height: 275px;
+		}
+
+			.sidebar-secondary-inactive div.posts-highlighted a.post-thumb {
+				height: 456px;
+			}
+
+		.posts-highlighted-details h1 {
+			font-size: 1.8em;
+			font-weight: normal;
+		}
+
+	/*--- Featured ----------------------------*/
+
+	#posts-featured {
+		width: 640px;
+	}
+
+		.posts-featured-wrapper {
+			width: 153px;
+			margin-top: 25px;
+			margin-right: 9px;
+			margin-bottom: 25px;
+		}
+
+			.posts-featured-wrapper a.post-thumb {
+				height: 119px;
+			}
+
+				.posts-featured-wrapper a.post-thumb:hover {
+					background-size: 120%;
+				}
+
+				.posts-featured-wrapper h3 {
+					font-size: 14px;
+				}
+
+					.posts-featured-wrapper h3:before {
+						display: none;
+					}
+
+			.posts-featured-details-wrapper > div {
+				margin: 10px;
+			}
+
+				.posts-featured-wrapper .ico16-views {
+					margin: 0 auto;
+				}
+
+				.posts-featured-wrapper .ico16-comment-2,
+				.posts-featured-wrapper .ico16-link {
+					display: none;
+				}
+
+	/*--- Related -----------------------------*/
+
+	.posts-related-wrapper {
+		padding-top: 25px;
+	}
+
+		.posts-related-wrapper h6 {
+			font-size: 1.7em;
+			padding-bottom: 25px;
+		}
+
+		.posts-related-wrapper div.posts-related-post-wrapper > div h5 {
+			font-size: 1.15em;
+		}
+
+
+	/*===========================================
+		W I D G E T S
+	===========================================*/
+
+	/*--- Custom menu -------------------------*/
+
+	#content-holder #sidebar .sidebar .widget_nav_menu,
+	.ie8 #content-holder #sidebar .sidebar .widget_nav_menu {
+		width: 307px;
+	}
+
+	/*--- Calendar ----------------------------*/
+
+	#content-holder #sidebar .sidebar .widget_calendar {
+		width: 307px;
+	}
+
+
+	/*===========================================
+		B U D D Y P R E S S
+	===========================================*/
+
+	#buddypress .activity-list li.load-more {
+		padding-top: 25px;
+	}
+
+	#item-nav {
+		margin-bottom: 25px;
+	}
+
+	.single-item #item-header-content,
+	.bp-user #item-header {
+		padding-bottom: 5px;
+	}
+
+	#buddypress div#subnav {
+		font-size: 12px;
+	}
+
+		#buddypress div.item-list-tabs ul li.last select {
+			font-size: 12px;
+			max-width: 150px;
+		}
+
+	#buddypress div.item-list-tabs,
+	#search-groups-form input,
+	#buddypress div.dir-search input[type="text"],
+	#buddypress div.message-search input[type="text"],
+	#buddypress input[type="submit"],
+	#buddypress input[type="button"],
+	#buddypress input[type="reset"],
+	#buddypress button.submit {
+		font-size: 12px;
+	}
+
+		#buddypress input[type="submit"],
+		#buddypress input[type="button"],
+		#buddypress input[type="reset"],
+		#buddypress button.submit {
+			padding-top: 0.8em;
+			padding-bottom: 0.8em;
+		}
+	
+	/*-- Search form --------------------------*/
+
+	#buddypress div.dir-search input[type="text"],
+	#buddypress div.message-search input[type="text"] {
+		padding: 0.8em 1em;
+	}
+
+	#buddypress div.message-search input[type="text"],
+	#buddypress #search-members-form input[type="text"] {
+		font-size: 12px;
+		padding-top: 0.8em;
+		padding-bottom: 0.8em;
+	}
+
+	/*--- Profile -----------------------------*/
+
+	#item-header-avatar > a {
+		width: 100px;
+		height: 100px;
+	}
+
+
+	/*===========================================
+		I C O N S
+	===========================================*/
+
+	/*--- Social ------------------------------*/
+
+	.icons-social {
+		display: table;
+		float: none;
+		width: auto;
+		margin: 0 auto;
+	}
+
+
+	/*===========================================
+		S H O R T C O D E S
+	===========================================*/
+
+	/*--- Columns -----------------+-----------*/
+
+	.column {
+		float: none;
+		width: auto !important;
+	}
+
+		.column > div {
+			margin-right: 0 !important;
+		}
+
+	/*--- Icon Box ----------------------------*/
+
+	.st_icon_box_16:before {
+		top: 0.60em;
+	}
+
+	.st_icon_box_32:before {
+		top: 0.2em;
+	}
+
+	/*--- Pull Quotes -------------------------*/
+
+	.pullquote {
+		line-height: 1.535;
+		margin-bottom: 10px;
+		padding: 10px 15px 15px;
+	}
+
+		.pullquote-left {
+			margin-right: 10px;
+		}
+
+		.pullquote-right {
+			margin-left: 10px;
+		}
+
+	/*--- Notice ------------------------------*/
+
+	.notice {
+		padding: 25px 35px 15px;
+	}
+
+	.notice-frontpage {
+		padding: 50px;
+	}
+
+	/*--- Tabs --------------------------------*/
+
+	.st-ul li {
+		padding: 5px 15px;
+	}
+
+	.st-tabs {
+		padding: 15px;
+	}
+
+	/*--- Separator OR ------------------------*/
+
+	.separator-or {
+		margin-bottom: 25px;
+	}
+
+
+	/*===========================================
+		P O S T
+	===========================================*/
+
+	h1.post-title {
+		font-size: 2.3em;
+		letter-spacing: -0.03em;
+		margin-bottom: 0;
+	}
+
+	.page-title {
+		font-size: 2.3em;
+		letter-spacing: -0.03em;
+		margin-bottom: 25px;
+	}
+
+	#article {
+		padding: 25px;
+	}
+
+	#pre_next_post {
+		font-size: 1em;
+		line-height: 1.54em;
+		margin-top: 25px;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+		#pre_next_post .p:before,
+		#pre_next_post .n:before {
+			top: 0.2em;
+		}
+
+	.single-author-info {
+		padding-left: 140px;
+	}
+
+		.single-author-upic {
+			float: left;
+			margin: 0 0 0 -140px;
+		}
+
+	.post-short-info {
+		float: left;
+		width: 281px;
+		margin: 0;
+		padding: 0 25px 0 0;
+		border-right: 1px solid rgba(0,0,0,0.1);
+		border-bottom: 0;
+	}
+
+		.dark .post-short-info {
+			border-right-color: rgba(255,255,255,0.1);
+		}
+
+
+	/*===========================================
+		S P E C I A L
+	===========================================*/
+
+	.alignleft {
+		margin-right: 10px;
+	}
+
+	.alignright {
+		margin-left: 10px;
+	}
+
+
+	/*===========================================
+		P A G I N A T I O N
+	===========================================*/
+
+	/*--- Page pagination ---------------------*/
+
+	.page-pagination {
+		margin: 25px 0;
+	}
+
+
+	/*===========================================
+		A R C H I V E
+	===========================================*/
+
+	#term {
+		margin-bottom: 25px;
+		padding-bottom: 12px;
+	}
+
+
+	/*===========================================
+		B B P R E S S
+	===========================================*/
+
+	#bbpress-forums ul.bbp-replies {
+		font-size: 14px;
+	}
+
+	#bbpress-forums li.bbp-header,
+	#bbpress-forums li.bbp-body ul.forum,
+	#bbpress-forums li.bbp-body ul.topic {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	#bbpress-forums > #subscription-toggle {
+		margin-bottom: 25px;
+	}
+
+
+	/*===========================================
+		C O M M E N T S
+	===========================================*/
+
+	.comments-title {
+		padding-top: 25px;
+	}
+
+	#respond {
+		padding-top: 0;
+	}
+
+
+	/*===========================================
+		4 0 4
+	===========================================*/
+
+	#content-404.notice {
+		margin-bottom: 25px;
+	}
+
+
+	/*===========================================
+		W O O C O M M E R C E
+	===========================================*/
+
+	/*--- 22.2 - Catalog ----------------------*/
+
+	body.woocommerce ul.products li.product {
+		width: 196px;
+		margin: 0 25px 25px 0;
+		clear: none;
+	}
+
+		body.woocommerce ul.products li.product:nth-child(2n),
+		body.woocommerce-page ul.products li.product:nth-child(2n) { /* from original woo resp. styles */
+			float: left;
+		}
+
+		body.woocommerce ul.products li.product.last {
+			margin-right: 0;
+		}
+
+		.woocommerce.columns-2 ul.products li.product,
+		.woocommerce.columns-3 ul.products li.product,
+		.woocommerce.columns-4 ul.products li.product { /* for shortcode */
+			float: left;
+			clear: both;
+			width: 48%;
+			margin: 0 0 25px;
+		}
+
+			.woocommerce.columns-2 ul.products li.product:nth-child(2n),
+			.woocommerce.columns-3 ul.products li.product:nth-child(2n),
+			.woocommerce.columns-4 ul.products li.product:nth-child(2n) {
+				float: right;
+				clear: none !important;
+			}
+
+				.st-woo-hover {
+					height: 196px;
+				}
+	
+					.woocommerce.columns-2 .st-woo-hover { /* for shortcode */
+						height: 283px;
+					}
+
+						.sidebar-position-none .woocommerce.columns-2 .st-woo-hover { /* for shortcode */
+							height: 283px;
+						}
+
+					.woocommerce.columns-3 .st-woo-hover { /* for shortcode */
+						height: 283px;
+					}
+
+						.sidebar-position-none .woocommerce.columns-3 .st-woo-hover { /* for shortcode */
+							height: 283px;
+						}
+
+					.woocommerce.columns-4 .st-woo-hover { /* for shortcode */
+						height: 283px;
+					}
+
+						.sidebar-position-none .woocommerce.columns-4 .st-woo-hover { /* for shortcode */
+							height: 283px;
+						}
+
+							.woocommerce ul.products li.product h3,
+							.woocommerce-page ul.products li.product h3 {
+								font-size: 1.2em;
+								font-weight: normal;
+							}
+
+	/*--- 22.3 - Single -----------------------*/
+
+	.woocommerce #content div.product,
+	.woocommerce div.product,
+	.woocommerce-page #content div.product,
+	.woocommerce-page div.product {
+		margin-bottom: 25px;
+		padding: 25px;
+	}
+
+		/* Images */
+		.woocommerce #content div.product div.images,
+		.woocommerce div.product div.images,
+		.woocommerce-page #content div.product div.images,
+		.woocommerce-page div.product div.images {
+			float: left; /* because original woo resp. styles */
+			width: 285px;
+			margin: 0 0 25px;
+		}
+
+		.woocommerce #content div.product div.thumbnails a,
+		.woocommerce div.product div.thumbnails a,
+		.woocommerce-page #content div.product div.thumbnails a,
+		.woocommerce-page div.product div.thumbnails a {
+			width: 95px;
+		}
+
+		.woocommerce span.onsale,
+		.woocommerce-page span.onsale {
+			left: 25px;
+		}
+
+		/* Summary */
+		.woocommerce #content div.product div.summary,
+		.woocommerce div.product div.summary,
+		.woocommerce-page #content div.product div.summary,
+		.woocommerce-page div.product div.summary {
+			float: right; /* because original woo resp. styles */
+			width: 280px;
+			margin: 0 0 25px;
+		}
+
+		/* Upsell */
+		.st-woo-upsells h2 {
+			margin-bottom: 25px;
+		}
+
+		/* Related */
+		.st-woo-related h2 {
+			margin-bottom: 25px;
+		}
+
+		/* Tabs */
+		.woocommerce-tabs > div > h2:first-child,
+		#reviews #comments h2 {
+			padding-top: 0;
+		}
+
+	/*--- 22.13 - Cart ------------------------*/
+
+	.woocommerce table.shop_table,
+	.woocommerce-page table.shop_table {
+		margin-bottom: 25px;
+	}
+
+	.woocommerce .cart-collaterals .cross-sells,
+	.woocommerce-page .cart-collaterals .cross-sells {
+		width: 100%;
+	}
+
+		.st-woo-cross h2,
+		.cart_totals h2,
+		.shipping_calculator h2 {
+			margin-bottom: 25px;
+		}
+
+		.woocommerce .cart-collaterals .cross-sells ul.products,
+		.woocommerce-page .cart-collaterals .cross-sells ul.products {
+			display: table;
+			margin: 0 auto 25px;
+		}
+
+	.woocommerce .cart-collaterals .cart_totals,
+	.woocommerce-page .cart-collaterals .cart_totals,
+	.woocommerce .cart-collaterals .shipping_calculator,
+	.woocommerce-page .cart-collaterals .shipping_calculator {
+		width: 100%;
+	}
+
+		.cart_totals {
+			margin-bottom: 25px;
+		}
+
+	/*--- 22.16 - Pagination ------------------*/
+
+	.woocommerce #content nav.woocommerce-pagination ul,
+	.woocommerce nav.woocommerce-pagination ul,
+	.woocommerce-page #content nav.woocommerce-pagination ul,
+	.woocommerce-page nav.woocommerce-pagination ul {
+		margin-bottom: 0;
+	}
+
+
+	/*===========================================
+		F O R M S
+	===========================================*/
+
+	/* none */
+
+
+/**/}
+
+
+@media only screen and ( min-width: 480px ) and ( max-width: 639px ) {
+/*===============================================
+
+	P H O N E   H
+	480px/639px
+
+===============================================*//**/
+
+/*
+
+	1 - LAYOUT
+
+		- Header
+		- Content
+		- Footer
+
+	2 - MENU
+
+		- Primary
+		- Secondary
+
+	3 - SIDEBARS
+
+		- Sidebar
+		- Footer
+		- Ad sidebars
+
+	5 - COMMON
+
+		- Titles
+		- Attachment
+		- Quotes
+		- Fieldset
+
+	6 - POSTS
+
+		- Featured
+
+	7 - WIDGETS
+
+	8 - BUDDYPRESS
+
+	9 - ICONS
+
+		- Social
+
+	10 - SHORTCODES
+
+	11 - POST
+
+	12 - SPECIAL
+
+	13 - PAGINATION
+
+	14 - ARCHIVE
+
+	15 - BBPRESS
+
+	16 - COMMENTS
+
+	17 - 404
+
+	18 - WOOCOMMERCE
+	
+	19 - FORMS
+
+*/
+
+	/*===========================================
+		L A Y O U T
+	===========================================*/
+
+	.boxed #layout {
+		max-width: 510px;
+	}
+
+	/*--- Header ------------------------------*/
+
+	#header {
+		padding-top: 0;
+	}
+
+		#header-holder {
+			width: auto;
+		}
+	
+			#logo {
+				float: none;
+				width: auto;
+				height: auto;
+				margin: 0 auto;
+				padding: 15px 0;
+			}
+	
+				#logo h2 {
+					max-width: 480px;
+					margin: 0;
+					text-align: center;
+				}
+	
+					#logo h2 img {
+						margin: 0 auto;
+					}
+
+		#header-holder-2 {
+			width: auto;
+		}
+
+	/*--- Content -----------------------------*/
+
+	#content-layout {
+		width: 480px;
+		margin: 0 auto;
+	}
+
+		#content-holder #content-box {
+			float: none;
+			width: auto;
+		}
+
+			#content-box {
+				min-height: 100px;
+				padding: 15px 0;
+			}
+
+				.sidebar-secondary-available #content-box > div > div:first-child {
+					width: 249px;
+				}
+
+		#content-holder div.post-single {
+			float: none;
+			width: 480px;
+			margin: 0;
+		}
+
+		/* Frontpage v.2 */
+		#article-frontpage-2 {
+			margin-bottom: 15px;
+		}
+
+	/*--- Footer ------------------------------*/
+
+	#footer-holder {
+		width: 480px;
+		padding-top: 25px;
+		padding-bottom: 10px;
+	}
+
+		#footer-box {
+			margin-right: -50px;
+		}
+
+	#copyrights-holder {
+		width: auto;
+	}
+
+		#copyrights-box * {
+			line-height: 1.575em;
+		}
+
+			#copyrights-box > div {
+				width: 100%;
+				text-align: center;
+			}
+
+
+	/*===========================================
+		M E N U
+	===========================================*/
+
+	/*--- Primary -----------------------------*/
+
+	#menu-select {
+		display: block;
+	}
+
+	#menu {
+		float: none;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+		#menu > div {
+			display: block;
+		}
+
+			#menu-box {
+				width: 480px;
+				height: auto;
+				margin: 0 auto;
+			}
+	
+				ul.menu {
+					display: none;
+				}
+
+	/*--- Secondary ---------------------------*/
+
+	#menu-2 {
+		display: table;
+		margin: 0 auto;
+	}
+
+		ul.menu-2 > li > a {
+			padding: 11px 11px 10px;
+		}
+
+		ul.menu-2 > li.hasUl > a {
+			padding-right: 11px;
+		}
+
+			ul.menu-2 > li.hasUl > a:before {
+				display: none;
+			}
+
+
+	/*===========================================
+		S I D E B A R S
+	===========================================*/
+
+	/*--- Sidebar -----------------------------*/
+
+	#content-holder #sidebar {
+		float: none;
+		width: auto;
+		padding: 0;
+	}
+
+		#content-holder .sidebar {
+			margin: 0;
+		}
+
+			.sidebar .widget {
+				padding: 15px;
+			}
+
+				.widget {
+					margin-bottom: 15px;
+				}
+
+	#content-holder div.sidebar-post {
+		width: 480px;
+		margin: 15px 0 0;
+		padding-top: 15px;
+		border-top: 5px solid rgba(0,0,0,0.05);
+	}
+
+		.dark #content-holder div.sidebar-post {
+			border-top-color: rgba(255,255,255,0.05);
+		}
+
+			.sidebar-post,
+			.sidebar-post div {
+				font-size: inherit;
+			}
+		
+			#stickyDiv {
+				float: right;
+				position: relative !important;
+				top: auto !important;
+				width: 225px;
+			}
+	
+				#stickyDiv > div {
+					margin: 0 0 15px;
+				}
+
+	/*--- Footer ------------------------------*/
+
+	#footer-box .sidebar-footer,
+	#footer-box .sidebar-footer.last {
+		width: 252px;
+	}
+
+		#footer-box .sidebar-footer > div,
+		#footer-box .sidebar-footer.last > div {
+			margin: 0 25px 0 0;
+		}
+
+	/*--- Ad sidebars -------------------------*/
+
+	.sidebar-ad-a {
+		padding: 15px 0;
+	}
+
+	.sidebar-ad-b,
+	#sidebar-ad-c {
+		width: 100%;
+	}
+
+		#sidebar-ad-c .sidebar-ad-c {
+			padding: 15px 0;
+		}
+
+			.sidebar-ad-a .widget,
+			#sidebar-ad-c .widget {
+				display: block;
+				width: auto;
+				margin: 0 15px;
+				padding: 0;
+			}
+
+	.sidebar-ad-b .widget {
+		margin-bottom: 15px;
+	}
+
+	/*--- Secondary sidebars ------------------*/
+
+	#sidebar-secondary {
+		width: 216px;
+	}
+
+	/*--- Frontpage Sidebars ------------------*/
+
+	#sidebar-homepage-box {
+	}
+
+		#sidebar-homepage-box .sidebar-homepage,
+		#sidebar-homepage-box .sidebar-homepage.last {
+			width: 50%;
+		}
+
+			#sidebar-homepage-box .sidebar-homepage.odd > div {
+				margin: 0 7.5px 0 0;
+			}
+
+			#sidebar-homepage-box .sidebar-homepage.even > div {
+				margin: 0 0 0 7.5px;
+			}
+
+	/*===========================================
+		C O M M O N
+	===========================================*/
+
+	/*--- Titles -----------------------------*/
+
+	h1 {
+		font-size: 2.0em;
+	}
+
+	h2 {
+		font-size: 1.7em;
+	}
+
+	h3 {
+		font-size: 1.35em;
+	}
+
+	h4 {
+		font-size: 1.15em;
+	}
+
+	h5 {
+		font-size: 1em;
+	}
+
+	/*--- Attachment -------------------------*/
+
+	.wp-caption.alignleft {
+		margin-left: -20px;
+	}
+
+	.wp-caption.alignright {
+		margin-right: -20px;
+	}
+
+	/*--- Quotes -----------------------------*/
+
+	blockquote p {
+		line-height: 1.535em;
+	}
+
+	/*--- Fieldset ---------------------------*/
+
+	fieldset {
+		padding: 10px 15px;
+	}
+
+	/*--- Paragraphs -------------------------*/
+
+	p {
+		margin-bottom: 0.5em;
+	}
+
+
+	/*===========================================
+		P O S T S
+	===========================================*/
+
+	.post-template {
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+	}
+
+	/*--- Default -----------------------------*/
+
+	.post-default {
+		padding-top: 15px;
+		padding-bottom: 0;
+	}
+
+		.post-default:first-child {
+			padding-top: 0;
+		}
+	
+			.post-default .post-title {
+				font-size: 1.7em;
+			}
+	
+				.sticky.post-default .post-title:before {
+					margin: 0 0 0.5em;
+				}
+	
+			.post-default .meta {
+				margin-bottom: 2.post-default5px;
+			}
+	
+			.post-default .content-data {
+				padding: 15px;
+		}
+
+	/*--- Post t4 -----------------------------*/
+
+	.post-t4 {
+		padding-bottom: 0;
+		overflow: hidden;
+	}
+
+	.sidebar-secondary-available .post-t4 {
+		padding: 0;
+	}
+
+		.sidebar-secondary-available .post-t4 .thumb-wrapper {
+			width: 249px;
+			margin: 0;
+		}
+
+			.post-t4 a.post-thumb {
+				height: 176px;
+			}
+
+		.sidebar-secondary-available .post-t4 h3 {
+			font-size: 1.2em;
+			margin: 10px 15px 15px 15px;
+			padding: 0;
+		}
+
+			.sidebar-secondary-available .post-t4-no-thumb h3 {
+				font-size: 1.2em;
+			}
+
+			.sidebar-secondary-available .post-t4 h3.post-title-short {
+				margin-bottom: 5px;
+			}
+
+				.sidebar-secondary-available .post-t4 h3.post-title-short a {
+					max-height: none;
+					-webkit-line-clamp: 10; /* Chrome */
+				}
+
+		.sidebar-secondary-available .post-t4 p {
+			max-height: none;
+			-webkit-line-clamp: 10; /* Chrome */
+			padding: 0 15px 15px 15px;
+			overflow: visible;
+		}
+
+		/* W/out thumbnail */
+		.post-t4-no-thumb {
+			min-height: 50px;
+			padding-bottom: 50px;
+		}
+	
+			.post-t4-no-thumb h3 {
+				font-size: 1.35em;
+				font-weight: normal;
+				line-height: 1.35em;
+				padding-bottom: 0;
+			}
+
+		.sidebar-secondary-available .post-t4 .meta {
+			position: relative;
+			left: auto;
+			bottom: auto;
+			height: auto;
+			margin: 15px 15px 0 15px;
+		}
+
+		/* On frontpage */
+		#posts-t4 .post-t4 {
+			float: none;
+			width: 193px;
+			height: auto;
+		}
+
+			#posts-t4 .post-t4-no-thumb {
+				width: 455px;
+			}
+
+				#posts-t4 .post-t4-no-thumb h3 {
+					max-height: none;
+					font-size: 2.2em;
+					font-weight: 300;
+					margin-bottom: 55px;
+					border-bottom: 0;
+					background: none;
+				}
+
+	/*--- Highlighted -------------------------*/
+
+	.posts-highlighted {
+		margin-bottom: 15px;
+		padding-bottom: 0;
+	}
+
+		div.posts-highlighted a.post-thumb {
+			height: 177px;
+		}
+
+			.sidebar-secondary-inactive div.posts-highlighted a.post-thumb {
+				height: 342px;
+			}
+
+		.posts-highlighted-details > div {
+			padding: 15px;
+		}
+
+			.posts-highlighted-details h1 {
+				font-size: 1.5em;
+				font-weight: normal;
+			}
+
+	/*--- Featured ----------------------------*/
+
+	#posts-featured {
+		width: 480px;
+	}
+
+		.posts-featured-wrapper {
+			width: 153px;
+			margin-top: 10px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+		}
+
+			#posts-featured > div.first + div + div {
+				margin-right: 0;
+			}
+
+			#posts-featured > div.last {
+				display: none;
+			}
+
+				.posts-featured-wrapper a.post-thumb {
+					height: 119px;
+				}
+	
+					.posts-featured-wrapper a.post-thumb:hover {
+						background-size: 120%;
+					}
+	
+					.posts-featured-wrapper h3 {
+						font-size: 14px;
+					}
+	
+						.posts-featured-wrapper h3:before {
+							display: none;
+						}
+	
+				.posts-featured-details-wrapper > div {
+					margin: 10px;
+				}
+	
+					.posts-featured-wrapper .ico16-views {
+						margin: 0 auto;
+					}
+	
+					.posts-featured-wrapper .ico16-comment-2,
+					.posts-featured-wrapper .ico16-link {
+						display: none;
+					}
+
+	/*--- Related -----------------------------*/
+
+	.posts-related-wrapper {
+		padding-top: 15px;
+	}
+
+		.posts-related-wrapper h6 {
+			font-size: 1.7em;
+			padding-bottom: 15px;
+		}
+
+		.posts-related-wrapper div.posts-related-post-wrapper {
+			width: 232px;
+			margin: 0 0 0 auto;
+		}
+
+			.posts-related-wrapper td:first-child div.posts-related-post-wrapper {
+				margin: 0 auto 0 0;
+			}
+
+			.sidebar-position-left .posts-related-wrapper div.posts-related-post-wrapper,
+			.sidebar-position-right .posts-related-wrapper div.posts-related-post-wrapper {
+				margin: 0 0 0 auto;
+			}
+
+			.sidebar-position-left .posts-related-wrapper table td:first-child div.posts-related-post-wrapper,
+			.sidebar-position-right .posts-related-wrapper table td:first-child div.posts-related-post-wrapper {
+				margin: 0 auto 0 0;
+			}
+
+				.posts-related-wrapper div.posts-related-post-wrapper a.post-thumb {
+					height: 164px;
+				}
+
+					.posts-related-wrapper div.posts-related-post-wrapper a.post-thumb:before,
+					.posts-related-wrapper div.posts-related-post-wrapper a.post-thumb:after {
+						font-size: 24px;
+					}
+
+				.posts-related-wrapper div.posts-related-post-wrapper > div h5 {
+					font-size: 1em;
+				}
+
+
+	/*===========================================
+		W I D G E T S
+	===========================================*/
+
+	#sidebar .widget-posts,
+	#sidebar .widget_search {
+		padding: 20px;
+	}
+
+	/*--- Calendar ----------------------------*/
+
+	#content-holder #sidebar .sidebar .widget_calendar {
+		padding: 0;
+	}
+
+
+	/*===========================================
+		B U D D Y P R E S S
+	===========================================*/
+
+	#buddypress .activity-list li.load-more {
+		padding-top: 15px;
+	}
+
+	#item-nav {
+		margin-bottom: 15px;
+	}
+
+	.single-item #item-header-content,
+	.bp-user #item-header {
+		padding-bottom: 5px;
+	}
+
+	#buddypress div.item-list-tabs,
+	#search-groups-form input,
+	#buddypress div.dir-search input[type="text"],
+	#buddypress div.message-search input[type="text"],
+	#buddypress input[type="submit"],
+	#buddypress input[type="button"],
+	#buddypress input[type="reset"],
+	#buddypress button.submit {
+		font-size: 12px;
+	}
+
+		#buddypress input[type="submit"],
+		#buddypress input[type="button"],
+		#buddypress input[type="reset"],
+		#buddypress button.submit {
+		text-indent: -9999px;
+			padding-top: 0.8em;
+			padding-bottom: 0.8em;
+		}
+
+	/*-- Primary level ------------------------*/
+
+	#item-nav {
+		padding: 15px;
+	}
+
+	/*-- Secondary level ----------------------*/
+	
+	#buddypress div#subnav.item-list-tabs ul li.last {
+		position: relative;
+	}
+	
+	/*-- Search form --------------------------*/
+
+	#buddypress div.dir-search input[type="text"],
+	#buddypress div.message-search input[type="text"] {
+		padding: 0.8em 1em;
+	}
+
+	#buddypress div.message-search input[type="text"],
+	#buddypress #search-members-form input[type="text"] {
+		font-size: 12px;
+		padding-top: 0.8em;
+		padding-bottom: 0.8em;
+	}
+
+	/*--- Profile -----------------------------*/
+
+	#item-header-avatar > a {
+		width: 75px;
+		height: 75px;
+	}
+
+	/*-- Other --------------------------------*/
+
+	.activity-type-tabs {
+		padding: 15px;
+	}
+
+
+	/*===========================================
+		I C O N S
+	===========================================*/
+
+	/*--- Social ------------------------------*/
+
+	.icons-social {
+		display: table;
+		float: none;
+		width: auto;
+		margin: 0 auto;
+	}
+
+
+	/*===========================================
+		S H O R T C O D E S
+	===========================================*/
+
+	/*--- Columns -----------------+-----------*/
+
+	.column {
+		float: none;
+		width: auto !important;
+	}
+
+		.column > div {
+			margin-right: 0 !important;
+		}
+
+	/*--- Icon Box ----------------------------*/
+
+	.st_icon_box_16:before {
+		top: 0.60em;
+	}
+
+	.st_icon_box_32:before {
+		top: 0.2em;
+	}
+
+	/*--- Pull Quotes -------------------------*/
+
+	.pullquote {
+		line-height: 1.535;
+		margin-bottom: 10px;
+		padding: 10px 15px 15px;
+	}
+
+		.pullquote-left {
+			margin-right: 10px;
+		}
+
+		.pullquote-right {
+			margin-left: 10px;
+		}
+
+	/*--- Notice ------------------------------*/
+
+	.notice {
+		padding: 20px 25px 15px;
+	}
+
+	.notice-frontpage {
+		font-size: 1em;
+		padding: 50px 25px;
+	}
+
+		.notice-frontpage p {
+			margin-bottom: 1em;
+		}
+
+	/*--- Tabs --------------------------------*/
+
+	.st-ul li {
+		padding: 5px 15px;
+	}
+
+	.st-tabs {
+		padding: 15px;
+	}
+
+	/*--- Toggle --------------------------------*/
+
+	.toggle-title,
+	.toggle-box {
+		padding: 15px;
+	}
+
+	/*--- Separator OR ------------------------*/
+
+	.separator-or {
+		margin-bottom: 15px;
+	}
+
+
+	/*===========================================
+		P O S T
+	===========================================*/
+
+	h1.post-title {
+		font-size: 2.0em;
+		letter-spacing: -0.02em;
+		margin-bottom: 0;
+	}
+
+	.page-title {
+		font-size: 2.0em;
+		letter-spacing: -0.02em;
+		margin-bottom: 15px;
+	}
+
+	#article {
+		padding: 15px;
+	}
+
+	#pre_next_post {
+		font-size: 1em;
+		line-height: 1.54em;
+		margin-top: 15px;
+		padding: 1em 25px;
+	}
+
+		#pre_next_post .p:before,
+		#pre_next_post .n:before {
+			top: 0.2em;
+		}
+
+	#title-after,
+	#post-excerpt,
+	#post-before,
+	#post-after {
+		padding: 15px;
+	}
+
+	.single-author-info {
+		padding: 0 0 15px 140px;
+	}
+
+		.single-author-upic {
+			float: left;
+			margin: 0 0 0 -140px;
+		}
+
+	.post-short-info {
+		float: left;
+		width: 225px;
+		margin-bottom: 10px;
+		padding: 0 15px 0 0;
+		border-right: 1px solid rgba(0,0,0,0.1);
+		border-bottom: 0;
+	}
+
+		.dark .post-short-info {
+			border-right-color: rgba(255,255,255,0.1);
+		}
+
+
+	/*===========================================
+		S P E C I A L
+	===========================================*/
+
+	.alignleft {
+		margin-right: 10px;
+	}
+
+	.alignright {
+		margin-left: 10px;
+	}
+
+
+	/*===========================================
+		P A G I N A T I O N
+	===========================================*/
+
+	/*--- Page pagination ---------------------*/
+
+	.page-pagination {
+		margin: 15px 0;
+	}
+
+
+	/*===========================================
+		A R C H I V E
+	===========================================*/
+
+	#term {
+		margin-bottom: 15px;
+		padding-bottom: 12px;
+	}
+
+
+	/*===========================================
+		B B P R E S S
+	===========================================*/
+
+	#bbpress-forums ul.bbp-replies {
+		font-size: 14px;
+	}
+
+	.bbp-header {
+		display: none;
+	}
+
+	#bbpress-forums li.bbp-header,
+	#bbpress-forums li.bbp-body ul.forum,
+	#bbpress-forums li.bbp-body ul.topic {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.bbp-forum-topic-count,
+	.bbp-forum-reply-count,
+	.bbp-topic-voice-count,
+	.bbp-topic-reply-count {
+		display: none;
+	}
+
+	li.bbp-forum-info,
+	li.bbp-topic-title {
+		float: none;
+		width: auto;
+	}
+
+	#bbpress-forums li.bbp-forum-freshness,
+	#bbpress-forums li.bbp-topic-freshness {
+		float: none;
+		width: auto;
+		text-align: inherit;
+	}
+
+		#bbpress-forums .type-forum li.bbp-forum-freshness,
+		#bbpress-forums .type-forum li.bbp-topic-freshness {
+			margin-left: 34px;
+		}
+
+			#bbpress-forums li.bbp-forum-freshness .bbp-topic-meta,
+			#bbpress-forums li.bbp-topic-freshness .bbp-topic-meta {
+				display: inline;
+				margin-top: 0;
+			}
+
+	#bbpress-forums ul.bbp-lead-topic, 
+	#bbpress-forums ul.bbp-topics,
+	#bbpress-forums ul.bbp-forums,
+	#bbpress-forums ul.bbp-replies,
+	#bbpress-forums ul.bbp-search-results,
+	#bbpress-forums > #subscription-toggle,
+	.bbp-pagination .bbp-pagination-links span,
+	.bbp-pagination .bbp-pagination-links a,
+	div.bbp-template-notice.info {
+		margin-bottom: 15px;
+	}
+
+	div.bbp-template-notice.info,
+	div.bbp-template-notice {
+		padding: 1em 2em;
+	}
+
+	.sidebar .widget.widget_display_search {
+		padding: 20px;
+	}
+	
+	#content-parent fieldset.bbp-form,
+	#container fieldset.bbp-form,
+	#wrapper fieldset.bbp-form {
+		padding: 0 15px 15px;
+	}
+
+	/*--- Reply -------------------------------*/
+
+	div.bbp-forum-header,
+	div.bbp-topic-header,
+	div.bbp-reply-header,
+	li.bbp-body div.hentry,
+	.bbp-replies div.hentry {
+		padding: 15px 0 0;
+	}
+
+		#bbpress-forums div.bbp-forum-author,
+		#bbpress-forums div.bbp-topic-author,
+		#bbpress-forums div.bbp-reply-author {
+			width: 75px;
+		}
+	
+			#bbpress-forums div.bbp-forum-author > a img,
+			#bbpress-forums div.bbp-topic-author > a img,
+			#bbpress-forums div.bbp-reply-author > a img {
+				width: 50px;
+				height: 50px;
+			}
+	
+		#bbpress-forums div.bbp-forum-content,
+		#bbpress-forums div.bbp-topic-content,
+		#bbpress-forums div.bbp-reply-content {
+			margin-left: 90px;
+			padding: 0;
+		}
+
+
+	/*===========================================
+		C O M M E N T S
+	===========================================*/
+
+	.comments-title {
+		margin-bottom: 15px;
+		padding-top: 25px;
+	}
+
+	#respond {
+		padding-top: 0;
+	}
+
+	.comment-top-level .comment-box,
+	#comments > li {
+		margin-bottom: 15px;
+	}
+
+	#commentform {
+		padding-bottom: 15px;
+	}
+
+
+	/*===========================================
+		4 0 4
+	===========================================*/
+
+	.error404 #content-box {
+		padding-bottom: 15px;
+	}
+
+		#content-404.notice {
+			margin-bottom: 25px;
+		}
+
+
+	/*===========================================
+		W O O C O M M E R C E
+	===========================================*/
+
+	/*--- 22.2 - Catalog ----------------------*/
+
+	body.woocommerce .woocommerce-ordering,
+	body.woocommerce .woocommerce-result-count,
+	body.woocommerce-page .woocommerce-ordering,
+	body.woocommerce-page .woocommerce-result-count {
+		margin-bottom: 15px;
+	}
+
+	body.woocommerce ul.products li.product {
+		width: 232px;
+		margin: 0 15px 15px 0;
+		clear: none;
+	}
+
+		body.woocommerce ul.products li.product:nth-child(odd),
+		body.woocommerce-page ul.products li.product:nth-child(odd) {
+			float: left;
+		}
+
+		body.woocommerce ul.products li.product:nth-child(even),
+		body.woocommerce-page ul.products li.product:nth-child(even) {
+			float: right;
+			margin-right: 0;
+		}
+
+		body.woocommerce ul.products li.product.last {
+			margin-right: 0;
+		}
+
+		.woocommerce.columns-2 ul.products li.product,
+		.woocommerce.columns-3 ul.products li.product,
+		.woocommerce.columns-4 ul.products li.product { /* for shortcode */
+			float: left;
+			clear: both;
+			width: 48%;
+			margin: 0 0 15px;
+		}
+
+			.woocommerce.columns-2 ul.products li.product:nth-child(2n),
+			.woocommerce.columns-3 ul.products li.product:nth-child(2n),
+			.woocommerce.columns-4 ul.products li.product:nth-child(2n) {
+				float: right;
+				clear: none !important;
+			}
+
+				.st-woo-hover {
+					height: 232px;
+				}
+	
+					.woocommerce.columns-2 .st-woo-hover { /* for shortcode */
+						height: 216px;
+					}
+
+						.sidebar-position-none .woocommerce.columns-2 .st-woo-hover { /* for shortcode */
+							height: 216px;
+						}
+
+					.woocommerce.columns-3 .st-woo-hover { /* for shortcode */
+						height: 216px;
+					}
+
+						.sidebar-position-none .woocommerce.columns-3 .st-woo-hover { /* for shortcode */
+							height: 216px;
+						}
+		
+					.woocommerce.columns-4 .st-woo-hover { /* for shortcode */
+						height: 216px;
+					}
+
+						.sidebar-position-none .woocommerce.columns-4 .st-woo-hover { /* for shortcode */
+							height: 216px;
+						}
+	
+							.woocommerce ul.products li.product h3,
+							.woocommerce-page ul.products li.product h3 {
+								font-size: 1.2em;
+								font-weight: normal;
+							}
+
+	/*--- 22.3 - Single -----------------------*/
+
+	.woocommerce #content div.product,
+	.woocommerce div.product,
+	.woocommerce-page #content div.product,
+	.woocommerce-page div.product {
+		margin-bottom: 15px;
+		padding: 15px;
+	}
+
+		/* Images */
+		.woocommerce #content div.product div.images,
+		.woocommerce div.product div.images,
+		.woocommerce-page #content div.product div.images,
+		.woocommerce-page div.product div.images {
+			width: 400;
+			margin: 0 0 20px;
+		}
+
+		.woocommerce #content div.product div.thumbnails a,
+		.woocommerce div.product div.thumbnails a,
+		.woocommerce-page #content div.product div.thumbnails a,
+		.woocommerce-page div.product div.thumbnails a {
+			width: 80px;
+		}
+
+		.woocommerce span.onsale,
+		.woocommerce-page span.onsale {
+			left: 15px;
+		}
+
+		/* Summary */
+		.woocommerce #content div.product div.summary,
+		.woocommerce div.product div.summary,
+		.woocommerce-page #content div.product div.summary,
+		.woocommerce-page div.product div.summary {
+			width: auto;
+			margin: 0 0 25px;
+		}
+
+		/* Upsell */
+		.st-woo-upsells ul.products {
+			margin-right: 0;
+		}
+
+			.st-woo-upsells h2 {
+				margin-bottom: 15px;
+			}
+
+		/* Related */
+		.woocommerce .st-woo-related ul.products li.product:nth-child(3) {
+			display: none;
+		}
+
+			.st-woo-related h2 {
+				margin-bottom: 15px;
+			}
+
+			.st-woo-related ul.products {
+				margin-right: 0;
+			}
+
+		/* Tabs */
+		.woocommerce-tabs > div > h2:first-child,
+		#reviews #comments h2 {
+			padding-top: 0;
+		}
+
+	/*--- 22.8 - Widget: Product Search -------*/
+
+	.sidebar .widget_product_search {
+		padding: 20px;
+	}
+
+	/*--- 22.13 - Cart ------------------------*/
+
+	.woocommerce table.shop_table,
+	.woocommerce-page table.shop_table {
+		margin-bottom: 15px;
+	}
+
+	.woocommerce .cart-collaterals .cross-sells,
+	.woocommerce-page .cart-collaterals .cross-sells {
+		width: 100%;
+	}
+
+		.st-woo-cross h2,
+		.cart_totals h2,
+		.shipping_calculator h2 {
+			margin-bottom: 15px;
+		}
+
+		.woocommerce .cart-collaterals .cross-sells ul.products,
+		.woocommerce-page .cart-collaterals .cross-sells ul.products {
+			display: table;
+			margin: 0 auto 15px;
+		}
+
+			.woocommerce .cart-collaterals .cross-sells ul.products li,
+			.woocommerce-page .cart-collaterals .cross-sells ul.products li {
+				width: 232px;
+			}
+
+	.woocommerce .cart-collaterals .cart_totals,
+	.woocommerce-page .cart-collaterals .cart_totals,
+	.woocommerce .cart-collaterals .shipping_calculator,
+	.woocommerce-page .cart-collaterals .shipping_calculator {
+		width: 100%;
+	}
+
+		.cart_totals {
+			margin-bottom: 15px;
+		}
+
+	/*--- 22.14 - Alerts ----------------------*/
+
+	.woocommerce .woocommerce-error,
+	.woocommerce .woocommerce-info,
+	.woocommerce .woocommerce-message,
+	.woocommerce-page .woocommerce-error,
+	.woocommerce-page .woocommerce-info,
+	.woocommerce-page .woocommerce-message {
+		margin-bottom: 15px !important;
+	}
+
+	/*--- 22.16 - Pagination ------------------*/
+
+	.woocommerce #content nav.woocommerce-pagination ul,
+	.woocommerce nav.woocommerce-pagination ul,
+	.woocommerce-page #content nav.woocommerce-pagination ul,
+	.woocommerce-page nav.woocommerce-pagination ul {
+		margin-bottom: 0;
+	}
+
+
+	/*===========================================
+		F O R M S
+	===========================================*/
+
+	/* none */
+
+
+/**/}
+
+
+@media only screen and ( max-width: 479px ) {
+/*===============================================
+
+	P H O N E   V
+	320px/479px
+
+===============================================*//**/
+
+/*
+
+	1 - LAYOUT
+
+		- Header
+		- Content
+		- Footer
+
+	2 - MENU
+
+		- Primary
+		- Secondary
+
+	3 - SIDEBARS
+
+		- Sidebar
+		- Footer
+		- Ad sidebars
+		- Homepage Sidebars
+
+	5 - COMMON
+
+		- Titles
+		- Attachment
+		- Quotes
+		- Fieldset
+
+	6 - POSTS
+
+		- Featured
+
+	7 - WIDGETS
+
+	8 - BUDDYPRESS
+
+	9 - ICONS
+
+		- Social
+
+	10 - SHORTCODES
+
+	11 - POST
+
+	12 - SPECIAL
+
+	13 - PAGINATION
+
+	14 - ARCHIVE
+
+	15 - BBPRESS
+
+	16 - COMMENTS
+
+	17 - 404
+
+	18 - WOOCOMMERCE
+	
+	19 - FORMS
+
+*/
+
+	/*===========================================
+		L A Y O U T
+	===========================================*/
+
+	.boxed #layout {
+		max-width: 350px;
+	}
+
+	/*--- Header ------------------------------*/
+
+	#header {
+		padding-top: 0;
+	}
+
+		#header-holder {
+			width: auto;
+		}
+	
+			#logo {
+				float: none;
+				width: auto;
+				height: auto;
+				margin: 0 auto;
+				padding: 15px 0;
+			}
+	
+				#logo h2 {
+					max-width: 320px;
+					margin: 0;
+					text-align: center;
+				}
+	
+					#logo h2 img {
+						margin: 0 auto;
+					}
+
+		#header-holder-2 {
+			width: auto;
+		}
+
+	/*--- Content -----------------------------*/
+
+	#content-layout {
+		width: 320px;
+		margin: 0 auto;
+	}
+
+		#content-holder #content-box {
+			float: none;
+			width: auto;
+		}
+
+			#content-box {
+				min-height: 100px;
+				padding: 15px 0;
+			}
+
+				.sidebar-secondary-available #content-box > div > div:first-child {
+					width: 320px;
+				}
+
+		#content-holder div.post-single {
+			float: none;
+			width: 320px;
+			margin: 0;
+		}
+
+		/* Frontpage v.2 */
+		#article-frontpage-2 {
+			margin-bottom: 15px;
+		}
+
+	/*--- Footer ------------------------------*/
+
+	#footer-holder {
+		width: 320px;
+		padding-top: 25px;
+		padding-bottom: 10px;
+	}
+
+		#footer-box {
+			margin-right: -50px;
+		}
+
+	#copyrights-holder {
+		width: auto;
+	}
+
+		#copyrights-box * {
+			line-height: 1.575em;
+		}
+
+			#copyrights-box > div {
+				width: 100%;
+				text-align: center;
+			}
+
+
+	/*===========================================
+		M E N U
+	===========================================*/
+
+	/*--- Primary -----------------------------*/
+
+	#menu-select {
+		display: block;
+	}
+
+	#menu {
+		float: none;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+		#menu > div {
+			display: block;
+		}
+
+			#menu-box {
+				width: 320px;
+				height: auto;
+				margin: 0 auto;
+			}
+	
+				ul.menu {
+					display: none;
+				}
+
+	/*--- Secondary ---------------------------*/
+
+	#menu-2 {
+		display: table;
+		margin: 0 auto;
+	}
+
+		ul.menu-2 {
+			text-align: center;
+		}
+
+			ul.menu-2 > li {
+				float: none;
+			}
+
+				ul.menu-2 > li > a {
+					padding: 11px 7px 10px;
+				}
+		
+				ul.menu-2 > li.hasUl > a {
+					padding-right: 7px;
+				}
+		
+					ul.menu-2 > li.hasUl > a:before {
+						display: none;
+					}
+
+
+	/*===========================================
+		S I D E B A R S
+	===========================================*/
+
+	/*--- Sidebar -----------------------------*/
+
+	#content-holder #sidebar {
+		float: none;
+		width: auto;
+		padding: 0;
+	}
+
+		#content-holder .sidebar {
+			margin: 0;
+		}
+
+			.sidebar .widget {
+				padding: 15px;
+			}
+
+				.widget {
+					margin-bottom: 15px;
+				}
+
+	#content-holder div.sidebar-post {
+		width: 320px;
+		margin: 15px 0 0;
+		padding-top: 15px;
+		border-top: 5px solid rgba(0,0,0,0.05);
+	}
+
+		.dark #content-holder div.sidebar-post {
+			border-top-color: rgba(255,255,255,0.05);
+		}
+
+			.sidebar-post,
+			.sidebar-post div {
+				font-size: inherit;
+			}
+		
+			#stickyDiv {
+				position: relative !important;
+				top: auto !important;
+				width: 320px;
+			}
+	
+				#stickyDiv > div {
+					margin: 0 0 15px;
+				}
+
+	/*--- Footer ------------------------------*/
+
+	#footer-box .sidebar-footer,
+	#footer-box .sidebar-footer.last {
+		float: none;
+		width: 320px;
+	}
+
+		#footer-box .sidebar-footer > div,
+		#footer-box .sidebar-footer.last > div {
+			margin: 0;
+		}
+
+	/*--- Ad sidebars -------------------------*/
+
+	.sidebar-ad-a {
+		padding: 15px 0;
+	}
+
+	.sidebar-ad-b,
+	#sidebar-ad-c {
+		width: 100%;
+	}
+
+		#sidebar-ad-c .sidebar-ad-c {
+			padding: 15px 0;
+		}
+
+			.sidebar-ad-a .widget,
+			#sidebar-ad-c .widget {
+				display: block;
+				width: auto;
+				margin: 0 15px;
+				padding: 0;
+			}
+
+	.sidebar-ad-b .widget {
+		margin-bottom: 15px;
+	}
+
+	/*--- Secondary sidebars ------------------*/
+
+	#sidebar-secondary {
+		width: 320px;
+		margin: 0 0 -15px;
+		padding: 15px 0 0;
+	}
+
+	/*--- Frontpage Sidebars ------------------*/
+
+	#sidebar-homepage-box {
+	}
+
+		#sidebar-homepage-box .sidebar-homepage,
+		#sidebar-homepage-box .sidebar-homepage.last {
+			width: 100%;
+		}
+
+			#sidebar-homepage-box .sidebar-homepage > div {
+				margin: 0;
+			}
+
+
+	/*===========================================
+		C O M M O N
+	===========================================*/
+
+	/*--- Titles -----------------------------*/
+
+	h1 {
+		font-size: 2.0em;
+	}
+
+	h2 {
+		font-size: 1.7em;
+	}
+
+	h3 {
+		font-size: 1.35em;
+	}
+
+	h4 {
+		font-size: 1.15em;
+	}
+
+	h5 {
+		font-size: 1em;
+	}
+
+	/*--- Attachment -------------------------*/
+
+	.wp-caption.alignleft {
+		margin-left: -20px;
+	}
+
+	.wp-caption.alignright {
+		margin-right: -20px;
+	}
+
+	/*--- Quotes -----------------------------*/
+
+	blockquote p {
+		line-height: 1.535em;
+	}
+
+	/*--- Fieldset ---------------------------*/
+
+	fieldset {
+		padding: 10px 15px;
+	}
+
+	/*--- Paragraphs -------------------------*/
+
+	p {
+		margin-bottom: 0.5em;
+	}
+
+
+	/*===========================================
+		P O S T S
+	===========================================*/
+
+	.post-template {
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+	}
+
+	/*--- Default -----------------------------*/
+
+	.post-default {
+		padding-top: 15px;
+		padding-bottom: 0;
+	}
+
+		.post-default:first-child {
+			padding-top: 0;
+		}
+	
+			.post-default .post-title {
+				font-size: 1.7em;
+			}
+	
+				.sticky.post-default .post-title:before {
+					margin: 0 0 0.5em;
+				}
+	
+			.post-default .meta {
+				margin-bottom: 2.post-default5px;
+			}
+	
+			.post-default .content-data {
+				padding: 15px;
+		}
+
+	/*--- Post t4 -----------------------------*/
+
+	.post-t4 {
+		padding-bottom: 0;
+		overflow: hidden;
+	}
+
+	.post-t4 {
+		padding: 0;
+	}
+
+		.post-t4 .thumb-wrapper {
+			margin: 0;
+		}
+
+			.post-t4 .thumb-wrapper a.post-thumb {
+				overflow: visible;
+			}
+
+				.post-t4 a.post-thumb:before,
+				.post-t4 a.post-thumb:hover:before,
+				.post-t4 a.post-thumb:after,
+				.post-t4 a.post-thumb:hover:after {
+					left: 275px;
+					font-size: 36px;
+					opacity: 1;
+					transition: all 350ms cubic-bezier(0, 0.5, 0.5, 1);
+				}
+
+					.post-t4 a.post-thumb:before {
+						color: #DDD;
+					}
+
+						.dark .post-t4 a.post-thumb:before {
+							color: rgba(255,255,255,0.4);
+						}
+
+					.post-t4 a.post-thumb:after {
+						background: #FFF;
+					}
+
+						.dark .post-t4 a.post-thumb:after {
+							background: #5B4141;
+						}
+
+					.post-t4 a.post-thumb:hover:before,
+					.post-t4 a.post-thumb:hover:after {
+						left: 50%;
+					}
+
+						.post-t4 a.post-thumb:hover:before {
+							color: #FFF;
+						}
+
+						.post-t4 a.post-thumb:hover:after {
+							background: rgba(0,0,0,0.5);
+						}
+
+		.post-t4 > div + div {
+			padding-bottom: 25px;
+		}
+
+			.post-t4 .meta {
+				position: relative;
+				bottom: auto;
+				height: auto;
+				margin: 20px 0 0 25px;
+			}
+	
+			.post-t4 h3 {
+				margin: 10px 50px 5px 25px;
+				padding: 0;
+			}
+	
+				.post-t4-no-thumb h3 {
+					font-size: 1.35em;
+				}
+	
+					.sidebar-secondary-available .post-t4 h3.post-title-short {
+						margin-bottom: 5px;
+					}
+		
+						.post-t4 h3.post-title-short a {
+							max-height: none;
+							-webkit-line-clamp: 10; /* Chrome */
+						}
+	
+			.post-t4 p {
+				max-height: none;
+				-webkit-line-clamp: 10; /* Chrome */
+				padding: 0 25px 0 25px;
+				overflow: visible;
+			}
+	
+			.post-t4-no-thumb {
+				min-height: 50px;
+			}
+
+				.post-t4-no-thumb > div {
+					padding-bottom: 25px;
+				}
+
+					.post-t4-no-thumb h3 {
+						font-size: 1.35em;
+						font-weight: normal;
+						line-height: 1.35em;
+					}
+
+		/* On frontpage */
+		#posts-t4 .post-t4 {
+			float: none;
+			width: auto;
+			height: auto;
+		}
+
+			#posts-t4 .post-t4-no-thumb {
+				width: 100%;
+			}
+
+				#posts-t4 .post-t4-no-thumb h3 {
+					max-height: none;
+					margin-bottom: 25px;
+					padding-top: 0;
+					border-bottom: 0;
+					background: none;
+				}
+
+	/*--- Highlighted -------------------------*/
+
+	.posts-highlighted {
+		margin-bottom: 15px;
+		padding-bottom: 0;
+	}
+
+		div.posts-highlighted a.post-thumb {
+			height: 228px;
+		}
+
+			.sidebar-secondary-inactive div.posts-highlighted a.post-thumb {
+				height: 228px;
+			}
+
+		.posts-highlighted-details > div {
+			padding: 15px;
+		}
+
+			.posts-highlighted-details h1 {
+				font-size: 1.5em;
+				font-weight: normal;
+			}
+
+	/*--- Featured ----------------------------*/
+
+	#posts-featured {
+		width: 320px;
+	}
+
+		.posts-featured-wrapper {
+			width: 155px;
+			margin-top: 10px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+		}
+
+			#posts-featured > div.first + div {
+				margin-right: 0;
+			}
+
+			#posts-featured > div.first + div + div,
+			#posts-featured > div.last {
+				display: none;
+			}
+
+				.posts-featured-wrapper a.post-thumb {
+					height: 120px;
+				}
+	
+					.posts-featured-wrapper a.post-thumb:hover {
+						background-size: 120%;
+					}
+	
+					.posts-featured-wrapper h3 {
+						font-size: 1em;
+					}
+	
+						.posts-featured-wrapper h3:before {
+							display: none;
+						}
+	
+				.posts-featured-details-wrapper > div {
+					margin: 10px;
+				}
+	
+					.posts-featured-wrapper .ico16-views {
+						margin: 0 auto;
+					}
+	
+					.posts-featured-wrapper .ico16-comment-2,
+					.posts-featured-wrapper .ico16-link {
+						display: none;
+					}
+
+	/*--- Related -----------------------------*/
+
+	.posts-related-wrapper {
+		padding-top: 15px;
+	}
+
+		.posts-related-wrapper h6 {
+			font-size: 1.7em;
+			padding-bottom: 15px;
+		}
+
+		.posts-related-wrapper div.posts-related-post-wrapper {
+			width: 152px;
+			margin: 0 0 0 auto;
+		}
+
+			.posts-related-wrapper td:first-child div.posts-related-post-wrapper {
+				margin: 0 auto 0 0;
+			}
+
+			.sidebar-position-left .posts-related-wrapper div.posts-related-post-wrapper,
+			.sidebar-position-right .posts-related-wrapper div.posts-related-post-wrapper {
+				margin: 0 0 0 auto;
+			}
+
+			.sidebar-position-left .posts-related-wrapper table td:first-child div.posts-related-post-wrapper,
+			.sidebar-position-right .posts-related-wrapper table td:first-child div.posts-related-post-wrapper {
+				margin: 0 auto 0 0;
+			}
+
+				.posts-related-wrapper div.posts-related-post-wrapper a.post-thumb {
+					height: 109px;
+				}
+
+					.posts-related-wrapper div.posts-related-post-wrapper a.post-thumb:before,
+					.posts-related-wrapper div.posts-related-post-wrapper a.post-thumb:after {
+						font-size: 24px;
+					}
+
+				.posts-related-wrapper div.posts-related-post-wrapper > div h5 {
+					font-size: 1em;
+					padding: 15px;
+				}
+
+
+	/*===========================================
+		W I D G E T S
+	===========================================*/
+
+	#sidebar .widget-posts,
+	#sidebar .widget_search {
+		padding: 20px;
+	}
+
+
+	/*===========================================
+		B U D D Y P R E S S
+	===========================================*/
+
+	#buddypress .activity-list li.load-more {
+		padding-top: 15px;
+	}
+
+	#item-nav {
+		margin-bottom: 15px;
+	}
+
+	.single-item #item-header-content,
+	.bp-user #item-header {
+		padding-bottom: 5px;
+	}
+
+	#buddypress div.item-list-tabs,
+	#search-groups-form input,
+	#buddypress div.dir-search input[type="text"],
+	#buddypress div.message-search input[type="text"],
+	#buddypress input[type="submit"],
+	#buddypress input[type="button"],
+	#buddypress input[type="reset"],
+	#buddypress button.submit {
+		font-size: 12px;
+	}
+
+	/*-- Primary level ------------------------*/
+
+	#item-nav {
+		padding: 15px;
+	}
+
+	/*-- Secondary level ----------------------*/
+	
+	#buddypress div#subnav.item-list-tabs ul li.last {
+		position: relative;
+	}
+
+	/*--- Search ------------------------------*/
+	
+	#buddypress div.dir-search,
+	#buddypress div.message-search {
+		margin: 0 0 15px;
+	}
+
+		#buddypress div.dir-search input[type="text"],
+		#buddypress div.message-search input[type="text"] {
+			width: 243px;
+			padding-top: 0.9em;
+			padding-bottom: 0.9em;
+		}
+
+		#buddypress div.dir-search input[type="text"],
+		#buddypress div.message-search input[type="text"],
+		#buddypress #search-members-form input[type="text"] {
+			width: 241px;
+		}
+
+	#buddypress div#subnav.item-list-tabs ul li.groups-members-search {
+		display: block;
+	}
+
+		#buddypress div#subnav.item-list-tabs ul li.groups-members-search #members_search {
+			width: 241px;
+			margin-bottom: 15px;
+		}
+
+	/*--- Profile -----------------------------*/
+
+	#item-header-avatar > a {
+		width: 75px;
+		height: 75px;
+	}
+
+	/*-- Other --------------------------------*/
+
+	.activity-type-tabs {
+		padding: 15px;
+	}
+
+
+	/*===========================================
+		I C O N S
+	===========================================*/
+
+	/*--- Social ------------------------------*/
+
+	.icons-social {
+		display: table;
+		float: none;
+		width: auto;
+		margin: 0 auto;
+	}
+
+
+	/*===========================================
+		S H O R T C O D E S
+	===========================================*/
+
+	/*--- Columns -----------------+-----------*/
+
+	.column {
+		float: none;
+		width: auto !important;
+	}
+
+		.column > div {
+			margin-right: 0 !important;
+		}
+
+	/*--- Icon Box ----------------------------*/
+
+	.st_icon_box_16:before {
+		top: 0.60em;
+	}
+
+	.st_icon_box_32:before {
+		top: 0.2em;
+	}
+
+	/*--- Pull Quotes -------------------------*/
+
+	.pullquote {
+		line-height: 1.535;
+		margin-bottom: 10px;
+		padding: 10px 15px 15px;
+	}
+
+		.pullquote-left {
+			margin-right: 10px;
+		}
+
+		.pullquote-right {
+			margin-left: 10px;
+		}
+
+	/*--- Notice ------------------------------*/
+
+	.notice {
+		padding: 20px 25px 15px;
+	}
+
+	.notice-frontpage {
+		font-size: 1em;
+		padding: 25px;
+	}
+
+		.notice-frontpage p {
+			margin-bottom: 1em;
+		}
+
+	/*--- Tabs --------------------------------*/
+
+	.st-ul li {
+		padding: 5px 15px;
+	}
+
+	.st-tabs {
+		padding: 15px;
+	}
+
+	/*--- Toggle --------------------------------*/
+
+	.toggle-title,
+	.toggle-box {
+		padding: 15px;
+	}
+
+	/*--- Separator OR ------------------------*/
+
+	.separator-or {
+		margin-bottom: 15px;
+	}
+
+
+	/*===========================================
+		P O S T
+	===========================================*/
+
+	h1.post-title {
+		font-size: 2.0em;
+		letter-spacing: -0.02em;
+		margin-bottom: 0;
+	}
+
+	.page-title {
+		font-size: 2.0em;
+		letter-spacing: -0.02em;
+		margin-bottom: 15px;
+	}
+
+	#article {
+		padding: 15px;
+	}
+
+	#pre_next_post {
+		font-size: 1em;
+		line-height: 1.54em;
+		margin-top: 15px;
+		padding: 1em 25px;
+	}
+
+		#pre_next_post .p:before,
+		#pre_next_post .n:before {
+			top: 0.2em;
+		}
+
+	#title-after,
+	#post-excerpt,
+	#post-before,
+	#post-after {
+		padding: 15px;
+	}
+
+	.single-author-info {
+		padding: 0 0 15px 100px;
+	}
+
+		.single-author-upic {
+			width: 75px;
+			height: 75px;
+			float: left;
+			margin: 0 0 0 -100px;
+		}
+
+			.single-author-upic img {
+				width: 75px;
+				height: 75px;
+			}
+
+
+	/*===========================================
+		S P E C I A L
+	===========================================*/
+
+	.alignleft {
+		margin-right: 10px;
+	}
+
+	.alignright {
+		margin-left: 10px;
+	}
+
+
+	/*===========================================
+		P A G I N A T I O N
+	===========================================*/
+
+	/*--- Page pagination ---------------------*/
+
+	.page-pagination {
+		margin: 15px 0;
+	}
+
+
+	/*===========================================
+		A R C H I V E
+	===========================================*/
+
+	#term {
+		margin-bottom: 15px;
+	}
+
+
+	/*===========================================
+		B B P R E S S
+	===========================================*/
+
+	#bbpress-forums ul.bbp-replies {
+		font-size: 14px;
+	}
+
+	.bbp-header {
+		display: none;
+	}
+
+	#bbpress-forums li.bbp-header,
+	#bbpress-forums li.bbp-body ul.forum,
+	#bbpress-forums li.bbp-body ul.topic {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.bbp-forum-topic-count,
+	.bbp-forum-reply-count,
+	.bbp-topic-voice-count,
+	.bbp-topic-reply-count {
+		display: none;
+	}
+
+	li.bbp-forum-info,
+	li.bbp-topic-title {
+		float: none;
+		width: auto;
+	}
+
+	#bbpress-forums li.bbp-forum-freshness,
+	#bbpress-forums li.bbp-topic-freshness {
+		float: none;
+		width: auto;
+		text-align: inherit;
+	}
+
+		#bbpress-forums .type-forum li.bbp-forum-freshness,
+		#bbpress-forums .type-forum li.bbp-topic-freshness {
+			margin-left: 34px;
+		}
+
+			#bbpress-forums li.bbp-forum-freshness .bbp-topic-meta,
+			#bbpress-forums li.bbp-topic-freshness .bbp-topic-meta {
+				display: inline;
+				margin-top: 0;
+			}
+
+	#bbpress-forums ul.bbp-lead-topic, 
+	#bbpress-forums ul.bbp-topics,
+	#bbpress-forums ul.bbp-forums,
+	#bbpress-forums ul.bbp-replies,
+	#bbpress-forums ul.bbp-search-results,
+	#bbpress-forums > #subscription-toggle,
+	.bbp-pagination .bbp-pagination-links span,
+	.bbp-pagination .bbp-pagination-links a,
+	div.bbp-template-notice.info {
+		margin-bottom: 15px;
+	}
+
+
+	div.bbp-template-notice.info,
+	div.bbp-template-notice {
+		padding: 1em;
+	}
+
+	.bbp-body li.bbp-forum-info > a,
+	.bbp-body li.bbp-topic-title > a {
+		font-size: 1em;
+	}
+
+	.sidebar .widget.widget_display_search {
+		padding: 20px;
+	}
+	
+	#content-parent fieldset.bbp-form,
+	#container fieldset.bbp-form,
+	#wrapper fieldset.bbp-form {
+		padding: 0 15px 15px;
+	}
+
+	/*--- Reply -------------------------------*/
+
+	div.bbp-forum-header,
+	div.bbp-topic-header,
+	div.bbp-reply-header,
+	li.bbp-body div.hentry {
+		padding: 15px 0 0;
+	}
+
+		#bbpress-forums div.bbp-forum-header,
+		#bbpress-forums div.bbp-topic-header,
+		#bbpress-forums div.bbp-reply-header {
+			margin-top: 0;
+		}
+
+		#bbpress-forums div.bbp-forum-author,
+		#bbpress-forums div.bbp-topic-author,
+		#bbpress-forums div.bbp-reply-author {
+			float: none;
+			display: table;
+			text-align: center;
+			width: 100%;
+			padding: 15px 0;
+		}
+
+			#bbpress-forums div.bbp-forum-author > a img,
+			#bbpress-forums div.bbp-topic-author > a img,
+			#bbpress-forums div.bbp-reply-author > a img {
+				width: 50px;
+				height: 50px;
+			}
+
+	#bbpress-forums div.reply {
+		padding-top: 15px;
+	}
+
+		#bbpress-forums div.bbp-forum-content,
+		#bbpress-forums div.bbp-topic-content,
+		#bbpress-forums div.bbp-reply-content {
+			margin-left: 0;
+			padding: 0;
+		}
+
+	#bbpress-forums div.bbp-reply-author img.avatar {
+		position: inherit;
+	}
+
+
+	/*===========================================
+		C O M M E N T S
+	===========================================*/
+
+	.comments-title {
+		padding-top: 25px;
+	}
+
+	#respond {
+		padding-top: 0;
+	}
+
+	#comments .children {
+		margin: 0;
+	}
+
+	.comment-top-level .comment-box,
+	.comment-low-level .comment-box {
+		padding-left: 0;
+	}
+
+		.avatar-box {
+			float: right;
+			margin-left: 1em;
+		}
+
+	.comment-top-level .comment-box,
+	#comments > li {
+		margin-bottom: 15px;
+	}
+
+	#commentform {
+		padding-bottom: 15px;
+	}
+
+
+	/*===========================================
+		4 0 4
+	===========================================*/
+
+	.error404 #content-box {
+		padding-bottom: 15px;
+	}
+
+		#content-404.notice {
+			margin-bottom: 25px;
+			padding: 25px 100px 25px 25px;
+		}
+
+			#page-404 h1 {
+				padding-bottom: 10px;
+			}
+
+
+	/*===========================================
+		W O O C O M M E R C E
+	===========================================*/
+
+	/*--- 22.2 - Catalog ----------------------*/
+
+	body.woocommerce .woocommerce-ordering,
+	body.woocommerce .woocommerce-result-count,
+	body.woocommerce-page .woocommerce-ordering,
+	body.woocommerce-page .woocommerce-result-count {
+		float: none;
+		display: table;
+		margin: 0 auto 15px;
+		padding: 0;
+	}
+
+	body.woocommerce ul.products li.product {
+		float: none;
+		margin: 0 auto 15px;
+		clear: both;
+	}
+
+		body.woocommerce ul.products li.product:nth-child(2n),
+		body.woocommerce-page ul.products li.product:nth-child(2n) {
+			float: none;
+		}
+
+		body.woocommerce ul.products li.product.last {
+			margin-right: auto;
+		}
+
+		.woocommerce.columns-2 ul.products li.product,
+		.woocommerce.columns-3 ul.products li.product,
+		.woocommerce.columns-4 ul.products li.product { /* for shortcode */
+			float: left;
+			clear: both;
+			width: 48%;
+			margin: 0 0 10px;
+		}
+
+			.woocommerce.columns-2 ul.products li.product:nth-child(2n),
+			.woocommerce.columns-3 ul.products li.product:nth-child(2n),
+			.woocommerce.columns-4 ul.products li.product:nth-child(2n) {
+				float: right;
+				clear: none !important;
+			}
+
+				.woocommerce.columns-2 .st-woo-hover { /* for shortcode */
+					height: 140px;
+				}
+
+					.sidebar-position-none .woocommerce.columns-2 .st-woo-hover { /* for shortcode */
+						height: 140px;
+					}
+
+				.woocommerce.columns-3 .st-woo-hover { /* for shortcode */
+					height: 140px;
+				}
+
+					.sidebar-position-none .woocommerce.columns-3 .st-woo-hover { /* for shortcode */
+						height: 140px;
+					}
+	
+				.woocommerce.columns-4 .st-woo-hover { /* for shortcode */
+					height: 140px;
+				}
+
+					.sidebar-position-none .woocommerce.columns-4 .st-woo-hover { /* for shortcode */
+						height: 140px;
+					}
+
+						.woocommerce ul.products li.product h3,
+						.woocommerce-page ul.products li.product h3 {
+							font-size: 1em;
+							font-weight: normal;
+						}
+
+	/*--- 22.3 - Single -----------------------*/
+
+	.woocommerce #content div.product,
+	.woocommerce div.product,
+	.woocommerce-page #content div.product,
+	.woocommerce-page div.product {
+		margin-bottom: 15px;
+		padding: 15px;
+	}
+
+		/* Images */
+		.woocommerce #content div.product div.images,
+		.woocommerce div.product div.images,
+		.woocommerce-page #content div.product div.images,
+		.woocommerce-page div.product div.images {
+			width: 290px;
+			margin: 0 0 20px;
+		}
+
+		.woocommerce #content div.product div.thumbnails a,
+		.woocommerce div.product div.thumbnails a,
+		.woocommerce-page #content div.product div.thumbnails a,
+		.woocommerce-page div.product div.thumbnails a {
+			width: 58px;
+		}
+
+		.woocommerce span.onsale,
+		.woocommerce-page span.onsale {
+			left: 15px;
+		}
+
+		/* Summary */
+		.woocommerce #content div.product div.summary,
+		.woocommerce div.product div.summary,
+		.woocommerce-page #content div.product div.summary,
+		.woocommerce-page div.product div.summary {
+			width: auto;
+			margin: 0 0 25px;
+		}
+
+		/* Upsell */
+		.st-woo-upsells ul.products {
+			margin-right: 0;
+		}
+
+			.woocommerce .st-woo-upsells ul.products li.product {
+				margin-bottom: 15px;
+			}
+	
+			.st-woo-upsells h2 {
+				margin-bottom: 15px;
+			}
+
+		/* Related */
+		.st-woo-related ul.products {
+			margin-right: 0;
+		}
+
+		.woocommerce .st-woo-related ul.products li.product {
+			margin-bottom: 15px;
+		}
+
+			.woocommerce .st-woo-related ul.products li.product:last-child {
+				margin-bottom: 0;
+			}
+
+		.st-woo-related h2 {
+			margin-bottom: 15px;
+		}
+
+		/* Tabs */
+		.woocommerce-tabs > div > h2:first-child,
+		#reviews #comments h2 {
+			padding-top: 0;
+		}
+
+	/*--- 22.8 - Widget: Product Search -------*/
+
+	.sidebar .widget_product_search {
+		padding: 20px;
+	}
+
+	/*--- 22.13 - Cart ------------------------*/
+
+	.woocommerce table.shop_table,
+	.woocommerce-page table.shop_table {
+		margin-bottom: 15px;
+	}
+
+	.woocommerce .cart-collaterals .cross-sells,
+	.woocommerce-page .cart-collaterals .cross-sells {
+		width: 100%;
+	}
+
+		.st-woo-cross h2,
+		.cart_totals h2,
+		.shipping_calculator h2 {
+			margin-bottom: 15px;
+		}
+
+		.woocommerce .cart-collaterals .cross-sells ul.products,
+		.woocommerce-page .cart-collaterals .cross-sells ul.products {
+			display: table;
+			margin: 0 auto 15px;
+		}
+
+			.woocommerce .cart-collaterals .cross-sells ul.products li.product:first-child,
+			.woocommerce-page .cart-collaterals .cross-sells ul.products li.product:first-child {
+				margin-bottom: 15px;
+			}
+
+	.woocommerce .cart-collaterals .cart_totals,
+	.woocommerce-page .cart-collaterals .cart_totals,
+	.woocommerce .cart-collaterals .shipping_calculator,
+	.woocommerce-page .cart-collaterals .shipping_calculator {
+		width: 100%;
+	}
+
+		.cart_totals {
+			margin-bottom: 15px;
+		}
+
+	/*--- 22.14 - Alerts ----------------------*/
+
+	.woocommerce .woocommerce-error,
+	.woocommerce .woocommerce-info,
+	.woocommerce .woocommerce-message,
+	.woocommerce-page .woocommerce-error,
+	.woocommerce-page .woocommerce-info,
+	.woocommerce-page .woocommerce-message {
+		margin-bottom: 15px !important;
+	}
+
+	/*--- 22.16 - Pagination ------------------*/
+
+	.woocommerce #content nav.woocommerce-pagination ul,
+	.woocommerce nav.woocommerce-pagination ul,
+	.woocommerce-page #content nav.woocommerce-pagination ul,
+	.woocommerce-page nav.woocommerce-pagination ul {
+		margin-bottom: 0;
+	}
+
+
+	/*===========================================
+		F O R M S
+	===========================================*/
+
+	/* none */
+
+
+/**/}

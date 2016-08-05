@@ -1,0 +1,578 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: strictthemes.com\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-15 15:03+0100\n"
+"PO-Revision-Date: 2014-08-15 15:03+0100\n"
+"Last-Translator: StrictThemes <info@strictthemes.com>\n"
+"Language-Team: StrictThemes <info@strictthemes.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../..\n"
+"Language: el_GR\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:20
+msgid "Sorry, the page you asked for couldn't be found."
+msgstr "Ζητούμε συγγνώμη, αλλά η σελίδα που ψάχνετε δεν υπάρχει."
+
+#: 404.php:21
+msgid "Please, try to use the search form below."
+msgstr "Μπορείτε να δοκιμάσετε την αναζήτηση χρησιμοποιώντας λέξεις - κλειδιά."
+
+#: 404.php:30
+#: header.php:81
+msgid "Search..."
+msgstr "Αναζήτηση..."
+
+#: 404.php:37
+msgid "Here's a little map that might help you get back on track:"
+msgstr "Ακολουθεί ένας μικρός χάρτης, που μπορεί να βοηθήσει την περιήγησή σας στο Bimag:"
+
+#: 404.php:41
+msgid "Categories"
+msgstr "Κατηγορίες"
+
+#: 404.php:48
+msgid "Archives"
+msgstr "Αρχεία"
+
+#: 404.php:55
+#: page.php:167
+#: single.php:181
+msgid "Pages"
+msgstr "Σελίδες"
+
+#: archive.php:236
+#: index.php:81
+#: search.php:99
+#: template-frontpage.php:130
+msgid "Older posts"
+msgstr "Παλαιότερα άρθρα"
+
+#: archive.php:236
+#: index.php:81
+#: search.php:99
+#: template-frontpage.php:130
+msgid "Newer posts"
+msgstr "Νεότερα άρθρα"
+
+#: archive.php:295
+#: attachment.php:106
+#: page.php:188
+#: single.php:328
+msgid "Sorry, no posts matched your criteria."
+msgstr "Δε βρέθηκαν αποτελέσματα. "
+
+#: comments.php:35
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Το άρθρο προστατεύεται με κωδικό. Εισάγετε τον κωδικό για να δείτε τα σχόλια."
+
+#: comments.php:74
+msgid "Comments"
+msgstr "Σχόλια"
+
+#: comments.php:96
+msgid "Pingbacks"
+msgstr "Pingbacks"
+
+#: comments.php:112
+msgid "Older comments"
+msgstr "Παλαιότερα σχόλια"
+
+#: comments.php:113
+msgid "Newer comments"
+msgstr "Πρόσφατα σχόλια"
+
+#: comments.php:143
+msgid "You must be logged in to post a comment."
+msgstr "Πρέπει να συνδεθείτε για να γράψετε σχόλιο."
+
+#: comments.php:143
+msgid "Log in"
+msgstr "Σύνδεση"
+
+#: comments.php:161
+msgid "Name"
+msgstr "Όνομα"
+
+#: comments.php:174
+msgid "Email"
+msgstr "Email"
+
+#: comments.php:188
+#: single.php:263
+msgid "Website"
+msgstr "Ιστότοπος"
+
+#: comments.php:204
+msgid "Type here"
+msgstr "Το κείμενό σου εδώ:"
+
+#: options.php:57
+msgid "Aside"
+msgstr "Χωριστά"
+
+#: options.php:61
+msgid "Image"
+msgstr "Εικόνα"
+
+#: options.php:65
+msgid "Gallery"
+msgstr "Συλλογή"
+
+#: options.php:69
+msgid "Audio"
+msgstr "Αρχείο ήχου"
+
+#: options.php:73
+msgid "Video"
+msgstr "Βίντεο"
+
+#: options.php:77
+msgid "Link"
+msgstr "Σύνδεσμος"
+
+#: options.php:81
+msgid "Quote"
+msgstr "Παράθεμα"
+
+#: options.php:85
+msgid "Status"
+msgstr "Κατάσταση"
+
+#: options.php:89
+msgid "Chat"
+msgstr "Chat"
+
+#: options.php:162
+msgid "Appears on the header of all pages."
+msgstr "Εμφανίζεται στην κορυφή όλων των σελίδων. "
+
+#: options.php:163
+msgid "Appears on the middle of homepage and archives."
+msgstr "Εμφανίζεται στο μέσον της αρχικής σελίδας και των αρχείων."
+
+#: options.php:164
+msgid "Appears on the bottom of all pages."
+msgstr "Εμφανίζεται στο κάτω μέρος όλων των σελίδων."
+
+#: options.php:273
+#: options.php:393
+msgid "Default"
+msgstr "Προεπιλογή"
+
+#: options.php:275
+msgid "This is standard template."
+msgstr "Αυτό είναι πρότυπο template."
+
+#: options.php:295
+msgid "Template with thumbnails."
+msgstr "Template με μικρογραφίες εικόνων. "
+
+#: options.php:315
+msgid "Minimalistic template. Also it used on search page."
+msgstr "Μινιμαλιστικό template. Χρησιμοποιείται επίσης στη σελίδα αναζήτησης."
+
+#: options.php:450
+msgid "Light"
+msgstr "Φωτεινό"
+
+#: options.php:454
+msgid "Dark"
+msgstr "Σκοτεινό"
+
+#: search.php:107
+msgid "Sorry, nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Δε βρέθηκαν αποτελέσματα. Παρακαλούμε δοκιμάστε με διαφορετικές λέξεις - κλειδιά."
+
+#: single.php:202
+msgid "You Might Also Like"
+msgstr "Δες επίσης"
+
+#: single.php:266
+msgid "Facebook"
+msgstr "Facebook"
+
+#: single.php:269
+msgid "Google+"
+msgstr "Google+"
+
+#: single.php:272
+msgid "Twitter"
+msgstr "Twitter"
+
+#: framework/functions/checking.php:31
+#, php-format
+msgid "You're using <strong>ST Kit</strong> plugin v.%1$s, however <strong>%2$s</strong> theme requires <strong>ST Kit</strong> v.%3$s or higher. Update plugin from <a href='%4$s'>Plugins</a> page."
+msgstr "You're using <strong>ST Kit</strong> plugin v.%1$s, however <strong>%2$s</strong> theme requires <strong>ST Kit</strong> v.%3$s or higher. Update plugin from <a href='%4$s'>Plugins</a> page."
+
+#: framework/functions/global.php:650
+msgid "Previous"
+msgstr "Προηγούμενο"
+
+#: framework/functions/global.php:651
+msgid "Next"
+msgstr "Επόμενο"
+
+#: framework/functions/global.php:775
+msgid "Leave a reply"
+msgstr "Γράψε το σχόλιό σου"
+
+#: framework/functions/global.php:775
+msgid "1 Comment"
+msgstr "1 Σχόλιο"
+
+#: framework/functions/global.php:775
+msgid "% Comments"
+msgstr "% Σχόλια"
+
+#: framework/functions/register-menu.php:38
+msgid "Primary Menu"
+msgstr "Βασικό μενού"
+
+#: framework/functions/register-menu.php:41
+msgid "Secondary Menu"
+msgstr "Δευτερεύον μενού"
+
+#: framework/functions/register-menu.php:182
+msgid "Home"
+msgstr "Αρχική"
+
+#: framework/functions/register-sidebars.php:51
+msgid "Appears on posts and pages by default."
+msgstr "Εμφανίζεται στα άρθρα και στις σελίδες από προεπιλογή."
+
+#: framework/functions/register-sidebars.php:67
+msgid "Appears on archives and homepage."
+msgstr "Εμφανίζεται στα αρχεία και την αρχική σελίδα."
+
+#: framework/functions/register-sidebars.php:83
+msgid "Additional sidebar. Usually, it comes by left side of post. Appears on posts only."
+msgstr "Πρόσθετη sidebar. Συνήθως βρίσκεται στο αριστερό μέρος. Εμφανίζεται μόνο στα άρθρα."
+
+#: framework/functions/register-sidebars.php:125
+msgid "Appears on Front Page by default."
+msgstr "Εμφανίζεται στην πρώτη σελίδα από προεπιλογή."
+
+#: framework/functions/register-sidebars.php:141
+msgid "Appears on projects and archives of projects depends of selected template."
+msgstr "Εμφανίζεται σε έργα και αρχεία έργων που βασίζονται στο επιλεγμένο template."
+
+#: framework/functions/register-sidebars.php:157
+msgid "Appears on all pages at the bottom of site."
+msgstr "Εμφανίζεται σε όλες τις σελίδες στο κάτω μέρος του σάιτ."
+
+#: framework/functions/register-sidebars.php:173
+msgid "Appears on bbPress forum pages."
+msgstr "Εμφανίζεται στις σελίδες bbPress forum."
+
+#: framework/functions/register-sidebars.php:189
+msgid "Appears on BuddyPress pages."
+msgstr "Εμφανίζεται στις σελίδες BuddyPress."
+
+#: framework/functions/register-sidebars.php:205
+msgid "Appears on WooCommerce pages."
+msgstr "Εμφανίζεται στις σελίδες WooCommerce."
+
+#: framework/functions/register-sidebars.php:221
+msgid "Appears on selected posts and pages."
+msgstr "Εμφανίζεται σε επιλεγμένα άρθρα και σελίδες."
+
+#: framework/functions/register-tgm.php:64
+msgid "Install Required Plugins"
+msgstr "Εγκατάσταση απαιτούμενων Πρόσθετων"
+
+#: framework/functions/register-tgm.php:65
+msgid "Install Plugins"
+msgstr "Εγκατάσταση Πρόσθετων"
+
+#: framework/functions/register-tgm.php:66
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Εγκατάσταση Πρόσθετου:  %s"
+
+#: framework/functions/register-tgm.php:67
+msgid "Something went wrong with the plugin API."
+msgstr "Εμφανίστηκε πρόβλημα με το Πρόσθετο API."
+
+#: framework/functions/register-tgm.php:78
+msgid "Return to Required Plugins Installer"
+msgstr "Επιστροφή στην εγκατάσταση των απαιτούμενων Πρόσθετων."
+
+#: framework/functions/register-tgm.php:79
+msgid "Plugin activated successfully."
+msgstr "Επιτυχής ενεργοποίηση Πρόσθετου."
+
+#: framework/functions/register-tgm.php:80
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr "Όλα τα Πρόσθετα εγκαταστάθηκαν και ενεργοποιήθηκαν επιτυχώς. %s"
+
+#: framework/functions/classes/class-envato-protected-api.php:67
+msgid "Please enter your Envato Marketplace Username."
+msgstr "Παρακαλώ εισάγετε το όνομα χρήστη στο Envato Marketplace"
+
+#: framework/functions/classes/class-envato-protected-api.php:71
+msgid "Please enter your Envato Marketplace API Key."
+msgstr "Παρακαλώ εισάγετε το API Key στο Envato Marketplace"
+
+#: framework/functions/classes/class-envato-protected-api.php:96
+msgid "The API \"set\" is a required parameter."
+msgstr "Το API \"set\" είναι απαιτούμενη παράμετρος"
+
+#: framework/functions/classes/class-envato-protected-api.php:167
+msgid "The Envato Marketplace \"item ID\" is a required parameter."
+msgstr "Το Envato Marketplace \"item ID\" είναι απαιτούμενη παράμετρος"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:199
+msgid "Something went wrong."
+msgstr "Προέκυψε λάθος"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:211
+msgid "Return to the dashboard"
+msgstr "Επιστροφή στον Πίνακα ελέγχου"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:213
+msgid "The following plugin was activated successfully:"
+msgstr "Το ακόλουθο Πρόσθετο εγκαταστάθηκε επιτυχώς:"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:214
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Όλα τα Πρόσθετα εγκαταστάθηκαν και ενεργοποιήθηκαν επιτυχώς. %1$s"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:215
+msgid "Dismiss this notice"
+msgstr "Απόρριψη αυτής της ειδοποίησης"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:544
+#: framework/functions/classes/class-tgm-plugin-activation.php:2168
+msgid "Return to the Dashboard"
+msgstr "Επιστροφή στον Πίνακα ελέγχου"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1174
+msgid "Private Repository"
+msgstr "Ιδιωτικός χώρος αποθήκευσης"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1177
+msgid "Pre-Packaged"
+msgstr "Προσυσκευασμένα"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1182
+msgid "WordPress Repository"
+msgstr "Χώρος αποθήκευσης WordPress"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1185
+msgid "Required"
+msgstr "Απαραίτητο"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1185
+msgid "Recommended"
+msgstr "Προτεινόμενο"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1188
+msgid "Not Installed"
+msgstr "Δεν εγκαταστάθηκε"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1190
+msgid "Installed But Not Activated"
+msgstr "Εγκαταστάθηκε, αλλά δεν ενεργοποιήθηκε"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1290
+#: framework/functions/classes/class-tgm-plugin-activation.php:1398
+msgid "Install"
+msgstr "Εγκατάσταση"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1312
+#: framework/functions/classes/class-tgm-plugin-activation.php:1399
+msgid "Activate"
+msgstr "Ενεργοποίηση"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1361
+#, php-format
+msgid "No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the Dashboard\">Return to the Dashboard</a>"
+msgstr "Δεν υπάρχουν Πρόσθετα προς εγκατάσταση ή ενεργοποίηση. <a href=\"%1$s\" title=\"Return to the Dashboard\">Return to the Dashboard</a>"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1377
+msgid "Plugin"
+msgstr "Πρόσθετο"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1378
+msgid "Source"
+msgstr "Πηγή"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1379
+msgid "Type"
+msgstr "Τύπος"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1508
+msgid "No plugins are available to be installed at this time."
+msgstr "Δεν υπάρχουν Πρόσθετα διαθέσιμα προς εγκατάσταση αυτή τη στιγμή."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1616
+msgid "No plugins are available to be activated at this time."
+msgstr "Δεν υπάρχουν Πρόσθετα διαθέσιμα προς ενεργοποίηση αυτή τη στιγμή."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1934
+msgid "Install package not available."
+msgstr "Δεν είναι διαθέσιμο το πακέτο εγκατάστασης."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1935
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr "Λήψη πακέτου εγκατάστασης από <span class=\"code\">%s</span>&#8230;"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1936
+msgid "Unpacking the package&#8230;"
+msgstr "Εξαγωγή των περιεχομένων του πακέτου&#8230;"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1937
+msgid "Installing the plugin&#8230;"
+msgstr "Εγκατάσταση του Πρόσθετου&#8230;"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1938
+msgid "Plugin install failed."
+msgstr "Η εγκατάσταση του Πρόσθετου απέτυχε."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1939
+msgid "Plugin installed successfully."
+msgstr "Το Πρόσθετο εγκαταστάθηκε επιτυχώς."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1950
+msgid "Plugin activation failed."
+msgstr "Η ενεργοποίηση του Πρόσθετου απέτυχε."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2064
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Η διαδικασία εγκατάστασης και ενεργοποίησης αρχίζει. Μπορεί να χρειαστεί να περιμένετε λίγο ώσπου να ολοκληρωθεί. "
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2065
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s εγκαταστάθηκε και ενεργοποιήθηκε επιτυχώς."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2065
+#: framework/functions/classes/class-tgm-plugin-activation.php:2074
+msgid "Show Details"
+msgstr "Εμφάνιση λεπτομερειών"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2065
+#: framework/functions/classes/class-tgm-plugin-activation.php:2074
+msgid "Hide Details"
+msgstr "Απόκρυψη λεπτομερειών"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2066
+msgid "All installations and activations have been completed."
+msgstr "Όλες οι εγκαταστάσεις και ενεργοποιήσεις έχουν ολοκληρωθεί."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2067
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Εγκατάσταση και ενεργοποίηση Πρόσθετου %1$s (%2$d/%3$d)"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2071
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Η διαδικασία εγκατάστασης αρχίζει. Μπορεί να χρειαστεί να περιμένετε λίγο ώσπου να ολοκληρωθεί. "
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2072
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "Παρουσιάστηκε λάθος κατά την εγκατάσταση %1$s: <strong>%2$s</strong>."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2073
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "Η εγκατάσταση του %1$s απέτυχε."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2074
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s εγκαταστάθηκε με επιτυχία."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2075
+msgid "All installations have been completed."
+msgstr "Όλες οι εγκαταστάσεις ολοκληρώθηκαν."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2076
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Εγκατάσταση Πρόσθετου %1$s (%2$d/%3$d)"
+
+#: includes/comments/comment.php:46
+#: includes/comments/pingback.php:44
+msgid "at"
+msgstr "σε"
+
+#: includes/comments/comment.php:62
+msgid "Reply"
+msgstr "Απάντηση"
+
+#: includes/comments/comment.php:64
+msgid "Cancel"
+msgstr "Άκυρο"
+
+#: includes/comments/comment.php:73
+#: includes/comments/pingback.php:32
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#: includes/comments/comment.php:78
+msgid "Your comment is awaiting moderation."
+msgstr "Το σχόλιό σου βρίσκεται σε αναμονή"
+
+#: includes/posts/featured.php:163
+msgid "More"
+msgstr "Δες το άρθρο"
+
+#: includes/sidebars/sidebar_homepage_a.php:16
+msgid "Welcome to"
+msgstr "Καλωσορίσατε στο"
+
+#: includes/sidebars/sidebar_homepage_a.php:17
+msgid "For replacing this dummy info, please, drop a widget on \"Homepage Sidebar 1\" at Appearance > Widgets page."
+msgstr "Για να αντικαταστήσετε το dummy info, παρακαλούμε εισάγετε ένα widget στο \"Homepage Sidebar 1\" at Appearance > Widgets page. "
+
+#: includes/sidebars/sidebar_homepage_a.php:21
+msgid "Live demo"
+msgstr "Live demo"
+
+#: includes/sidebars/sidebar_homepage_a.php:22
+msgid "Documentation"
+msgstr "Τεκμηρίωση"
+
+#: includes/sidebars/sidebar_homepage_a.php:23
+msgid "Theme Panel"
+msgstr "Πίνακας διαχείρισης θέματος"
+
+#: includes/sidebars/sidebar_homepage_a.php:30
+msgid "Setup custom logo"
+msgstr "Εγκατάσταση λογότυπου"
+
+#: includes/sidebars/sidebar_homepage_a.php:31
+msgid "Setup Google Analytics"
+msgstr "Εγκατάσταση Google Analytics"
+
+#: includes/sidebars/sidebar_homepage_a.php:32
+msgid "Change blog template"
+msgstr "Αλλαγή στην εμφάνιση του blog"
+
+#: includes/sidebars/sidebar_homepage_a.php:33
+msgid "Select footer scheme"
+msgstr "Επιλογή σχεδίου υποσέλιδου"
+
+#: includes/sidebars/sidebar_homepage_a.php:34
+msgid "Use another font"
+msgstr "Αλλαγή γραμματοσειράς"
+
+#: includes/sidebars/sidebar_homepage_a.php:35
+msgid "Tweak colors"
+msgstr "Tweak colors"
+
+#: includes/sidebars/sidebar_homepage_a.php:36
+msgid "Enable portfolio"
+msgstr "Ενεργοποίηση portfolio "
+

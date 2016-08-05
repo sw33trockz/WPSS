@@ -1,0 +1,967 @@
+/*
+
+	1 - LAYOUT
+
+		1.1 - Header
+		1.2 - Content
+		1.3 - Footer
+
+	2 - COMMON
+
+		2.1 - Body
+		2.2 - Titles
+		2.3 - Links
+		2.4 - Images
+		2.5 - Fieldsets
+		2.6 - Code
+
+	3 - FORMS
+
+	4 - COMMENTS
+
+	5 - ARCHIVE
+
+	6 - STANDARD WIDGETS
+
+		6.1 - Common
+		6.2 - Search
+		6.3 - Tags
+
+	7 - CUSTOM WIDGETS
+
+		7.1 - ST Sharrre
+		7.2 - ST Subscribe
+		7.3 - ST Posts
+
+	8 - SHORTCODES
+
+		8.1 - Toggle
+		8.2 - Tabs
+		8.3 - Tooltip
+		8.4 - Notice
+		8.5 - Skill
+		8.6 - Separator OR
+
+	9 - 16 PIXELS
+
+	10 - PAGINATION
+
+		10.1 - Comments pagination
+		10.2 - Default pagination
+		10.3 - WP-Pagenavi
+
+	11 - POST
+
+		11.1 - Post info
+		11.2 - Prev/Next post links
+		11.3 - Article
+
+	12 - FORMATS		
+
+	13 - TEMPLATES
+
+		13.1 - Template 4
+		13.2 - Featured
+		13.3 - Highlighted
+		13.4 - Related
+
+	14 - 404
+
+	15 - SIDEBARS
+
+		15.1 - Ad Sidebars
+
+	16 - BBPRESS
+
+	17 - BUDDYPRESS
+
+	18 - WOOCOMMERCE
+
+*/
+
+/*==01.==========================================
+
+	L A Y O U T
+	Layout styles
+
+===============================================*/
+
+	/*-------------------------------------------
+		1.1 - Header
+	-------------------------------------------*/
+
+	#logo h2,
+	#logo h2 a,
+	#logo h2 img {
+		color: #FFF;
+	}
+
+
+	/*-------------------------------------------
+		1.2 - Content
+	-------------------------------------------*/
+
+	/* none */
+
+
+	/*-------------------------------------------
+		1.3 - Footer
+	-------------------------------------------*/
+
+	/* none */
+
+
+/*==02.==========================================
+
+	C O M M O N
+	General styles
+
+===============================================*/
+
+	/*--- Body --------------------------------*/
+
+	body.dark {
+		color: #c0abab;
+		background-color: #5b4141;
+	}
+
+		body.dark #layout {
+			background-color: rgba(0,0,0,0.2);
+		}
+
+		body.dark.boxed #layout,
+		body.dark.boxed #footer-layout {
+			background-color: rgba(0,0,0,0.2);
+		}
+
+
+	/*--- Titles ------------------------------*/
+
+	.dark h1,
+	.dark h2,
+	.dark h3,
+	.dark h4,
+	.dark h5,
+	.dark h6 {
+		color: #FFF;
+	}
+
+		.dark #article h1,
+		.dark #article h2,
+		.dark #article h3,
+		.dark #article h4,
+		.dark #article h5,
+		.dark #article h6,
+		.dark .post-default .content-data h1,
+		.dark .post-default .content-data h2,
+		.dark .post-default .content-data h3,
+		.dark .post-default .content-data h4,
+		.dark .post-default .content-data h5,
+		.dark .post-default .content-data h6 {
+			color: #33393D;
+		}
+
+			.dark h1 a,
+			.dark h2 a,
+			.dark h3 a,
+			.dark h4 a,
+			.dark h5 a,
+			.dark h6 a {
+				color: #FFF;
+			}
+	
+				.dark #article h1 a,
+				.dark #article h2 a,
+				.dark #article h3 a,
+				.dark #article h4 a,
+				.dark #article h5 a,
+				.dark #article h6 a,
+				.dark .product h1,
+				.dark .product h2,
+				.dark .product h3,
+				.dark .product h4,
+				.dark .product h5,
+				.dark .product h6 {
+					color: #33393D;
+				}
+
+					.dark #content-parent h1 a:hover,
+					.dark #content-parent h2 a:hover,
+					.dark #content-parent h3 a:hover,
+					.dark #content-parent h4 a:hover,
+					.dark #content-parent h5 a:hover,
+					.dark #content-parent h6 a:hover {
+						color: #FB9351;
+					}
+
+	.dark .term-title {
+		color: #FFF;
+	}
+
+
+	/*--- Links -------------------------------*/
+
+	.dark #content-parent a:hover,
+	.dark #posts-featured a:hover {
+		color: #FFF;
+	}
+
+		.dark #content-parent #article a:hover {
+			color: #5B4141;
+		}
+
+
+	/*--- Code --------------------------------*/
+
+	pre {
+		color: #FFF;
+		background-color: transparent;
+		box-shadow: 0 0 1px rgba(255,255,255,0.2);
+	}
+
+
+/*==03.==========================================
+
+	F O R M S
+	Styles for HTML Controls
+
+===============================================*/
+
+	.dark input,
+	.dark select,
+	.dark textarea {
+		color: #FFF;
+		background: #5B4141;
+		border: none;
+	}
+	
+		input:focus,
+		select:focus,
+		textarea:focus {
+			color: #FFF;
+			border: none;
+		}
+
+			#article input,
+			#article select,
+			#article textarea,
+			#article input:focus,
+			#article select:focus,
+			#article textarea:focus {
+				color: inherit;
+				background: inherit;
+				border: 1px solid #DDD;;
+			}
+
+				.chrome select:focus option {
+					color: #56646F;
+				}
+
+
+/*==04.==========================================
+
+	C O M M E N T S
+	Comment styles
+
+===============================================*/
+
+	.comments-title {
+		border-bottom-color: rgba(255,255,255,0.05);
+	}
+
+		#comments > li {
+			border-bottom-color: rgba(255,255,255,0.1);
+		}
+
+			.comment-author,
+			.comment-author a {
+				color: #FFF;
+			}
+
+				.dark .avatar-box {
+					background: #5B4141;
+				}
+
+/*==05.==========================================
+
+	A R C H I V E
+	Styles for Archive page
+
+===============================================*/
+	
+	.dark #term {
+		border-bottom-color: rgba(255,255,255,0.2);
+	}
+
+
+/*==06.==========================================
+
+	S T A N D A R D   W I D G E T S
+	Default WordPress widgets
+
+===============================================*/
+
+	/*--- Common ------------------------------*/
+
+	.dark #sidebar .widget > h5 {
+		color: #FFF;
+	}
+
+	.widget_recent_entries > ul > li,
+	.widget_pages > ul > li,
+	.widget_archive > ul > li,
+	.widget_categories > ul > li,
+	.widget_meta > ul > li,
+	.widget_recent_comments > ul > li {
+		border-top-color: rgba(255,255,255,0.1);
+	}
+
+
+	/*--- Search ------------------------------*/
+
+	.widget_search form > div {
+	}
+	
+		.dark .widget_search input[name="s"],
+		.dark .widget_search input[name="s"]:focus {
+			color: #56646F;
+			background: none;
+		}
+
+
+	/*--- Tags --------------------------------*/
+
+	.dark .tagcloud a {
+		background: #fb9351;
+	}
+
+		.dark .tagcloud a:hover {
+			background: #5B4141;
+		}
+
+		.tagcloud a span {
+			padding: 7px 8px;
+			border: 0;
+		}
+
+
+	/*--- RSS ---------------------------------*/
+
+	.widget_rss > ul > li {
+		border-top-color: rgba(255,255,255,0.1);
+	}
+
+
+/*==07.==========================================
+
+	C U S T O M   W I D G E T S
+	Another WordPress widgets
+
+===============================================*/
+
+	/*--- ST Sharrre --------------------------*/
+
+	.dark .sharrre .count {
+		color: #FFF;
+		border: none;
+		background: #fb9351;
+	}
+
+		.dark .sharrre .count:before {
+			border-color: #fb9351 transparent transparent;
+		}
+
+		.dark .sharrre .count:after {
+			display: none;
+		}
+
+		.dark .sharrre .share:before,
+		.dark .sharrre .share:hover:before {
+			color: rgba(255,255,255,0.9);
+		}
+
+
+	/*--- ST Subscribe ------------------------*/
+
+	.widget-subscribe form > div {
+		background: url('../../images/bg-black-25.png');
+		padding: 11px 45px 11px 11px;
+		border: none;
+	}
+
+		.widget-subscribe input[name="email"] {
+			background: none;
+		}
+
+
+	/*--- ST Posts ----------------------------*/
+
+	#sidebar-secondary .widget-posts > div,
+	.sidebar-homepage .widget-posts > div {
+		border-top-color: rgba(255,255,255,0.1);
+	}
+
+
+/*==08.==========================================
+
+	S H O R T C O D E S
+	Shortcode styles
+
+===============================================*/
+
+	/*--- Separator OR ------------------------*/
+
+	.dark.page-template-template-frontpage-2-php .separator-or span {
+		color: #FFF;
+	}
+
+		.dark.page-template-template-frontpage-2-php .separator-or span:before,
+		.dark.page-template-template-frontpage-2-php .separator-or span:after {
+			border-top-color: rgba(255,255,255,0.1);
+		}
+
+
+/*==09.==========================================
+
+	1 6   P I X E L S
+	16px icons
+
+===============================================*/
+
+	/* none */
+
+
+/*==10.==========================================
+
+	P A G I N A T I O N
+	1,2,3,4...
+
+===============================================*/
+
+	/*--- Comments pagination -----------------*/
+
+	.nav-next a,
+	.nav-previous a {
+		color: inherit;
+	}
+
+
+	/*--- Default pagination ------------------*/
+
+	.dark #but-prev-next a {
+		color: #FFF;
+	}
+
+		.dark #but-prev-next a:hover {
+			color: #5b4141;
+		}
+
+	/*--- WP-Pagenavi -------------------------*/
+
+	.dark #wp-pagenavibox .wp-pagenavi * {
+		color: #FFF;
+	}
+
+		.dark #wp-pagenavibox .wp-pagenavi a:hover {
+			color: #5b4141;
+		}
+
+		/* 1 2 [3] 4 5 */
+		#wp-pagenavibox span.current {
+			background: rgba(255,255,255,0.1);
+		}
+
+
+/*==11.==========================================
+
+	P O S T
+	Styles for post page
+
+===============================================*/
+
+	.dark .page-title a.button {
+		border-color: rgba(255,255,255,0.1);
+	}
+
+	/*--- Post info ---------------------------*/
+
+	.dark .single-author-upic {	
+		background: #5B4141;
+	}
+
+	.dark .single-author-info,
+	.dark .post-short-info {
+		border-bottom-color: rgba(255,255,255,0.1);
+	}
+
+	/*--- Prev/Next post links ----------------*/
+
+	#pre_next_post {
+		border-color: rgba(255,255,255,0.1);
+	}
+
+		#pre_next_post:before {
+			background-color: rgba(255,255,255,0.1);
+		}
+
+			#pre_next_post .p:before,
+			#pre_next_post .n:before {
+				color: rgba(255,255,255,0.4);
+			}
+
+	/*--- Article -----------------------------*/
+
+	.dark #article,
+	.dark .post-default .content-data,
+	.dark #title-after,
+	.dark #post-before,
+	.dark #post-after {
+		color: #33393d;
+	}
+
+
+/*==12.==========================================
+
+	F O R M A T S
+	Styles for post formats
+
+===============================================*/
+
+	/*-------------------------------------------
+		4.3 - Link
+	-------------------------------------------*/
+
+	.st-format-link-holder {
+		background: url('../../images/bg-black-25.png');
+	}
+
+
+	/*-------------------------------------------
+		4.4 - Quote
+	-------------------------------------------*/
+
+	.st-format-quote-holder {
+		background: url('../../images/bg-black-25.png');
+	}
+
+
+/*==13.==========================================
+
+	T E M P L A T E S
+	Styles for post templates
+
+===============================================*/
+
+	.post-template {
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+	}
+
+	.meta .ico16,
+	.meta .ico16 a,
+	.meta .ico16:before {
+		color: rgba(255,255,255,0.4);
+	}
+
+		.meta .ico16:hover {
+			color: #FFF;
+		}
+
+	/*--- Sticky post ---------------------------*/
+
+	#content-box .sticky.post-default {
+	}
+
+
+	/*--- Default -----------------------------*/
+
+	/* Info */
+	.projects-default-wrapper .project-info {
+		background: url('../../images/bg-black-25.png') repeat;
+	}
+
+
+	/*-------------------------------------------
+		13.1 - Template 4
+	-------------------------------------------*/
+
+	.dark .post-t4 {
+		background: #5B4141;
+		border-bottom: none;
+	}
+
+	.dark #posts-t4 .post-t4-no-thumb h3 {
+		background: #5B4141;
+		border-bottom-color: #5B4141;
+	}
+
+
+	/*-------------------------------------------
+		13.2 - Featured
+	-------------------------------------------*/
+
+	.posts-featured-wrapper {
+		background: rgba(0, 0, 0, 0.15);
+		border-bottom: none;
+	}
+
+
+	/*-------------------------------------------
+		13.3 - Highlighted
+	-------------------------------------------*/
+
+	.dark .posts-highlighted {
+		background-color: #5B4141;
+		border-bottom: none;
+	}
+
+
+	/*-------------------------------------------
+		13.4 - Related
+	-------------------------------------------*/
+
+	.dark .posts-related-wrapper div.posts-related-post-wrapper {
+		background: #5B4141;
+	}
+
+		.dark .posts-related-details-wrapper > div h5 a {
+			color: #FFF;
+		}
+
+			.dark .posts-related-details-wrapper > div h5 a:hover {
+				color: #FB9351;
+			}
+
+/*==14.==========================================
+
+	4 0 4
+	Styles for error page
+
+===============================================*/
+
+	.dark #page-404 form input {
+		color: #5B4141;
+		background: #FFF;
+	}
+
+		.dark #page-404 form:before {
+			color: #FB9351;
+		}
+	
+			.dark #page-404 ul > li {
+				border-bottom-color: rgba(255,255,255,0.1);
+			}
+
+
+/*==15.==========================================
+
+	S I D E B A R S
+	Sidebar styles
+
+===============================================*/
+
+	.dark .widget > h5 {
+		border-bottom-color: rgba(255,255,255,0.2);
+	}
+
+
+	/*--- Sidebar Default -----------------------*/
+
+	.dark .sidebar .widget {
+		border-color: rgba(255,255,255,0.05);
+	}
+
+
+	/*--- Ad Sidebars ---------------------------*/
+
+	.dark .sidebar-ad-a {
+		background: rgba(0,0,0,0.15);
+		border-bottom: none;
+	}
+
+
+	.dark #sidebar-ad-c .sidebar-ad-c {
+		background: rgba(0,0,0,0.1);
+	}
+
+
+/*==16.==========================================
+
+	B B P R E S S
+	Forum styles
+
+===============================================*/
+
+	.dark .bbp-login-form input[type="text"],
+	.dark .bbp-login-form input[type="password"],
+	.dark .bbp-login-form textarea {
+		background: url('../../images/bg-black-25.png');
+		border: none;
+	}
+
+	.dark #bbpress-forums div.odd,
+	.dark #bbpress-forums ul.odd {
+		background-image: url('../../images/bg-white-05.png');
+	}
+
+		.dark #bbp-search-form input[name="bbp_search"],
+		.dark #bbp-search-form input[name="bbp_search"]:focus {
+			color: #56646F;
+			background: none;
+		}
+
+
+	/*-------------------------------------------
+		16.2 - Widgets
+	-------------------------------------------*/
+
+	.widget_display_forums > ul > li,
+	.widget_display_replies > ul > li,
+	.widget_display_topics > ul > li,
+	.widget_display_views > ul > li {
+		border-top-color: rgba(255,255,255,0.1);
+	}
+
+	/* Login */
+	.dark .bbp_widget_login h4 {
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+	}
+
+/*==17.==========================================
+
+	B U D D Y P R E S S
+	BuddyPress styles
+
+===============================================*/
+
+	/*-------------------------------------------
+		17.1 - Buttons
+	-------------------------------------------*/
+
+	a.bp-title-button,
+	#buddypress button,
+	#buddypress a.button,
+	#buddypress ul.button-nav li a,
+	#buddypress div.generic-button a,
+	#buddypress .comment-reply-link {
+	}
+
+		#buddypress button:hover,
+		#buddypress a.button:hover,
+		#buddypress a.button:focus,
+		#buddypress ul.button-nav li a:hover,
+		#buddypress ul.button-nav li.current a,
+		#buddypress div.generic-button a:hover,
+		#buddypress .comment-reply-link:hover {
+		}
+
+
+	/*-------------------------------------------
+		17.3 - Navigation bar
+	-------------------------------------------*/
+
+	/* none */
+
+
+	/*-------------------------------------------
+		17.4 - Acivity Stream
+	-------------------------------------------*/
+
+		/* .activity-comments
+		================================================*/
+		
+			/*-- .acomment-content -----------------------------------------*/
+		
+				/*-- .activity-meta --*/
+		
+				#buddypress div.activity-meta a:hover {
+				}
+
+
+	/*-------------------------------------------
+		17.6 - Navigation bar
+	-------------------------------------------*/
+
+		.dark #content-parent #article div.item-list-tabs ul li.selected a:hover,
+		.dark #content-parent #article div.item-list-tabs ul li.current a:hover {
+			color: #FFF;
+		}
+
+
+	/*-------------------------------------------
+		17.7 - Widget: Members
+	-------------------------------------------*/
+
+		#members-list-options .selected {
+			color: #FFF;
+		}
+
+
+	/*-------------------------------------------
+		17.8 - Widget: Friends
+	-------------------------------------------*/
+
+		.dark #friends-list-options .selected {
+			color: #FFF;
+		}
+
+
+	/*-------------------------------------------
+		17.9 - Widget: Groups
+	-------------------------------------------*/
+
+		.dark #groups-list-options .selected {
+			color: #FFF;
+		}
+
+/*==18.==========================================
+
+	W O O C O M M E R C E
+	WooCommerce styles
+
+===============================================*/
+
+	/*-------------------------------------------
+		22.2 - Catalog
+	-------------------------------------------*/
+
+	.dark.woocommerce ul.products li.product {
+		background: #5B4141;
+	}
+	
+		/* Top of product */
+		.dark .st-woo-hover {
+			background: #5B4141;
+			border-bottom-color: #5B4141;
+		}
+
+		/* Bottom of product */
+		.dark.woocommerce ul.products li.product .price,
+		.dark.woocommerce-page ul.products li.product .price {
+			color: #FFF;
+		}
+
+		.dark.woocommerce ul.products li.product h3,
+		.dark.woocommerce-page ul.products li.product h3 {
+			color: #FFF;
+		}
+
+	/*-------------------------------------------
+		22.3 - Single
+	-------------------------------------------*/
+
+	.dark.woocommerce #content div.product,
+	.dark.woocommerce div.product,
+	.dark.woocommerce-page #content div.product,
+	.dark.woocommerce-page div.product {
+		color: #33393D;
+	}
+
+	.dark #content-parent .product a:hover {
+		color: #33393D;
+	}
+
+	/*-------------------------------------------
+		22.4 - Widget: Shopping Cart
+	-------------------------------------------*/
+
+	.dark.woocommerce ul.cart_list li,
+	.dark.woocommerce ul.product_list_widget li,
+	.dark.woocommerce-page ul.cart_list li,
+	.dark.woocommerce-page ul.product_list_widget li {
+		color: #FFF;
+		border-top-color: rgba(255,255,255,0.1);
+	}
+
+	.dark.woocommerce .widget_shopping_cart .total,
+	.dark.woocommerce-page .widget_shopping_cart .total,
+	.dark.woocommerce-page.widget_shopping_cart .total,
+	.dark.woocommerce.widget_shopping_cart .total {
+		border-top-color: rgba(255,255,255,0.1);
+	}
+
+	/*-------------------------------------------
+		22.5 - Widget: Price Filter
+	-------------------------------------------*/
+
+	.dark.woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content,
+	.dark.woocommerce-page .widget_price_filter .price_slider_wrapper .ui-widget-content {
+		border: none;
+	}
+
+	/*-------------------------------------------
+		22.6 - Widget: Product Categories
+	-------------------------------------------*/
+
+	.dark .widget_product_categories > ul > li {
+		border-top-color: rgba(255,255,255,0.1);
+	}
+
+	/*-------------------------------------------
+		22.7 - Widget: Products
+	-------------------------------------------*/
+	.dark .widget_products ins {
+		color: #FFF;
+	}
+
+	/*-------------------------------------------
+		22.10 - Widget: Recently Viewed Products
+	-------------------------------------------*/
+
+	.dark .widget_recently_viewed_products ins {
+		color: #FFF;
+	}
+
+	/*-------------------------------------------
+		22.11 - Widget: Top Rated Products
+	-------------------------------------------*/
+
+	.dark .widget_top_rated_products ins {
+		color: #FFF;
+	}
+
+	/*-------------------------------------------
+		22.13 - Cart
+	-------------------------------------------*/
+
+	.dark #article .st-woo-cross h2,
+	.dark #article .cart_totals h2,
+	.dark #article .shipping_calculator h2 a {
+		color: #FFF;
+	}
+
+	.dark .woocommerce .cart-collaterals .cross-sells ul.products li,
+	.dark .woocommerce-page .cart-collaterals .cross-sells ul.products li {
+		background: #5B4141;
+	}
+
+		.dark #article .woocommerce .cart-collaterals .cross-sells ul.products li h3,
+		.dark #article .woocommerce-page .cart-collaterals .cross-sells ul.products li h3 {
+			color: #FFF;
+		}
+
+	.dark #article .shipping_calculator select,
+	.dark #article .shipping_calculator input {
+		background: #FFF;
+	}
+
+	/*-------------------------------------------
+		22.16 - Pagination
+	-------------------------------------------*/
+
+	.dark.woocommerce .woocommerce-pagination ul.page-numbers li *,
+	.dark.woocommerce-page .woocommerce-pagination ul.page-numbers li * {
+		color: #FFF;
+	}
+
+	/* 1 2 3 4 5 */
+	.dark.woocommerce #content-parent .woocommerce-pagination ul.page-numbers li a:hover,
+	.dark.woocommerce-page #content-parent .woocommerce-pagination ul.page-numbers li a:hover {
+		color: #5B4141;
+	}
+		
+	/* 1 2 [3] 4 5 */
+	.dark.woocommerce .woocommerce-pagination ul.page-numbers li span.current,
+	.dark.woocommerce-page .woocommerce-pagination ul.page-numbers li span.current {
+		color: #FFF;
+		background: rgba(255,255,255,0.1);
+	}

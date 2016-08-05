@@ -1,0 +1,672 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: dankov\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-15 15:03+0100\n"
+"PO-Revision-Date: 2014-08-15 15:03+0100\n"
+"Last-Translator: StrictThemes <info@strictthemes.com>\n"
+"Language-Team: Dankov <dankov-theme@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk_UA\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:20
+msgid "Sorry, the page you asked for couldn't be found."
+msgstr "На жаль, запитувана сторінка не знайдена."
+
+#: 404.php:21
+msgid "Please, try to use the search form below."
+msgstr "Будь ласка, використовуйте форму пошуку."
+
+#: 404.php:30
+#: header.php:81
+msgid "Search..."
+msgstr "Пошук..."
+
+#: 404.php:37
+msgid "Here's a little map that might help you get back on track:"
+msgstr "Можливо, ці посилання допоможуть знайти те, що Ви шукали."
+
+#: 404.php:41
+msgid "Categories"
+msgstr "Категорії"
+
+#: 404.php:48
+msgid "Archives"
+msgstr "Архіви"
+
+#: 404.php:55
+#: page.php:167
+#: single.php:181
+msgid "Pages"
+msgstr "Сторінки"
+
+#: archive.php:236
+#: index.php:81
+#: search.php:99
+#: template-frontpage.php:130
+msgid "Older posts"
+msgstr "Назад"
+
+#: archive.php:236
+#: index.php:81
+#: search.php:99
+#: template-frontpage.php:130
+msgid "Newer posts"
+msgstr "Вперед"
+
+#: archive.php:295
+#: attachment.php:106
+#: page.php:188
+#: single.php:328
+msgid "Sorry, no posts matched your criteria."
+msgstr "На жаль, нічого немає."
+
+#: comments.php:35
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Цей пост захищений паролем. Введіть пароль для перегляду коментарів."
+
+#: comments.php:74
+msgid "Comments"
+msgstr "Коментарі"
+
+#: comments.php:96
+msgid "Pingbacks"
+msgstr "Пінгбекі"
+
+#: comments.php:112
+msgid "Older comments"
+msgstr "Назад"
+
+#: comments.php:113
+msgid "Newer comments"
+msgstr "Вперед"
+
+#: comments.php:143
+msgid "You must be logged in to post a comment."
+msgstr "Ви повинні увійти, щоб залишити коментар."
+
+#: comments.php:143
+msgid "Log in"
+msgstr "Вхід"
+
+#: comments.php:161
+msgid "Name"
+msgstr "Iм'я"
+
+#: comments.php:174
+msgid "Email"
+msgstr "E-mail"
+
+#: comments.php:188
+#: single.php:263
+msgid "Website"
+msgstr "Сайт"
+
+#: comments.php:204
+msgid "Type here"
+msgstr "Напишіть тут"
+
+#: options.php:57
+msgid "Aside"
+msgstr "Iнший"
+
+#: options.php:61
+msgid "Image"
+msgstr "Зображення"
+
+#: options.php:65
+msgid "Gallery"
+msgstr "Галерея"
+
+#: options.php:69
+msgid "Audio"
+msgstr "Аудіо"
+
+#: options.php:73
+msgid "Video"
+msgstr "Відео"
+
+#: options.php:77
+msgid "Link"
+msgstr "Посилання"
+
+#: options.php:81
+msgid "Quote"
+msgstr "Цитата"
+
+#: options.php:85
+msgid "Status"
+msgstr "Статус"
+
+#: options.php:89
+msgid "Chat"
+msgstr "Чат"
+
+#: options.php:162
+msgid "Appears on the header of all pages."
+msgstr "Показується в хедері всіх сторінок."
+
+#: options.php:163
+msgid "Appears on the middle of homepage and archives."
+msgstr "Показується в середині головної сторінки."
+
+#: options.php:164
+msgid "Appears on the bottom of all pages."
+msgstr "Показується внизу всіх сторінок."
+
+#: options.php:273
+#: options.php:393
+msgid "Default"
+msgstr "За замовчуванням"
+
+#: options.php:275
+msgid "This is standard template."
+msgstr "Це стандартний шаблон."
+
+#: options.php:295
+msgid "Template with thumbnails."
+msgstr "Шаблон з мініатюрами"
+
+#: options.php:315
+msgid "Minimalistic template. Also it used on search page."
+msgstr "Мінімалістичний шаблон. Також він використовується на сторінці пошуку."
+
+#: options.php:450
+msgid "Light"
+msgstr "Світлий"
+
+#: options.php:454
+msgid "Dark"
+msgstr "Темний"
+
+#: search.php:107
+msgid "Sorry, nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Будь ласка, спробуйте ще раз використовуючи інші ключові слова."
+
+#: single.php:202
+msgid "You Might Also Like"
+msgstr "См. также"
+
+#: single.php:266
+msgid "Facebook"
+msgstr "Фейсбук"
+
+#: single.php:269
+msgid "Google+"
+msgstr "Гугл+"
+
+#: single.php:272
+msgid "Twitter"
+msgstr "Твiттер"
+
+#: framework/functions/checking.php:31
+#, php-format
+msgid "You're using <strong>ST Kit</strong> plugin v.%1$s, however <strong>%2$s</strong> theme requires <strong>ST Kit</strong> v.%3$s or higher. Update plugin from <a href='%4$s'>Plugins</a> page."
+msgstr "Ви використовуєте плагін <strong>ST Kit</ strong> версії %1$s, проте для повноцінної роботи теми <strong>%2$s</ strong> потрібна <strong>ST Kit</ strong> версії %3$s і вище. Перейдіть на сторінку <a href='%4$s'>Плагіни</ a> і обновіть <strong>ST Kit</ strong>."
+
+#: framework/functions/global.php:650
+msgid "Previous"
+msgstr "Назад"
+
+#: framework/functions/global.php:651
+msgid "Next"
+msgstr "Вперед"
+
+#: framework/functions/global.php:775
+msgid "Leave a reply"
+msgstr "Написати коментар"
+
+#: framework/functions/global.php:775
+msgid "1 Comment"
+msgstr "1"
+
+#: framework/functions/global.php:775
+msgid "% Comments"
+msgstr "%"
+
+#: framework/functions/register-menu.php:38
+msgid "Primary Menu"
+msgstr "Основне меню"
+
+#: framework/functions/register-menu.php:41
+msgid "Secondary Menu"
+msgstr "Додаткове меню"
+
+#: framework/functions/register-menu.php:182
+msgid "Home"
+msgstr "Головна"
+
+#: framework/functions/register-sidebars.php:51
+msgid "Appears on posts and pages by default."
+msgstr "Показується на сторінках і постах по-замовчуванням."
+
+#: framework/functions/register-sidebars.php:67
+msgid "Appears on archives and homepage."
+msgstr "Показується на головній сторінці та архівах."
+
+#: framework/functions/register-sidebars.php:83
+msgid "Additional sidebar. Usually, it comes by left side of post. Appears on posts only."
+msgstr "Додатковий сайдбар. Показується тільки в постах. Зазвичай розташований зліва від контентної частини."
+
+#: framework/functions/register-sidebars.php:125
+msgid "Appears on Front Page by default."
+msgstr "Показується на головній сторінці."
+
+#: framework/functions/register-sidebars.php:141
+msgid "Appears on projects and archives of projects depends of selected template."
+msgstr "Показується на сторінці проекту або архівах проектів залежно від вибраного шаблону."
+
+#: framework/functions/register-sidebars.php:157
+msgid "Appears on all pages at the bottom of site."
+msgstr "Показується в нижній частині всіх сторінок сайту."
+
+#: framework/functions/register-sidebars.php:173
+msgid "Appears on bbPress forum pages."
+msgstr "Показується на сторінках bbPress-форуму."
+
+#: framework/functions/register-sidebars.php:189
+msgid "Appears on BuddyPress pages."
+msgstr "Показується на сторінках BuddyPress."
+
+#: framework/functions/register-sidebars.php:205
+msgid "Appears on WooCommerce pages."
+msgstr "Показується на сторінках WooCommerce."
+
+#: framework/functions/register-sidebars.php:221
+msgid "Appears on selected posts and pages."
+msgstr "Показується на обраних посадах і сторінках."
+
+#: framework/functions/register-tgm.php:64
+msgid "Install Required Plugins"
+msgstr "Встановити необхідні плагіни"
+
+#: framework/functions/register-tgm.php:65
+msgid "Install Plugins"
+msgstr "Встановити плагіни"
+
+#: framework/functions/register-tgm.php:66
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Установка плагіна: %s"
+
+#: framework/functions/register-tgm.php:67
+msgid "Something went wrong with the plugin API."
+msgstr "Щось не так з API плагіна."
+
+#: framework/functions/register-tgm.php:78
+msgid "Return to Required Plugins Installer"
+msgstr "Назад до інсталятора необхідних плагінів"
+
+#: framework/functions/register-tgm.php:79
+msgid "Plugin activated successfully."
+msgstr "Плагін успішно активовано."
+
+#: framework/functions/register-tgm.php:80
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr "Всі плагіни встановлені й успішно активовані. %s"
+
+#: framework/functions/classes/class-envato-protected-api.php:67
+msgid "Please enter your Envato Marketplace Username."
+msgstr "Будь ласка, введіть логін на Envato Marketplace."
+
+#: framework/functions/classes/class-envato-protected-api.php:71
+msgid "Please enter your Envato Marketplace API Key."
+msgstr "Будь ласка, введіть Ваш ключ API на Envato Marketplace."
+
+#: framework/functions/classes/class-envato-protected-api.php:96
+msgid "The API \"set\" is a required parameter."
+msgstr "Обов'язковий параметр."
+
+#: framework/functions/classes/class-envato-protected-api.php:167
+msgid "The Envato Marketplace \"item ID\" is a required parameter."
+msgstr "Обов'язковий параметр."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:199
+msgid "Something went wrong."
+msgstr "Щось пішло не так."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:211
+msgid "Return to the dashboard"
+msgstr "Повернутися до робочого столу"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:213
+msgid "The following plugin was activated successfully:"
+msgstr "Нижченаведені плагіни встановлені й успішно активовані: %s."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:214
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Всі плагіни встановлені й успішно активовані. %1$s"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:215
+msgid "Dismiss this notice"
+msgstr "Ігнорувати це повідомлення"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:544
+#: framework/functions/classes/class-tgm-plugin-activation.php:2168
+msgid "Return to the Dashboard"
+msgstr "Повернутися до робочого столу"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1174
+msgid "Private Repository"
+msgstr "Приватний репозиторій"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1177
+msgid "Pre-Packaged"
+msgstr "Що поставляється"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1182
+msgid "WordPress Repository"
+msgstr "WordPress репозиторій"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1185
+msgid "Required"
+msgstr "Необхідний"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1185
+msgid "Recommended"
+msgstr "Рекомендований"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1188
+msgid "Not Installed"
+msgstr "Не встановлений"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1190
+msgid "Installed But Not Activated"
+msgstr "Встановлено, але не активований"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1290
+#: framework/functions/classes/class-tgm-plugin-activation.php:1398
+msgid "Install"
+msgstr "Встановити"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1312
+#: framework/functions/classes/class-tgm-plugin-activation.php:1399
+msgid "Activate"
+msgstr "Активувати"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1361
+#, php-format
+msgid "No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the Dashboard\">Return to the Dashboard</a>"
+msgstr "Нема чого встановлювати або активувати. <a href=\"%1$s\" title=\"Повернутися до робочого столу\">Повернутися до робочого столу</a>"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1377
+msgid "Plugin"
+msgstr "Плагін"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1378
+msgid "Source"
+msgstr "Ресурс"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1379
+msgid "Type"
+msgstr "Тип"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1508
+msgid "No plugins are available to be installed at this time."
+msgstr "Немає доступних для інсталяції плагінів."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1616
+msgid "No plugins are available to be activated at this time."
+msgstr "Немає доступних для активації плагінів."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1934
+msgid "Install package not available."
+msgstr "Не виходить встановити."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1935
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr "Завантажуємо з <span class=\"code\">%s</span>&#8230;"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1936
+msgid "Unpacking the package&#8230;"
+msgstr "Розпаковуємо..."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1937
+msgid "Installing the plugin&#8230;"
+msgstr "Встановлюємо плагін..."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1938
+msgid "Plugin install failed."
+msgstr "Не вийшло встановити плагін."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1939
+msgid "Plugin installed successfully."
+msgstr "Плагін успішно встановлений."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:1950
+msgid "Plugin activation failed."
+msgstr "Не вийшло активувати плагін."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2064
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Починаємо процес встановлення і активації. Це може зайняти деякий час, тому, будь ласка, будьте терплячі."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2065
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s встановлений і успішно активований."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2065
+#: framework/functions/classes/class-tgm-plugin-activation.php:2074
+msgid "Show Details"
+msgstr "Розгорнути"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2065
+#: framework/functions/classes/class-tgm-plugin-activation.php:2074
+msgid "Hide Details"
+msgstr "Згорнути"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2066
+msgid "All installations and activations have been completed."
+msgstr "Всі процеси установки і активації були завершені."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2067
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Встановлення і активація плагіна %1$s (%2$d/%3$d)"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2071
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Починаємо процес установки. Це може зайняти деякий час, тому, будь ласка, будьте терплячі."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2072
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "Сталася помилка при установці плагіна %1$s: <strong>%2$s</strong>."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2073
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "Не вийшло встановити плагін %1$s"
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2074
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s успішно встановлений."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2075
+msgid "All installations have been completed."
+msgstr "Всі процеси установки були завершені."
+
+#: framework/functions/classes/class-tgm-plugin-activation.php:2076
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Встановлюємо плагін %1$s (%2$d/%3$d)"
+
+#: includes/comments/comment.php:46
+#: includes/comments/pingback.php:44
+msgid "at"
+msgstr "в"
+
+#: includes/comments/comment.php:62
+msgid "Reply"
+msgstr "Відповісти"
+
+#: includes/comments/comment.php:64
+msgid "Cancel"
+msgstr "Скасування"
+
+#: includes/comments/comment.php:73
+#: includes/comments/pingback.php:32
+msgid "Edit"
+msgstr "Редагувати"
+
+#: includes/comments/comment.php:78
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш коментар очікує модерації."
+
+#: includes/posts/featured.php:163
+msgid "More"
+msgstr "Далі"
+
+#: includes/sidebars/sidebar_homepage_a.php:16
+msgid "Welcome to"
+msgstr "Ласкаво просимо в"
+
+#: includes/sidebars/sidebar_homepage_a.php:17
+msgid "For replacing this dummy info, please, drop a widget on \"Homepage Sidebar 1\" at Appearance > Widgets page."
+msgstr "Щоб замінити цю інформацію на власну, будь ласка, додайте будь віджет в \"Homepage Sidebar 1\"."
+
+#: includes/sidebars/sidebar_homepage_a.php:21
+msgid "Live demo"
+msgstr "Демо"
+
+#: includes/sidebars/sidebar_homepage_a.php:22
+msgid "Documentation"
+msgstr "Документація"
+
+#: includes/sidebars/sidebar_homepage_a.php:23
+msgid "Theme Panel"
+msgstr "Панель теми"
+
+#: includes/sidebars/sidebar_homepage_a.php:30
+msgid "Setup custom logo"
+msgstr "Встановити своє лого"
+
+#: includes/sidebars/sidebar_homepage_a.php:31
+msgid "Setup Google Analytics"
+msgstr "Встановити Google Analytics"
+
+#: includes/sidebars/sidebar_homepage_a.php:32
+msgid "Change blog template"
+msgstr "Вибрати шаблон блогу"
+
+#: includes/sidebars/sidebar_homepage_a.php:33
+msgid "Select footer scheme"
+msgstr "Вибрати варіант футера"
+
+#: includes/sidebars/sidebar_homepage_a.php:34
+msgid "Use another font"
+msgstr "Використовувати інший шрифт"
+
+#: includes/sidebars/sidebar_homepage_a.php:35
+msgid "Tweak colors"
+msgstr "Налаштувати кольори"
+
+#: includes/sidebars/sidebar_homepage_a.php:36
+msgid "Enable portfolio"
+msgstr "Активувати портфоліо"
+
+#~ msgid "External Link"
+#~ msgstr "Вихідне посилання"
+
+#~ msgid "Recent posts"
+#~ msgstr "Останні пости"
+
+#~ msgid "Sorry, you're not able to browse this website."
+#~ msgstr "На жаль, Ви не можете переглядати цей сайт."
+
+#~ msgid ""
+#~ "Because you are using an outdated version of MS Internet Explorer. <br/> "
+#~ "For a better experience using websites, please upgrade to a modern web "
+#~ "browser."
+#~ msgstr ""
+#~ "У зв'язку з тим, що Ви використовуєте застарілу версію браузера Internet "
+#~ "Explorer. <br/> Будь ласка, оновіть Internet Explorer або використовуйте "
+#~ "інший браузер."
+
+#~ msgid "You're using ST Kit plugin v."
+#~ msgstr "Ви використовуєте плагін ST Kit"
+
+#~ msgid "however"
+#~ msgstr "однак"
+
+#~ msgid "theme requires ST Kit v."
+#~ msgstr "тема вимагає ST Kit"
+
+#~ msgid "or higher. Update plugin"
+#~ msgstr "або вище. Оновити плагін"
+
+#~ msgid "here"
+#~ msgstr "тут"
+
+#~ msgid "Pages:"
+#~ msgstr "Сторінки:"
+
+#~ msgid "Older projects"
+#~ msgstr "Назад"
+
+#~ msgid "Newer projects"
+#~ msgstr "Вперед"
+
+#~ msgid "Select a page &crarr;"
+#~ msgstr "Виберіть сторінку &crarr;"
+
+#~ msgid ""
+#~ "Appears on posts and pages except the optional Front Page, which has its "
+#~ "own widgets."
+#~ msgstr "Доступно всюди крім головної сторінки."
+
+#~ msgid "Related Posts"
+#~ msgstr "Схожі пости"
+
+#~ msgid "Appears on the middle of some pages depends of concept of the theme."
+#~ msgstr ""
+#~ "Показывается в середине странице проекта или архивах проектов в "
+#~ "зависимости от выбранного шаблона."
+
+#~ msgid "This template comes with an excerpt instead of a whole post."
+#~ msgstr "В этом шаблоне тело поста заменено выдержкой."
+
+#~ msgid ""
+#~ "Portfolio inactive. Turn On <strong>Projects</strong> at <em>Theme Panel "
+#~ "> Projects</em> page."
+#~ msgstr ""
+#~ "Функция «Портфолио» неактивна. Поставьте галочку на странице <em>Панель "
+#~ "темы > Проекты</em>."
+
+#~ msgid "Continue"
+#~ msgstr "Далее"
+
+#~ msgid "A recent project goes here"
+#~ msgstr "Здесь будет новый проект"
+
+#~ msgid "In progress"
+#~ msgstr "В процессе"
+
+#~ msgid "Loading..."
+#~ msgstr "Загрузка..."
+
+#~ msgid "That's all."
+#~ msgstr "Это всё."
+
+#~ msgid "Oh :("
+#~ msgstr "Ой :("
+
+#~ msgid "Sorry, nothing matched your search criteria."
+#~ msgstr "К сожалению, ничего не найдено."
+
+#~ msgid "More about"
+#~ msgstr "Узнать больше"
+
+#~ msgid "Media Portfolio <span>&</span> Blog"
+#~ msgstr "Медиапортфолио <span>и</span> Блог"
