@@ -1,0 +1,1 @@
+<span><?php echo date(get_option('date_format')); ?></span>
