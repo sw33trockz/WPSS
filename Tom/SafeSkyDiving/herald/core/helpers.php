@@ -5,7 +5,7 @@
  *
  * Outputs any content into log file in theme root directory
  *
- * @param mixed  $mixed Content to output
+ * @param mixed   $mixed Content to output
  * @return void
  * @since  1.0
  */
@@ -62,7 +62,7 @@ endif;
  *
  * It checks which posts layout to display based on current template options
  *
- * @param  int $i Index of the current post in loop
+ * @param int     $i Index of the current post in loop
  * @return string Layout ID
  * @since  1.0
  */
@@ -79,29 +79,29 @@ if ( !function_exists( 'herald_get_current_post_layout' ) ):
 
 			$layout = herald_get_option( $herald_template.'_layout' );
 			$starter_layout = herald_get_option( $herald_template.'_starter_layout' );
-			$starter_limit = $starter_layout != 'none' ? herald_get_option( $herald_template.'_starter_limit') : 0;
+			$starter_limit = $starter_layout != 'none' ? herald_get_option( $herald_template.'_starter_limit' ) : 0;
 
 		} else if ( $herald_template == 'category' ) {
 
 				$obj = get_queried_object();
 
 				if ( isset( $obj->term_id ) ) {
-					
+
 					$meta = herald_get_category_meta( $obj->term_id );
 					$layout = $meta['layout'] == 'inherit' ? herald_get_option( $herald_template.'_layout' ) : $meta['layout'];
-					
-					if( $meta['starter_layout'] != 'inherit'){
+
+					if ( $meta['starter_layout'] != 'inherit' ) {
 						$starter_layout = $meta['starter_layout'];
 						$starter_limit = $starter_layout != 'none' ? $meta['starter_limit'] : 0;
 					} else {
 						$starter_layout = herald_get_option( $herald_template.'_starter_layout' );
-						$starter_limit = $starter_layout != 'none' ? herald_get_option( $herald_template.'_starter_limit') : 0;
+						$starter_limit = $starter_layout != 'none' ? herald_get_option( $herald_template.'_starter_limit' ) : 0;
 					}
 
 				}
-		}
+			}
 
-		if( !is_paged() && $starter_limit > $i ){
+		if ( !is_paged() && $starter_limit > $i ) {
 			return $starter_layout;
 		}
 
@@ -127,6 +127,10 @@ if ( !function_exists( 'herald_get_single_layout' ) ):
 			$layout = herald_get_option( 'single_layout' );
 		}
 
+		if ( herald_is_paginated_post() && in_array( $layout, array( 3, 6, 9 ) ) ) {
+			$layout -= 1;
+		}
+
 		return $layout;
 	}
 endif;
@@ -145,7 +149,7 @@ if ( !function_exists( 'herald_get_single_meta_bar_position' ) ):
 
 		$layout = herald_get_post_meta( get_the_ID(), 'meta_bar_position' );
 		if ( $layout == 'inherit' ) {
-			$layout = herald_get_option( 'single_meta_bar_position');
+			$layout = herald_get_option( 'single_meta_bar_position' );
 		}
 
 		return $layout;
@@ -199,13 +203,15 @@ if ( !function_exists( 'herald_get_post_meta' ) ):
 			'sticky_sidebar' => 'inherit',
 			'meta_bar_position' => 'inherit',
 			'display' => array(
-					'fimg' => 'inherit',
-					'headline' => 'inherit',
-					'tags'	=> 'inherit',
-					'author' => 'inherit',
-					'sticky_bar' => 'inherit',
-					'related' => 'inherit'
-				)
+				'fimg' => 'inherit',
+				'headline' => 'inherit',
+				'tags' => 'inherit',
+				'author' => 'inherit',
+				'sticky_bar' => 'inherit',
+				'related' => 'inherit',
+				'ad_above' => 1,
+				'ad_below'	=> 1
+			)
 		);
 
 		$meta = get_post_meta( $post_id, '_herald_meta', true );
@@ -246,7 +252,7 @@ if ( !function_exists( 'herald_get_page_meta' ) ):
 			'sidebar' => 'inherit',
 			'sticky_sidebar' => 'inherit',
 			'sections' => array(),
-			'pag' => 'none'
+			'pag' => 'none',
 		);
 
 		$meta = get_post_meta( $post_id, '_herald_meta', true );
@@ -408,6 +414,12 @@ if ( !function_exists( 'herald_get_author_social' ) ):
 		if ( !empty( $social ) ) {
 			foreach ( $social as $id => $name ) {
 				if ( $social_url = get_the_author_meta( $id,  $author_id ) ) {
+
+					if ( $id == 'twitter' ) {
+						$pos = strpos( $social_url, '@' );
+						$social_url = 'https://twitter.com/'.substr( $social_url, $pos, strlen( $social_url ) );
+					}
+
 					$output .=  '<a href="'.esc_url( $social_url ).'" target="_blank" class="fa fa-'.$id.'"></a>';
 				}
 			}
@@ -430,11 +442,11 @@ if ( !function_exists( 'herald_get_trending_posts' ) ):
 
 		$args['ignore_sticky_posts'] = 1;
 
-		$manual = herald_get_option( 'trending_manual');
+		$manual = herald_get_option( 'trending_manual' );
 
 		if ( !empty( $manual ) ) {
 
-			$manual = array_map('absint', explode(",", $manual));
+			$manual = array_map( 'absint', explode( ",", $manual ) );
 			$args['posts_per_page'] = absint( count( $manual ) );
 			$args['orderby'] =  'post__in';
 			$args['post__in'] =  $manual;
@@ -452,38 +464,38 @@ if ( !function_exists( 'herald_get_trending_posts' ) ):
 				$args['meta_key'] = ev_get_meta_key();
 
 			} else if ( strpos( $args['orderby'], 'reviews' ) !== false && herald_is_wp_review_active() ) {
-				
-				$review_type = substr( $args['orderby'], 8, strlen($args['orderby']) );
 
-				$args['orderby'] = 'meta_value_num';
-				$args['meta_key'] = 'wp_review_total';
+					$review_type = substr( $args['orderby'], 8, strlen( $args['orderby'] ) );
 
-				$args['meta_query'] = array(
-					array(
-						'key'     => 'wp_review_type',
-						'value'   => $review_type,
-					)
-				);
+					$args['orderby'] = 'meta_value_num';
+					$args['meta_key'] = 'wp_review_total';
 
-			}
+					$args['meta_query'] = array(
+						array(
+							'key'     => 'wp_review_type',
+							'value'   => $review_type,
+						)
+					);
 
-			$cat = herald_get_option('trending_cat');
-			if(is_array($cat)){			
-				$cat = array_keys(array_filter($cat));
+				}
+
+			$cat = herald_get_option( 'trending_cat' );
+			if ( is_array( $cat ) ) {
+				$cat = array_keys( array_filter( $cat ) );
 				if ( !empty( $cat ) ) {
 					$args['category__in'] = $cat;
 				}
 			}
-			
-			$tag = herald_get_option('trending_tag');
+
+			$tag = herald_get_option( 'trending_tag' );
 			if ( !empty( $tag ) ) {
-					$args['tax_query'] = array(
-						array(
-							'taxonomy' => 'post_tag',
-							'field'    => 'id',
-							'terms'    => $tag,
-						)
-					);
+				$args['tax_query'] = array(
+					array(
+						'taxonomy' => 'post_tag',
+						'field'    => 'id',
+						'terms'    => $tag,
+					)
+				);
 			}
 
 			if ( $time_diff = herald_get_option( 'trending_time' ) ) {
@@ -518,8 +530,8 @@ if ( !function_exists( 'herald_get_related_posts' ) ):
 		$args['post__not_in'] = array( $post_id );
 
 		//If previuos next posts active exclude them too
-		if ( herald_get_option( 'show_prev_next' ) ) {
-			$in_same_cat = herald_get_option( 'prev_next_cat' ) ? true : false;
+		if ( herald_get_option( 'single_sticky_prevnext' ) ) {
+			$in_same_cat = herald_get_option( 'single_prevnext_same_cat' );
 			$prev = get_previous_post( $in_same_cat );
 
 			if ( !empty( $prev ) ) {
@@ -542,22 +554,22 @@ if ( !function_exists( 'herald_get_related_posts' ) ):
 			$args['orderby'] = 'meta_value_num';
 			$args['meta_key'] = ev_get_meta_key();
 		} else if ( strpos( $args['orderby'], 'reviews' ) !== false && herald_is_wp_review_active() ) {
-				
-			$review_type = substr( $args['orderby'], 8, strlen($args['orderby']) );
 
-			$args['orderby'] = 'meta_value_num';
-			$args['meta_key'] = 'wp_review_total';
+				$review_type = substr( $args['orderby'], 8, strlen( $args['orderby'] ) );
 
-			$args['meta_query'] = array(
-				array(
-					'key'     => 'wp_review_type',
-					'value'   => $review_type,
-				)
-			);
+				$args['orderby'] = 'meta_value_num';
+				$args['meta_key'] = 'wp_review_total';
 
-		}
+				$args['meta_query'] = array(
+					array(
+						'key'     => 'wp_review_type',
+						'value'   => $review_type,
+					)
+				);
 
-		if($args['orderby'] == 'title'){
+			}
+
+		if ( $args['orderby'] == 'title' ) {
 			$args['order'] = 'ASC';
 		}
 
@@ -678,16 +690,16 @@ endif;
 
 if ( !function_exists( 'herald_get_featured_area' ) ):
 	function herald_get_featured_area() {
-		
-		if( !is_category() ){
+
+		if ( !is_category() ) {
 			return false;
 		}
-		
+
 		$obj = get_queried_object();
-		$meta= herald_get_category_meta($obj->term_id);
-		$layout = $meta['fa_layout'] == 'inherit' ? herald_get_option('category_fa_layout') : $meta['fa_layout'];
-		
-		if($layout == 'none'){
+		$meta= herald_get_category_meta( $obj->term_id );
+		$layout = $meta['fa_layout'] == 'inherit' ? herald_get_option( 'category_fa_layout' ) : $meta['fa_layout'];
+
+		if ( $layout == 'none' ) {
 			return false;
 		}
 
@@ -700,22 +712,22 @@ if ( !function_exists( 'herald_get_featured_area' ) ):
 			$args['orderby'] = 'meta_value_num';
 			$args['meta_key'] = ev_get_meta_key();
 		} else if ( strpos( $args['orderby'], 'reviews' ) !== false && herald_is_wp_review_active() ) {
-				
-			$review_type = substr( $args['orderby'], 8, strlen($args['orderby']) );
 
-			$args['orderby'] = 'meta_value_num';
-			$args['meta_key'] = 'wp_review_total';
+				$review_type = substr( $args['orderby'], 8, strlen( $args['orderby'] ) );
 
-			$args['meta_query'] = array(
-				array(
-					'key'     => 'wp_review_type',
-					'value'   => $review_type,
-				)
-			);
+				$args['orderby'] = 'meta_value_num';
+				$args['meta_key'] = 'wp_review_total';
 
-		}
+				$args['meta_query'] = array(
+					array(
+						'key'     => 'wp_review_type',
+						'value'   => $review_type,
+					)
+				);
 
-		if($args['orderby'] == 'title'){
+			}
+
+		if ( $args['orderby'] == 'title' ) {
 			$args['order'] = 'ASC';
 		}
 
@@ -734,7 +746,7 @@ endif;
 /**
  * Get number of posts for specific featured area layout
  *
- * @param  string $layout ID of a layout
+ * @param string  $layout ID of a layout
  * @return int Number of posts
  * @since  1.0
  */
@@ -745,12 +757,12 @@ if ( !function_exists( 'herald_get_featured_area_numposts' ) ):
 		$numposts = array(
 			'1' => 3,
 			'2' => 4,
-			'3'	=> 5,
+			'3' => 5,
 			'4' => 5,
 			'5' => 4
 		);
 
-		if(array_key_exists($layout, $numposts)){
+		if ( array_key_exists( $layout, $numposts ) ) {
 			return $numposts[$layout];
 		}
 
@@ -763,7 +775,7 @@ endif;
 /**
  * Calculate time difference
  *
- * @param string $timestring String to calculate difference from
+ * @param string  $timestring String to calculate difference from
  * @return  int Time difference in miliseconds
  * @since  1.0
  */
@@ -827,43 +839,43 @@ if ( !function_exists( 'herald_get_image_sizes' ) ):
 		$options = apply_filters( 'herald_modify_image_sizes_opts', $options );
 
 		//Check if user has disabled to generate particular image sizes from theme options
-		
-		$disable_img_sizes = (array) herald_get_option('disable_img_sizes'); 
-		$disable_img_sizes =array_keys( array_filter( $disable_img_sizes ));
+
+		$disable_img_sizes = (array) herald_get_option( 'disable_img_sizes' );
+		$disable_img_sizes =array_keys( array_filter( $disable_img_sizes ) );
 
 		$sizes = array();
 		$widths = array();
 		$herald_image_matches = array();
 
 		foreach ( $options as $layout => $opt ) {
-			
-			if( !in_array( $layout, $disable_img_sizes)){
+
+			if ( !in_array( $layout, $disable_img_sizes ) ) {
 
 				$lay_sizes = herald_calculate_image_size( $layout, $opt );
-				
+
 				if ( !empty( $lay_sizes ) ) {
 					foreach ( $lay_sizes as $id => $size ) {
-						
+
 						//Check if size with same args already exists and avoid generating same size twice
-						
-						if(!array_key_exists($size['args']['w'], $widths )){
+
+						if ( !array_key_exists( $size['args']['w'], $widths ) ) {
 
 							$widths[$size['args']['w']][] = $id;
 							$sizes[$id] = $size;
-							
+
 						} else {
-							
+
 							$add_size = true;
-							
-							foreach( $widths[$size['args']['w']] as $k => $name ){
-								if( $size['args']['w'] == $sizes[$name]['args']['w'] && $size['args']['h'] == $sizes[$name]['args']['h'] && $size['args']['crop'] == $sizes[$name]['args']['crop']){
+
+							foreach ( $widths[$size['args']['w']] as $k => $name ) {
+								if ( $size['args']['w'] == $sizes[$name]['args']['w'] && $size['args']['h'] == $sizes[$name]['args']['h'] && $size['args']['crop'] == $sizes[$name]['args']['crop'] ) {
 									$add_size = false;
 									$herald_image_matches[$id] = $name;
 									continue;
-								}	
+								}
 							}
 
-							if( $add_size ){
+							if ( $add_size ) {
 								$sizes[$id] = $size;
 							}
 						}
@@ -874,19 +886,19 @@ if ( !function_exists( 'herald_get_image_sizes' ) ):
 		}
 
 		//Apply featured area sizes
-		if(!in_array('fa1', $disable_img_sizes) ) {
+		if ( !in_array( 'fa1', $disable_img_sizes ) ) {
 			$sizes['herald-lay-fa1'] = array( 'title' => 'FA1', 'args' => array( 'w' => 434, 'h' => 420, 'crop' => true ) );
 			$sizes['herald-lay-fa1-full'] = array( 'title' => 'FA1 (full)', 'args' => array( 'w' => 550, 'h' => 520, 'crop' => true ) );
 		}
-		
-		if(!in_array('fa3', $disable_img_sizes) ) {
+
+		if ( !in_array( 'fa3', $disable_img_sizes ) ) {
 			$sizes['herald-lay-fa3-big'] = array( 'title' => 'FA3 Big', 'args' => array( 'w' => 459, 'h' => 420, 'crop' => true ) );
 			$sizes['herald-lay-fa3-big-full'] = array( 'title' => 'FA3 Big (full)', 'args' => array( 'w' => 559, 'h' => 520, 'crop' => true ) );
 			$sizes['herald-lay-fa3-small'] = array( 'title' => 'FA3 Small', 'args' => array( 'w' => 260, 'h' => 210, 'crop' => true ) );
 			$sizes['herald-lay-fa3-small-full'] = array( 'title' => 'FA3 Small (full)', 'args' => array( 'w' => 379, 'h' => 259, 'crop' => true ) );
 		}
 
-		if(!in_array('fa5', $disable_img_sizes) ) {
+		if ( !in_array( 'fa5', $disable_img_sizes ) ) {
 			$sizes['herald-lay-fa5'] = array( 'title' => 'FA5', 'args' => array( 'w' => 980, 'h' => 420, 'crop' => true ) );
 			$sizes['herald-lay-fa5-full'] = array( 'title' => 'FA5 (full)', 'args' => array( 'w' => 1320, 'h' => 520, 'crop' => true ) );
 		}
@@ -912,9 +924,9 @@ endif;
 
 if ( !function_exists( 'herald_calculate_image_size' ) ):
 	function herald_calculate_image_size( $lay, $width ) {
-		
+
 		$sizes = array();
-		
+
 		if ( $ratio = herald_get_option( 'img_size_lay_'.$lay.'_ratio' ) ) {
 			$crop = true;
 			if ( $ratio == 'original' ) {
@@ -924,8 +936,16 @@ if ( !function_exists( 'herald_calculate_image_size' ) ):
 			} else if ( $ratio == 'custom' ) {
 					$ratio = herald_get_option( 'img_size_lay_'.$lay.'_custom' );
 					$ratio_opts = explode( ":", $ratio );
-					$height['sid'] = absint( $width['sid'] * absint( $ratio_opts[1] ) / absint( $ratio_opts[0] ) );
-					$height['full'] = absint( $width['full'] * absint( $ratio_opts[1] ) / absint( $ratio_opts[0] ) );
+
+					if ( !empty( $ratio ) && !empty( $ratio_opts ) ) {
+						$height['sid'] = absint( $width['sid'] * absint( $ratio_opts[1] ) / absint( $ratio_opts[0] ) );
+						$height['full'] = absint( $width['full'] * absint( $ratio_opts[1] ) / absint( $ratio_opts[0] ) );
+
+					} else {
+						//fallback to 16:9 if user haven't set proper ratio
+						$height['sid'] = absint( $width['sid'] * 16 / 9 );
+						$height['full'] = absint( $width['full'] * 16 / 9 );
+					}
 				} else {
 				$ratio_opts = explode( "_", $ratio );
 				$height['sid'] = absint( $width['sid'] * $ratio_opts[1] / $ratio_opts[0] );
@@ -992,10 +1012,10 @@ if ( !function_exists( 'herald_detect_template' ) ):
 		}
 
 		if ( is_single() ) {
-			
+
 			$type = get_post_type( get_the_ID() );
 
-			if ( in_array($type, array('product', 'forum', 'topic') ) ) {
+			if ( in_array( $type, array( 'product', 'forum', 'topic' ) ) ) {
 				$template = $type;
 			} else {
 				$template = 'single';
@@ -1003,21 +1023,21 @@ if ( !function_exists( 'herald_detect_template' ) ):
 
 		} else if ( is_page_template( 'template-modules.php' ) ) {
 				$template = 'modules';
-			} else if ( is_page() ) {
-				$template = 'page';
-			} else if ( is_category() ) {
-				$template = 'category';
-			} else if ( is_tag() ) {
-				$template = 'tag';
-			} else if ( is_search() ) {
-				$template = 'search';
-			} else if ( is_author() ) {
-				$template = 'author';
-			} else if ( is_tax( 'product_cat' ) || is_post_type_archive( 'product' ) ) {
-				$template = 'product_cat';
-			} else if ( is_archive() ) {
-				$template = 'archive';
-			} else {
+		} else if ( is_page() ) {
+			$template = 'page';
+		} else if ( is_category() ) {
+			$template = 'category';
+		} else if ( is_tag() ) {
+			$template = 'tag';
+		} else if ( is_search() ) {
+			$template = 'search';
+		} else if ( is_author() ) {
+			$template = 'author';
+		} else if ( is_tax( 'product_cat' ) || is_post_type_archive( 'product' ) ) {
+			$template = 'product_cat';
+		} else if ( is_archive() ) {
+			$template = 'archive';
+		} else {
 			$template = 'archive'; //default
 		}
 
@@ -1063,11 +1083,23 @@ endif;
 
 if ( !function_exists( 'herald_read_time' ) ):
 	function herald_read_time( $text ) {
-		$words = str_word_count( strip_tags( $text ) );
+
+		if ( !herald_get_option( 'multibyte_rtime' ) ) {
+			//$words = str_word_count( wp_strip_all_tags( $text ) );
+			$words = count(preg_split( "/[\n\r\t ]+/", wp_strip_all_tags($text)));
+			
+		} else {
+			//$words = count( explode( ' ', html_entity_decode( mb_convert_encoding( $text, 'HTML-ENTITIES', 'UTF-8' ), ENT_QUOTES, 'UTF-8' ) ) );
+			$text = trim( preg_replace( "/[\n\r\t ]+/", ' ', wp_strip_all_tags($text) ), ' ' );
+			preg_match_all( '/./u', $text, $words_array );
+			$words = count($words_array[0]);
+		}
+
 		if ( !empty( $words ) ) {
 			$time_in_minutes = ceil( $words / 200 );
 			return $time_in_minutes;
 		}
+
 		return false;
 	}
 endif;
@@ -1086,13 +1118,37 @@ endif;
 if ( !function_exists( 'herald_trim_chars' ) ):
 	function herald_trim_chars( $string, $limit, $more = '...' ) {
 
+		/*
 		if ( !empty( $limit ) && strlen( $string ) > $limit ) {
 			$last_space = strrpos( substr( $string, 0, $limit ), ' ' );
 			$string = substr( $string, 0, $last_space );
 			$string = rtrim( $string, ".,-?!" );
 			$string.= $more;
 		}
+		*/
 
+		if(!empty($limit)){
+			$text = trim( preg_replace( "/[\n\r\t ]+/", ' ', $string ), ' ' );
+			preg_match_all( '/./u', $text, $chars );
+			$chars = $chars[0];
+			$count = count($chars);
+			if($count > $limit){
+
+				$chars = array_slice( $chars, 0, $limit );
+
+				for($i = ($limit -1 ); $i >= 0; $i--){
+					if( in_array($chars[$i], array('.', ' ', '-', '?', '!') ) ){
+						break;
+					}
+				}
+
+				$chars =  array_slice( $chars, 0, $i );
+				$string = implode( '', $chars );
+				$string = rtrim( $string, ".,-?!" );
+				$string.= $more;
+			}
+		}
+				
 		return $string;
 	}
 endif;
@@ -1124,11 +1180,11 @@ if ( !function_exists( 'herald_print_heading' ) ):
 
 		$output = '';
 
-		if ( !empty( $args['title'] ) ||  !empty( $args['actions'] ) ){
+		if ( !empty( $args['title'] ) ||  !empty( $args['actions'] ) ) {
 			$cat_class = !empty( $args['cat'] ) ? 'herald-cat-'.$args['cat'] : '';
 			$output.= '<div class="herald-mod-head '.$cat_class.'">';
 
-			if( !empty( $args['title'] ) ) {
+			if ( !empty( $args['title'] ) ) {
 				$output.= '<div class="herald-mod-title">'.$args['title'].'</div>';
 			}
 
@@ -1186,7 +1242,7 @@ endif;
 
 /**
  * Compare two values
- * 
+ *
  * Fucntion compares two values and sanitazes 0
  *
  * @param mixed   $a
@@ -1205,11 +1261,11 @@ endif;
 
 /**
  * Hex 2 rgba
- * 
+ *
  * Convert hexadecimal color to rgba
  *
- * @param string   $color Hexadecimal color value
- * @param float   $opacity Opacity value 
+ * @param string  $color   Hexadecimal color value
+ * @param float   $opacity Opacity value
  * @return string RGBA color value
  * @since  1.0
  */
@@ -1300,7 +1356,7 @@ endif;
  * Generate dynamic css
  *
  * Function parses theme options and generates css code dynamically
- * 
+ *
  * @return string Generated css code
  * @since  1.0
  */
@@ -1318,8 +1374,8 @@ endif;
 
 /**
  * Compress CSS Code
- * 
- * @param string $code Uncompressed css code 
+ *
+ * @param string  $code Uncompressed css code
  * @return string Compressed css code
  * @since  1.0
  */
@@ -1340,11 +1396,11 @@ endif;
 /**
  * Set image flag
  *
- * Functions sets image size flag in global variable so we 
+ * Functions sets image size flag in global variable so we
  * can manipulate with image sizes depend if we need full img size or size
  * with sidebar included in layout
  *
- * @param  string $type Can be 'sid' or 'full'
+ * @param string  $type Can be 'sid' or 'full'
  * @return void
  * @since  1.0
  */
@@ -1359,11 +1415,11 @@ endif;
 
 /**
  * Get JS settings
- * 
- * Function creates list of settings from thme options to pass 
- * them to global JS variable so we can use it in JS files 
  *
- * @return array List of JS settings 
+ * Function creates list of settings from thme options to pass
+ * them to global JS variable so we can use it in JS files
+ *
+ * @return array List of JS settings
  * @since  1.0
  */
 
@@ -1378,12 +1434,12 @@ if ( !function_exists( 'herald_get_js_settings' ) ):
 		$js_settings['header_sticky_offset'] = absint( herald_get_option( 'header_sticky_offset' ) );
 		$js_settings['header_sticky_up'] = herald_get_option( 'header_sticky_up' ) ? true : false;
 		$js_settings['single_sticky_bar'] = is_single() && herald_get_option( 'single_sticky_bar' ) ? true : false;
-		$js_settings['popup_img'] = herald_get_option('popup_img') ? true : false;
-		$js_settings['logo'] = herald_get_option('logo');
-		$js_settings['logo_retina'] = herald_get_option('logo_retina');
-		$js_settings['logo_mini'] = herald_get_option('logo_mini');
-		$js_settings['logo_mini_retina'] = herald_get_option('logo_mini_retina');
-		$js_settings['smooth_scroll'] = herald_get_option('smooth_scroll') ? true : false;
+		$js_settings['popup_img'] = herald_get_option( 'popup_img' ) ? true : false;
+		$js_settings['logo'] = herald_get_option( 'logo' );
+		$js_settings['logo_retina'] = herald_get_option( 'logo_retina' );
+		$js_settings['logo_mini'] = herald_get_option( 'logo_mini' );
+		$js_settings['logo_mini_retina'] = herald_get_option( 'logo_mini_retina' );
+		$js_settings['smooth_scroll'] = herald_get_option( 'smooth_scroll' ) ? true : false;
 
 		return $js_settings;
 	}
@@ -1411,7 +1467,7 @@ endif;
  * Generate fonts link
  *
  * Function creates font link from fonts selected in theme options
- * 
+ *
  * @return string
  * @since  1.0
  */
@@ -1419,7 +1475,6 @@ endif;
 if ( !function_exists( 'herald_generate_fonts_link' ) ):
 	function herald_generate_fonts_link() {
 
-		$output = array();
 		$fonts = array();
 		$fonts[] = herald_get_option( 'main_font' );
 		$fonts[] = herald_get_option( 'h_font' );
@@ -1445,12 +1500,14 @@ if ( !function_exists( 'herald_generate_fonts_link' ) ):
 			}
 		}
 
+		$subsets = array( 'latin' ); //latin as default
+
 		foreach ( $unique as $family => $items ) {
 
 			$link[$family] = $family;
 
 			$weight = array( '400' );
-			$subsets = array( 'latin' );
+
 
 			foreach ( $items as $item ) {
 
@@ -1475,21 +1532,23 @@ if ( !function_exists( 'herald_generate_fonts_link' ) ):
 			}
 
 			$link[$family] .= ':'.implode( ",", $weight );
-			$link[$family] .= '&subset='.implode( ",", $subsets );
+			//$link[$family] .= '&subset='.implode( ",", $subsets );
 		}
 
-		if(!empty($link)){
-			
-			$query_args = array(
-	            'family' => urlencode( implode( '|', $link ) ),
-	        );
-	 
-	        $fonts_url = add_query_arg( $query_args, $protocol.'fonts.googleapis.com/css' );
-	        
-	        return esc_url_raw( $fonts_url );
-    	}
+		if ( !empty( $link ) ) {
 
-    	return '';
+			$query_args = array(
+				'family' => urlencode( implode( '|', $link ) ),
+				'subset' => urlencode( implode( ',', $subsets ) )
+			);
+
+
+			$fonts_url = add_query_arg( $query_args, $protocol.'fonts.googleapis.com/css' );
+
+			return esc_url_raw( $fonts_url );
+		}
+
+		return '';
 
 	}
 endif;
@@ -1498,7 +1557,7 @@ endif;
 /**
  * Get native fonts
  *
- * 
+ *
  * @return array List of native fonts
  * @since  1.0
  */
@@ -1598,6 +1657,29 @@ if ( !function_exists( 'herald_is_paginated_post' ) ):
 	}
 endif;
 
+
+/**
+ * Check if is first page of paginated post
+ *
+ * @return bool
+ * @since  1.4.1
+ */
+
+if ( !function_exists( 'herald_is_paginated_post_first_page' ) ):
+	function herald_is_paginated_post_first_page() {
+
+		if ( !herald_is_paginated_post() ) {
+			return false;
+		}
+
+		global $page;
+
+		return $page === 1;
+
+	}
+endif;
+
+
 /**
  * Find which header section contains main nav
  *
@@ -1616,13 +1698,13 @@ if ( !function_exists( 'herald_main_nav_section' ) ):
 			'header_bottom_center',
 			'header_bottom_right',
 		);
-		
 
-		foreach($options as $slot){
-			$elements =  herald_get_option($slot);
+
+		foreach ( $options as $slot ) {
+			$elements =  herald_get_option( $slot );
 			//herald_log($slot);
-			if( array_key_exists('main-menu', $elements) && $elements['main-menu'] ){
-				return strpos($slot, 'middle') ? 'middle' : 'bottom';
+			if ( array_key_exists( 'main-menu', $elements ) && $elements['main-menu'] ) {
+				return strpos( $slot, 'middle' ) ? 'middle' : 'bottom';
 			}
 		}
 
@@ -1661,7 +1743,7 @@ endif;
 if ( !function_exists( 'herald_is_woocommerce_page' ) ):
 	function herald_is_woocommerce_page() {
 
-		return is_singular('product') || is_tax('product_cat') || is_post_type_archive('product');
+		return is_singular( 'product' ) || is_tax( 'product_cat' ) || is_post_type_archive( 'product' );
 	}
 endif;
 
@@ -1704,26 +1786,26 @@ endif;
 /**
  * Get term slugs by term names for specific taxonomy
  *
- * @param  string $names List of tag names separated by comma
- * @param  string $tax Taxonomy name
+ * @param string  $names List of tag names separated by comma
+ * @param string  $tax   Taxonomy name
  * @return array List of slugs
  * @since  1.2
  */
 
 if ( !function_exists( 'herald_get_tax_term_slug_by_name' ) ):
 	function herald_get_tax_term_slug_by_name( $names, $tax = 'post_tag' ) {
-		
-		if(empty($names)){
+
+		if ( empty( $names ) ) {
 			return '';
 		}
 
 		$slugs = array();
 		$names = explode( ",", $names );
 
-		foreach( $names as $name ){
-			$tag = get_term_by( 'name', trim($name), $tax);
-			
-			if( !empty($tag) && isset($tag->slug)){
+		foreach ( $names as $name ) {
+			$tag = get_term_by( 'name', trim( $name ), $tax );
+
+			if ( !empty( $tag ) && isset( $tag->slug ) ) {
 				$slugs[] = $tag->slug;
 			}
 		}
@@ -1737,8 +1819,8 @@ endif;
 /**
  * Get term names by term slugs for specific taxonomy
  *
- * @param  array $slugs List of tag slugs
- * @param  string $tax Taxonomy name
+ * @param array   $slugs List of tag slugs
+ * @param string  $tax   Taxonomy name
  * @return string List of names separrated by comma
  * @since  1.2
  */
@@ -1746,27 +1828,27 @@ endif;
 if ( !function_exists( 'herald_get_tax_term_name_by_slug' ) ):
 	function herald_get_tax_term_name_by_slug( $slugs, $tax = 'post_tag' ) {
 
-		if(empty($slugs)){
+		if ( empty( $slugs ) ) {
 			return '';
 		}
 
 		$names = array();
 
-		foreach($slugs as $slug){
-			$tag = get_term_by( 'slug', trim($slug), $tax );
-			if( !empty($tag) && isset($tag->name)){
+		foreach ( $slugs as $slug ) {
+			$tag = get_term_by( 'slug', trim( $slug ), $tax );
+			if ( !empty( $tag ) && isset( $tag->name ) ) {
 				$names[] = $tag->name;
 			}
 		}
 
-		if(!empty($names)){
-			$names = implode( ",", $names);
+		if ( !empty( $names ) ) {
+			$names = implode( ",", $names );
 		} else {
 			$names = '';
 		}
 
 		return $names;
-		
+
 	}
 endif;
 ?>

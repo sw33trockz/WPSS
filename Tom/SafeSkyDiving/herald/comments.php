@@ -17,19 +17,24 @@
 
 			echo herald_print_heading( $args ); 
 		?>
-			<div class="herald-gray-area"><span class="herald-fake-button herald-comment-form-open"><?php echo __herald('comment_button'); ?></span></div>
 		
-		<?php comment_form(array('title_reply' => '')); ?>
+		<?php if( strpos( 'above', herald_get_option('single_comment_form') ) !== false ) : ?>
+			<?php get_template_part( 'template-parts/single/comment-form' ); ?>
+		<?php endif; ?>
 
 		<?php if ( have_comments() ) : ?>
 
 			<ul class="comment-list">
 			<?php $args = array(
 				'avatar_size' => 60,
-				'reply_text' => 'Reply'
+				'reply_text' => __herald('comment_reply')
 			); ?>
 				<?php wp_list_comments($args); ?>
 			</ul>
+		<?php endif; ?>
+
+		<?php if( strpos( 'below', herald_get_option('single_comment_form') ) !== false ) : ?>
+			<?php get_template_part( 'template-parts/single/comment-form' ); ?>
 		<?php endif; ?>
 
 	</div>

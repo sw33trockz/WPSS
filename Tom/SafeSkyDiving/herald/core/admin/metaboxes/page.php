@@ -215,7 +215,8 @@ if ( !function_exists( 'herald_modules_metabox' ) ) :
 			'modules' => array(),
 			'use_sidebar' => 'right',
 			'sidebar' => 'herald_default_sidebar',
-			'sticky_sidebar' => 'herald_default_sticky_sidebar'
+			'sticky_sidebar' => 'herald_default_sticky_sidebar',
+			'css_class' => ''
 		);
 
 		$module_defaults = herald_get_module_defaults();
@@ -352,6 +353,16 @@ if ( !function_exists( 'herald_generate_section' ) ) :
 					  	</select>
 					 	<small class="howto"><?php esc_html_e( 'Choose a sticky sidebar', 'herald' ); ?></small>
 					 </div>
+				</div>
+
+				<div class="herald-opt">
+					<div class="herald-opt-title">
+						<?php esc_html_e( 'Custom CSS class', 'herald' ); ?>:
+					</div>
+					<div class="herald-opt-content">
+						<input class="herald-count-me" type="text" name="<?php echo esc_attr($name_prefix); ?>[css_class]" value="<?php echo esc_attr($section['css_class']);?>"/><br/>
+						<small class="howto"><?php esc_html_e( 'Specify class name for a possibility to apply custom styling to this section using CSS (i.e. my-custom-section)', 'herald' ); ?></small>
+					</div>
 				</div>
 
 			</div>
@@ -527,6 +538,16 @@ function herald_generate_module_posts( $module, $options, $name_prefix ){
 			</div>
 		</div>
 
+		<div class="herald-opt">
+			<div class="herald-opt-title">
+				<?php esc_html_e( 'Custom CSS class', 'herald' ); ?>:
+			</div>
+			<div class="herald-opt-content">
+				<input class="herald-count-me" type="text" name="<?php echo esc_attr($name_prefix); ?>[css_class]" value="<?php echo esc_attr($module['css_class']);?>"/><br/>
+				<small class="howto"><?php esc_html_e( 'Specify class name for a possibility to apply custom styling to this module using CSS (i.e. my-custom-module)', 'herald' ); ?></small>
+			</div>
+		</div>
+
 	</div>
 
 	<div class="herald-tab">
@@ -546,6 +567,16 @@ function herald_generate_module_posts( $module, $options, $name_prefix ){
 		   	</div>
 	    </div>
 
+	    <div class="herald-opt">
+			<div class="herald-opt-title">
+				<?php esc_html_e( 'Sort', 'herald' ); ?>:
+			</div>
+			<div class="herald-opt-content">
+		   		<label><input type="radio" name="<?php echo esc_attr($name_prefix); ?>[sort]" value="DESC" <?php checked( $module['sort'], 'DESC' ); ?> class="herald-count-me" /><?php esc_html_e('Descending', 'herald') ?></label><br/>
+		   		<label><input type="radio" name="<?php echo esc_attr($name_prefix); ?>[sort]" value="ASC" <?php checked( $module['sort'], 'ASC' ); ?> class="herald-count-me" /><?php esc_html_e('Ascending', 'herald') ?></label><br/>
+		   	</div>
+	    </div>
+
 		<div class="herald-opt">
 			<div class="herald-opt-title">
 				<?php esc_html_e( 'In category', 'herald' ); ?>:
@@ -558,6 +589,13 @@ function herald_generate_module_posts( $module, $options, $name_prefix ){
 		   		<?php endforeach; ?>
 		   		</div>
 		   		<small class="howto"><?php esc_html_e( 'Check whether you want to display posts from specific categories only', 'herald' ); ?></small>
+		   		<br/>
+		   		<label><input type="checkbox" name="<?php echo esc_attr( $name_prefix ); ?>[cat_child]" value="1" class="herald-count-me" <?php checked( $module['cat_child'], 1 );?>/><?php esc_html_e( 'Apply child categories', 'herald' ); ?></label><br/>
+		    	<small class="howto"><?php esc_html_e( 'If parent category is selected, posts from child categories will be included automatically', 'herald' ); ?></small>
+		    	<br/>
+		    	<label><input type="radio" name="<?php echo esc_attr($name_prefix); ?>[cat_inc_exc]" value="in" <?php checked( $module['cat_inc_exc'], 'in' ); ?> class="herald-count-me" /><?php esc_html_e('Include', 'herald') ?></label><br/>
+		   		<label><input type="radio" name="<?php echo esc_attr($name_prefix); ?>[cat_inc_exc]" value="not_in" <?php checked( $module['cat_inc_exc'], 'not_in' ); ?> class="herald-count-me" /><?php esc_html_e('Exclude', 'herald') ?></label><br/>
+		   		<small class="howto"><?php esc_html_e( 'Wheter to include or exclude posts from selected categories', 'herald' ); ?></small>
 		   	</div>
 	   	</div>
 
@@ -568,6 +606,10 @@ function herald_generate_module_posts( $module, $options, $name_prefix ){
 			<div class="herald-opt-content">
 		   		<input type="text" name="<?php echo esc_attr($name_prefix); ?>[tag]" value="<?php echo esc_attr(herald_get_tax_term_name_by_slug($module['tag'])); ?>" class="herald-count-me"/><br/>
 		   		<small class="howto"><?php esc_html_e( 'Specify one or more tags separated by comma. i.e. life, cooking, funny moments', 'herald' ); ?></small>
+		   		<br/>
+		    	<label><input type="radio" name="<?php echo esc_attr($name_prefix); ?>[tag_inc_exc]" value="in" <?php checked( $module['tag_inc_exc'], 'in' ); ?> class="herald-count-me" /><?php esc_html_e('Include', 'herald') ?></label><br/>
+		   		<label><input type="radio" name="<?php echo esc_attr($name_prefix); ?>[tag_inc_exc]" value="not_in" <?php checked( $module['tag_inc_exc'], 'not_in' ); ?> class="herald-count-me" /><?php esc_html_e('Exclude', 'herald') ?></label><br/>
+		   		<small class="howto"><?php esc_html_e( 'Wheter to include or exclude posts from selected tags', 'herald' ); ?></small>
 		   	</div>
 	   	</div>
 
@@ -711,6 +753,16 @@ function herald_generate_module_featured( $module, $options, $name_prefix ){
 		    </div>
 	    </div>
 
+	    <div class="herald-opt">
+			<div class="herald-opt-title">
+				<?php esc_html_e( 'Custom CSS class', 'herald' ); ?>:
+			</div>
+			<div class="herald-opt-content">
+				<input class="herald-count-me" type="text" name="<?php echo esc_attr($name_prefix); ?>[css_class]" value="<?php echo esc_attr($module['css_class']);?>"/><br/>
+				<small class="howto"><?php esc_html_e( 'Specify class name for a possibility to apply custom styling to this module using CSS (i.e. my-custom-module)', 'herald' ); ?></small>
+			</div>
+		</div>
+
 	</div>
 
 	<div class="herald-tab">
@@ -730,6 +782,16 @@ function herald_generate_module_featured( $module, $options, $name_prefix ){
 		   	</div>
 	    </div>
 
+	    <div class="herald-opt">
+			<div class="herald-opt-title">
+				<?php esc_html_e( 'Sort', 'herald' ); ?>:
+			</div>
+			<div class="herald-opt-content">
+		   		<label><input type="radio" name="<?php echo esc_attr($name_prefix); ?>[sort]" value="DESC" <?php checked( $module['sort'], 'DESC' ); ?> class="herald-count-me" /><?php esc_html_e('Descending', 'herald') ?></label><br/>
+		   		<label><input type="radio" name="<?php echo esc_attr($name_prefix); ?>[sort]" value="ASC" <?php checked( $module['sort'], 'ASC' ); ?> class="herald-count-me" /><?php esc_html_e('Ascending', 'herald') ?></label><br/>
+		   	</div>
+	    </div>
+
 		<div class="herald-opt">
 			<div class="herald-opt-title">
 				<?php esc_html_e( 'In category', 'herald' ); ?>:
@@ -742,6 +804,13 @@ function herald_generate_module_featured( $module, $options, $name_prefix ){
 		   		<?php endforeach; ?>
 		   		</div>
 		   		<small class="howto"><?php esc_html_e( 'Check whether you want to display posts from specific categories only', 'herald' ); ?></small>
+		   		<br/>
+		   		<label><input type="checkbox" name="<?php echo esc_attr( $name_prefix ); ?>[cat_child]" value="1" class="herald-count-me" <?php checked( $module['cat_child'], 1 );?>/><?php esc_html_e( 'Apply child categories', 'herald' ); ?></label><br/>
+		    	<small class="howto"><?php esc_html_e( 'If parent category is selected, posts from child categories will be included automatically', 'herald' ); ?></small>
+		    	<br/>
+		    	<label><input type="radio" name="<?php echo esc_attr($name_prefix); ?>[cat_inc_exc]" value="in" <?php checked( $module['cat_inc_exc'], 'in' ); ?> class="herald-count-me" /><?php esc_html_e('Include', 'herald') ?></label><br/>
+		   		<label><input type="radio" name="<?php echo esc_attr($name_prefix); ?>[cat_inc_exc]" value="not_in" <?php checked( $module['cat_inc_exc'], 'not_in' ); ?> class="herald-count-me" /><?php esc_html_e('Exclude', 'herald') ?></label><br/>
+		   		<small class="howto"><?php esc_html_e( 'Wheter to include or exclude posts from selected categories', 'herald' ); ?></small>
 		   	</div>
 	   	</div>
 
@@ -752,6 +821,10 @@ function herald_generate_module_featured( $module, $options, $name_prefix ){
 			<div class="herald-opt-content">
 		   		<input type="text" name="<?php echo esc_attr($name_prefix); ?>[tag]" value="<?php echo esc_attr(herald_get_tax_term_name_by_slug($module['tag'])); ?>" class="herald-count-me"/><br/>
 		   		<small class="howto"><?php esc_html_e( 'Specify one or more tags separated by comma. i.e. life, cooking, funny moments', 'herald' ); ?></small>
+				<br/>
+		   		<label><input type="radio" name="<?php echo esc_attr($name_prefix); ?>[tag_inc_exc]" value="in" <?php checked( $module['tag_inc_exc'], 'in' ); ?> class="herald-count-me" /><?php esc_html_e('Include', 'herald') ?></label><br/>
+		   		<label><input type="radio" name="<?php echo esc_attr($name_prefix); ?>[tag_inc_exc]" value="not_in" <?php checked( $module['tag_inc_exc'], 'not_in' ); ?> class="herald-count-me" /><?php esc_html_e('Exclude', 'herald') ?></label><br/>
+		   		<small class="howto"><?php esc_html_e( 'Wheter to include or exclude posts from selected tags', 'herald' ); ?></small>
 		   	</div>
 	   	</div>
 
@@ -881,6 +954,16 @@ if ( !function_exists( 'herald_generate_module_text' ) ) :
 			</div>
 		</div>
 
+		<div class="herald-opt">
+			<div class="herald-opt-title">
+				<?php esc_html_e( 'Custom CSS class', 'herald' ); ?>:
+			</div>
+			<div class="herald-opt-content">
+				<input class="herald-count-me" type="text" name="<?php echo esc_attr($name_prefix); ?>[css_class]" value="<?php echo esc_attr($module['css_class']);?>"/><br/>
+				<small class="howto"><?php esc_html_e( 'Specify class name for a possibility to apply custom styling to this module using CSS (i.e. my-custom-module)', 'herald' ); ?></small>
+			</div>
+		</div>
+
 	<?php }
 endif;
 
@@ -950,9 +1033,16 @@ function herald_generate_module_woocommerce( $module, $options, $name_prefix ){
 		   	</div>
 	    </div>
 
+	    <div class="herald-opt">
+			<div class="herald-opt-title">
+				<?php esc_html_e( 'Custom CSS class', 'herald' ); ?>:
+			</div>
+			<div class="herald-opt-content">
+				<input class="herald-count-me" type="text" name="<?php echo esc_attr($name_prefix); ?>[css_class]" value="<?php echo esc_attr($module['css_class']);?>"/><br/>
+				<small class="howto"><?php esc_html_e( 'Specify class name for a possibility to apply custom styling to this module using CSS (i.e. my-custom-module)', 'herald' ); ?></small>
+			</div>
+		</div>
 	   
-
-
 	</div>
 
 	<div class="herald-tab">

@@ -13,13 +13,17 @@
 				<a class="herald-author-name" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author_meta('display_name') ?></a>
 
 				<?php if( $twitter_url = get_the_author_meta('twitter') ) : ?>
-					<a class="herald-author-twitter" href="<?php echo esc_url( $twitter_url ); ?>"><?php echo basename($twitter_url); ?></a>
+						<?php 
+							$pos = strpos($twitter_url, '@');
+							$twitter_url = 'https://twitter.com/'.substr($twitter_url,$pos, strlen($twitter_url));
+						?>
+					<a class="herald-author-twitter" href="<?php echo esc_url( $twitter_url ); ?>" target="_blank"><?php echo basename($twitter_url); ?></a>
 				<?php endif; ?>
 			</div>
 		<?php endif; ?>
 
 		<?php if( $meta = herald_get_meta_data( 'single_big' ) ) : ?>
-			<div class="entry-meta"><?php echo $meta; ?></div>
+			<div class="entry-meta entry-meta-single"><?php echo $meta; ?></div>
 		<?php endif; ?>
 
 		<?php if( herald_get_option('single_share') ): ?>

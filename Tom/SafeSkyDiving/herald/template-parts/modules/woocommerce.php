@@ -1,4 +1,4 @@
-<div class="herald-module col-lg-<?php echo esc_attr( $module['columns']);?> col-md-<?php echo esc_attr( $module['columns']);?> col-sm-<?php echo esc_attr( $module['columns']);?>" id="herald-module-<?php echo esc_attr($s_ind.'-'.$m_ind); ?>" data-col="<?php echo esc_attr( $module['columns']);?>">
+<div class="herald-module <?php echo esc_attr( herald_get_module_class( $module ) ); ?>" id="herald-module-<?php echo esc_attr($s_ind.'-'.$m_ind); ?>" data-col="<?php echo esc_attr( $module['columns']);?>">
 
 	<?php echo herald_get_module_heading( $module ); ?>
 
@@ -7,6 +7,7 @@
 	<?php $slider_class = herald_module_is_slider( $module ) && ( absint($mod_query->post_count) > 1 ) ? 'herald-slider' : ''; ?>
 	<?php $eq_height_class = 'row-eq-height'; ?>
 	
+	<?php herald_set_img_flag('sid'); ?>
 
 	<div class="row herald-posts <?php echo esc_attr($eq_height_class.' '.$slider_class); ?>">
 		
@@ -44,5 +45,7 @@
 		<?php wp_reset_postdata(); ?>
 
 	</div>
+
+	<?php herald_set_img_flag(''); ?>
 
 </div>

@@ -20,7 +20,7 @@ $opt_name = 'herald_settings';
 
 $args = array(
     'opt_name'             => $opt_name,
-    'display_name'         => wp_kses( sprintf( __( 'Herald Options%sTheme Documentation%s', 'herald' ), '<a href="http://demo.mekshq.com/herald/documentation" target="_blank">', '</a>' ), wp_kses_allowed_html( 'post' )),
+    'display_name'         => wp_kses( sprintf( __( 'Herald Options%sTheme Documentation%s', 'herald' ), '<a href="http://mekshq.com/documentation/herald" target="_blank">', '</a>' ), wp_kses_allowed_html( 'post' )),
     'display_version'      => herald_get_update_notification(),
     'menu_type'            => 'menu',
     'allow_sub_menu'       => true,

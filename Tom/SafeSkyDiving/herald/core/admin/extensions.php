@@ -34,6 +34,7 @@ if ( !function_exists( 'herald_user_social_profiles' ) ):
 				$contactmethods[$soc_id] = $soc_name;
 			}
 		}
+
 		return $contactmethods;
 	}
 endif;
@@ -160,7 +161,7 @@ endif;
 if ( !function_exists( 'herald_dashboard_widget_cb' ) ):
 	function herald_dashboard_widget_cb() {
 		$hide = false;
-		if ( $data = get_transient( 'herald_mksaw' ) ) {
+		if ( $data = get_transient( 'herald_mksaw' ) ) { 
 			if ( $data != 'error' ) {
 				echo $data;
 			} else {
@@ -229,9 +230,12 @@ if ( !function_exists( 'herald_wp_review_exclude_admin_scripts' ) ):
 	function herald_wp_review_exclude_admin_scripts() {
 
 		if( herald_is_wp_review_active() ) {
-		 	wp_dequeue_style( 'plugin_name-admin-ui-css' );	
+		 	wp_dequeue_style( 'plugin_name-admin-ui-css' );
+		 	wp_dequeue_style( 'wp-review-admin-ui-css' );
 		}
-	  
+		
+		wp_dequeue_style( 'jquery-ui.js' );
+
 	}
 endif;
 

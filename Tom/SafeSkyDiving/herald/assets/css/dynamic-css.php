@@ -31,6 +31,9 @@ $color_header_trending_bg = esc_attr(herald_get_option( 'color_header_trending_b
 $color_header_trending_txt = esc_attr(herald_get_option( 'color_header_trending_txt' ));
 $color_header_trending_acc = esc_attr(herald_get_option( 'color_header_trending_acc' ));
 
+$header_responsive_breakpoint = esc_attr(herald_get_option( 'header_responsive_breakpoint' ));
+
+
 /* General styles */
 $body_background = herald_get_bg_option('body_background');
 $content_layout = herald_get_option('content_layout');
@@ -338,7 +341,7 @@ $color_footer_meta = esc_attr(herald_get_option( 'color_footer_meta' ));
 
 body {
   <?php if( $content_layout == 'boxed') : ?>
-		<?php echo $body_background; ?>;
+		<?php echo $body_background; ?>
 	<?php else: ?> 
 		background-color: <?php echo $color_content_bg; ?>;
   	<?php endif; ?>
@@ -525,7 +528,8 @@ input[type="submit"],
 .herald-header-wraper .herald-soc-nav a:hover,
 .meta-tags span,
 li.herald-mega-menu .herald-ovrld .entry-title a,
-li.herald-mega-menu .herald-ovrld .entry-title a:hover{
+li.herald-mega-menu .herald-ovrld .entry-title a:hover,
+.herald-ovrld .entry-meta .herald-reviews i:before{
 	color: #FFF;
 }
 .entry-meta .meta-item, 
@@ -539,7 +543,8 @@ li.herald-mega-menu .herald-ovrld .entry-title a:hover{
 .entry-meta a:hover,
 .herald-menu li.herald-mega-menu .col-lg-3 a:after,
 .herald-breadcrumbs,
-.herald-breadcrumbs a {
+.herald-breadcrumbs a,
+.entry-meta .herald-reviews i:before{
 	color: <?php echo $color_content_meta; ?>;
 }
 
@@ -831,7 +836,7 @@ if( $color_header_responsive_bg == $color_content_bg ){
 .herald-responsive-header .herald-search-active > span{
 	color: <?php echo $color_header_responsive_txt; ?>;	
 }
-.herald-responsive-header .herald-menu-popup-search.herald-search-active .herald-in-popup{
+.herald-responsive-header .herald-menu-popup-search .herald-in-popup{
 	background: <?php echo $color_content_bg; ?>;
 }
 .herald-responsive-header .herald-search-input,
@@ -996,4 +1001,24 @@ $overlay_opacity = herald_get_option('overlay_opacity');
 echo '.fa-post-thumbnail:before, .herald-ovrld .herald-post-thumbnail span:before, .herald-ovrld .herald-post-thumbnail a:before { opacity: '.esc_attr($overlay_opacity[1]).'; }';
 echo '.herald-fa-item:hover .fa-post-thumbnail:before, .herald-ovrld:hover .herald-post-thumbnail a:before, .herald-ovrld:hover .herald-post-thumbnail span:before{ opacity: '.esc_attr($overlay_opacity[2]).'; }';
 
+
+
 ?>
+
+/* Responsive header brekpoint */
+
+@media only screen and (min-width: <?php echo $header_responsive_breakpoint; ?>px) {
+.herald-site-header .header-top,
+.header-middle,
+.header-bottom,
+.herald-header-sticky,
+.header-trending{ display:block !important;}
+
+.herald-responsive-header,.herald-mobile-nav{display:none !important;}
+.herald-site-content {
+    margin-top: 0 !important;
+}
+.herald-mega-menu .sub-menu {
+    display: block;
+}
+}

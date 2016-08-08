@@ -1,5 +1,58 @@
 == Change Log ==
 
+
+= 1.5.2 =
+
+* Added: "Custom CSS class" option field for sections and modules with which you get a possibility to apply custom styling to a section or a module using CSS
+* Added: Option to on/off ads above and below content per each single post
+* Added: Translation strings for comment form fields i.e Name, Email, Website (Theme Options -> Translation)
+* Improved: Social sharing not working in some specific cases (i.e. having UTF8 characters in post titles)
+* Improved: Reading time and excerpt limit now properly calculates values for languages with UTF8 and special characters
+* Fixed: Option to filter posts by time period in Herald Posts Widget
+* Fixed: Sticky sidebar conflicts in specific cases
+* Fixed: Featured image custom ratio option not working (Theme Options -> Page)
+
+
+= 1.5.1 =
+
+* Fixed: Module builder not working in specific cases (bug appeared in version 1.5)
+
+
+= 1.5 =
+
+* Added: Option to specify browser width which will trigger responsive header ( Theme Options -> Header -> Responsive Header)
+* Added: Option to sort posts in ascending or descending order in modules (Modules Template)
+* Added: Option to automatically select posts from child categories if parent category is selected (Modules Template)
+* Added: Option to choose whether to include or exclude posts from selected categories (Modules Template)
+* Added: Option to choose whether to include or exclude posts from selected tags (Modules Template)
+* Added: Option to on/off category description (Theme Options -> Category Template)
+* Added: Option to position comment form above/below comments list (Theme Options -> Single -> Extras)
+* Added: Option to display post time in meta data for all post layouts
+* Added: Option to enable "multibyte" support and calculate reading time properly for some specific languages (Theme Options -> Misc.)
+* Added: Option to choose whether prev/next posts in sticky bottom bar will be pulled from the same category as current post (Theme Options -> Single -> Extras)
+* Added: Full support for Custom Sidebars WordPress plugin by WMPU Dev. Now widgets inherit our theme styling by default 
+* Improved: If paginated post is set to be displayed in layouts 3,6 or 9, it will automatically fall-back to layouts 2,5 or 8 respectively, in order to avoid styling issues
+* Fixed: Minor styling conflict with WP Review plugin latest version
+* Fixed: Minor styling issues in various browsers, responsive and rtl mode
+
+
+= 1.4.3 =
+
+* Fixed: Problem with editing categories in WP 4.5
+
+
+= 1.4.2 =
+
+* Fixed: Bug with specific Google Fonts
+
+
+= 1.4.1 =
+* Improved: Featured image on the first page of a paginated post is displayed by default
+* Fixed: Minor styling glitches in various browsers, responsive and rtl mode
+* Fixed: Header/Footer date language for non-english WP installations
+* Fixed: Conflict with plugins which override Twitter field in user profile options
+
+
 = 1.4 =
 
 * Added: Support for post reviews system using WP Review WordPress Plugin (stars, points and percentage review type). You can also order posts in modules by review values!

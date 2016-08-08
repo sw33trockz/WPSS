@@ -27,7 +27,10 @@ function herald_load_scripts() {
 function herald_load_css() {
 	
 	//Load google fonts
-	wp_enqueue_style( 'herald-fonts', herald_generate_fonts_link(), false, HERALD_THEME_VERSION );
+	if( $fonts_link = herald_generate_fonts_link() ){
+		wp_enqueue_style( 'herald-fonts', $fonts_link, false, HERALD_THEME_VERSION );
+	}
+	
 	
 	//Check if is minified option active and load appropriate files
 	if(	herald_get_option('minify_css') ){

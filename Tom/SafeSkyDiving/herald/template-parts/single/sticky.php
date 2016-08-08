@@ -5,7 +5,7 @@
 				
 				<?php if( herald_get_option('single_sticky_prevnext') ) : ?>					
 					
-					<?php $in_same_cat = true; ?>
+					<?php $in_same_cat = herald_get_option('single_prevnext_same_cat'); ?>
 					
 					<?php if( $prev = get_previous_post( $in_same_cat )): ?>
 						<div class="herald-sticky-prev h6">

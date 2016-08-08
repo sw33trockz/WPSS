@@ -1,7 +1,7 @@
 <?php
 
 /* Define Theme Vars */
-define( 'HERALD_THEME_VERSION', '1.4' );
+define( 'HERALD_THEME_VERSION', '1.5.2' );
 
 /* Define content width */
 if ( !isset( $content_width ) ) {

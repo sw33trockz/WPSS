@@ -8,7 +8,9 @@
 		<div class="entry-headline h5"><?php echo get_the_excerpt(); ?></div>
 	<?php endif; ?>
 
-	<?php get_template_part('template-parts/ads/above-single'); ?>
+	<?php if( herald_get_post_display( 'ad_above' ) ) : ?>
+		<?php get_template_part('template-parts/ads/above-single'); ?>
+	<?php endif; ?>
 	
 	<?php the_content(); ?>
 
@@ -22,6 +24,7 @@
 		</div>
 	<?php endif; ?>
 
-	<?php get_template_part('template-parts/ads/below-single'); ?>
-
+	<?php if( herald_get_post_display( 'ad_below' ) ) : ?>
+		<?php get_template_part('template-parts/ads/below-single'); ?>
+	<?php endif; ?>
 </div>

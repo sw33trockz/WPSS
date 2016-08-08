@@ -149,6 +149,10 @@ if ( !function_exists( 'herald_get_meta_data' ) ):
 
 		if ( !empty( $meta_data ) ) {
 
+			$has_time = in_array('time', $meta_data) ? true : false;
+			$has_date = in_array('date', $meta_data) ? true : false;
+			$time_added = false;
+
 			foreach ( $meta_data as $mkey ) {
 
 
@@ -157,8 +161,24 @@ if ( !function_exists( 'herald_get_meta_data' ) ):
 				switch ( $mkey ) {
 
 				case 'date':
-					$meta = '<span class="updated">'.get_the_date().'</span>';
+
+					
+					if( $has_time ){
+						$time = ' '.get_the_time();
+						$time_added = true;
+					} else {
+						$time = '';
+					}
+					
+					$meta = '<span class="updated">'.get_the_date().$time.'</span>';
 					break;
+
+				case 'time':
+					if(!$time_added && !$has_date){
+						$meta = '<span class="updated">'.get_the_time().'</span>';
+					}
+					break;
+					
 				case 'author':
 					$author_id = get_post_field( 'post_author', get_the_ID() );
 					$meta = '<span class="vcard author"><span class="fn"><a href="'.esc_url( get_author_posts_url( get_the_author_meta( 'ID', $author_id ) ) ).'">'.get_the_author_meta( 'display_name', $author_id ).'</a></span></span>';
@@ -167,7 +187,10 @@ if ( !function_exists( 'herald_get_meta_data' ) ):
 				case 'views':
 					global $wp_locale;
 					$thousands_sep = isset( $wp_locale->number_format['thousands_sep'] ) ? $wp_locale->number_format['thousands_sep'] : ',';
-					$meta = function_exists( 'ev_get_post_view_count' ) ?  number_format( absint( str_replace( $thousands_sep, '', ev_get_post_view_count( get_the_ID() ) ) + herald_get_option( 'views_forgery' ) ), 0, '', ',' )  . ' '.__herald( 'views' ) : '';
+					if( strlen( $thousands_sep ) > 1 ) {
+						$thousands_sep = trim( $thousands_sep );
+					}
+					$meta = function_exists( 'ev_get_post_view_count' ) ?  number_format_i18n( absint( str_replace( $thousands_sep, '', ev_get_post_view_count( get_the_ID() ) ) + herald_get_option( 'views_forgery' ) ) )  . ' '.__herald( 'views' ) : '';
 					break;
 
 				case 'rtime':
@@ -271,7 +294,7 @@ if ( !function_exists( 'herald_get_archive_heading' ) ):
 			$obj = get_queried_object();
 
 			$args['title'] = __herald( 'category' ).single_cat_title( '', false );
-			$args['desc'] = category_description();
+			$args['desc'] = herald_get_option('category_desc') ? category_description() : '';
 			$args['cat'] = $obj->term_id;
 
 			if ( herald_get_option( 'category_sub' ) ) {
@@ -389,6 +412,10 @@ if ( !function_exists( 'herald_get_post_display' ) ):
 		}
 
 		$meta = herald_get_post_meta( $post_id, 'display' );
+
+		if(in_array($option, array('ad_below', 'ad_above'))){
+			return $meta[$option];
+		}
 
 		if(array_key_exists($option, $meta)){
 			$value = $meta[$option] == 'inherit' ? herald_get_option('single_'.$option) : $meta[$option];

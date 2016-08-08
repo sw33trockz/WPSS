@@ -4,6 +4,6 @@
 	<?php endif; ?>
 	<?php the_title( '<h1 class="entry-title h1">', '</h1>' ); ?>
 	<?php if( $meta = herald_get_meta_data( 'single' ) ) : ?>
-		<div class="entry-meta"><?php echo $meta; ?></div>
+		<div class="entry-meta entry-meta-single"><?php echo $meta; ?></div>
 	<?php endif; ?>
 </header>

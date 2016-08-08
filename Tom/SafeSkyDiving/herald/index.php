@@ -6,7 +6,9 @@
 			<div class="herald-section container herald-no-sid">
 				<div class="row">
 					<div class="herald-module col-lg-12 col-md-12">
+						<?php herald_set_img_flag('full'); ?>
 						<?php include( locate_template('template-parts/featured/area-'. $fa['layout'].'.php' ) ); ?>
+						<?php herald_set_img_flag(''); ?>
 					</div>
 				</div>
 			</div>
@@ -26,7 +28,7 @@
 
 		<?php $wrap_class = $herald_sidebar_opts['use_sidebar'] != 'none' ? 'herald-main-content col-lg-9 col-md-9' : 'col-lg-12 col-md-12' ?>
 
-		<div class="herald-module <?php echo esc_attr($wrap_class); ?>">
+		<div class="herald-module col-mod-main <?php echo esc_attr($wrap_class); ?>">
 			
 			<?php if ( $archive_heading = herald_get_archive_heading() ): ?>
 					<?php echo $archive_heading; ?>

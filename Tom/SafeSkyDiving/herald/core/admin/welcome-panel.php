@@ -36,14 +36,25 @@
 				<p>
 					If you want your website to look very similar to our demo, you can use our one-click demo importer and start tweaking from that point.
 				</p>
-				<a class="button button-primary button-hero" href="<?php echo esc_url(admin_url('admin.php?page=herald_options&tab=60')); ?>">Import demo</a>
+				<?php 
+					$demo_import_tab = 61;
+
+					if( herald_is_woocommerce_active() ) {
+						$demo_import_tab++;
+					}
+
+					if( herald_is_bbpress_active() ) {
+						$demo_import_tab++;
+					}
+				?>
+				<a class="button button-primary button-hero" href="<?php echo esc_url(admin_url('admin.php?page=herald_options&tab='.$demo_import_tab)); ?>">Import demo</a>
 				
 			</div>
 
 			<div class="welcome-panel-column welcome-panel-last">
 				<h3>3. Explore Features</h3>
 				<p>We provide you with a full documentation to make sure you can easily setup and fully customize the theme to your liking.</p>
-				<a class="button button-primary button-hero" href="http://demo.mekshq.com/herald/documentation" target="_blank">Learn more</a> <span class="herald-customize-welcome">or <a href="<?php echo esc_url(admin_url('admin.php?page=herald_options')); ?>">start customizing</a> now</span>.
+				<a class="button button-primary button-hero" href="http://mekshq.com/documentation/herald" target="_blank">Learn more</a> <span class="herald-customize-welcome">or <a href="<?php echo esc_url(admin_url('admin.php?page=herald_options')); ?>">start customizing</a> now</span>.
 			</div>
 
 		</div>

@@ -1,1 +1,1 @@
-<span><?php echo date(get_option('date_format')); ?></span>
+<span><?php echo date_i18n(get_option('date_format')); ?></span>

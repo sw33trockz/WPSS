@@ -140,9 +140,9 @@ class HRD_Posts_Widget extends WP_Widget {
 			}
 
 
-			if ( !empty( $instance['date_limit'] ) ) {
+			if ( !empty( $instance['time'] ) ) {
 				$q_args['date_query'] = array(
-					'after' => date( 'Y-m-d', herald_calculate_time_diff( $instance['date_limit'] ) )
+					'after' => date( 'Y-m-d', herald_calculate_time_diff( $instance['time'] ) )
 				);
 			}
 		}

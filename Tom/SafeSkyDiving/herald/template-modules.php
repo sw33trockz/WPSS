@@ -35,10 +35,12 @@
 		<?php 
 			$herald_sidebar_opts = $section;
 			$section_class = $section['use_sidebar'] == 'none' ? 'herald-no-sid' : '';
-			$wrap_class = $section['use_sidebar'] != 'none' ? 'herald-main-content col-lg-9 col-md-9' : 'col-lg-12 col-md-12';
+			$section_class .= isset($section['css_class']) && !empty($section['css_class']) ? $section['css_class'] : '';
+			$wrap_class = $section['use_sidebar'] != 'none' ? 'herald-main-content col-lg-9 col-md-9 col-mod-main' : 'col-lg-12 col-md-12';
+
 		?>
 		
-		<div class="herald-section container <?php echo esc_attr($section_class); ?>">
+		<div class="herald-section container <?php echo esc_attr( $section_class ); ?>" id="herald-section-<?php echo esc_attr( $s_ind ); ?>">
 
 			<div class="row">
 
@@ -46,7 +48,7 @@
 					<?php get_template_part('sidebar'); ?>
 				<?php endif; ?>
 				
-				<div class="<?php echo esc_attr($wrap_class); ?>">
+				<div class="<?php echo esc_attr( $wrap_class ); ?>">
 
 					<div class="row">
 

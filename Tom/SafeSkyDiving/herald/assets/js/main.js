@@ -5,6 +5,14 @@
     $(document).ready(function() {
 
 
+if ((navigator.userAgent.match(/iPhone/)) || (navigator.userAgent.match(/iPod/))) {
+   $('body').addClass('iphone-device');
+}
+
+if (navigator.userAgent.match(/Android/)) {
+    $('body').addClass('android-device');
+}
+
         /* Make sure main area elements are centered and use proper logo version */
 
         var herald_retina_logo_done = false, herald_retina_mini_logo_done = false, herald_header_center_done = false;
@@ -14,9 +22,10 @@
         $( window ).resize(function() {
             herald_header_check();
             herald_sticky_sidebar();
+            herald_sidebar_switch();
 
-            $('.herald-responsive-header .herald-menu-popup-search span').removeClass('fa-times').addClass('fa-search');
-            $('.herald-responsive-header .herald-menu-popup-search').removeClass('herald-search-active');
+            $('.herald-responsive-header .herald-menu-popup-search.herald-search-active span').removeClass('fa-times').addClass('fa-search');
+            $('.herald-responsive-header .herald-menu-popup-search .herald-in-popup').removeClass('herald-search-active');
         });
 
 
@@ -60,11 +69,30 @@
 
         /* Header search */
 
-        $('body').on('click', '.herald-menu-popup-search span', function(e) {
+        $('body').on('click', '.herald-site-header .herald-menu-popup-search span, .herald-header-sticky .herald-menu-popup-search span', function(e) {
 
             e.preventDefault();
             $(this).toggleClass('fa-times', 'fa-search');
             $(this).parent().toggleClass('herald-search-active');
+            $('.herald-search-active input[type="text"]').focus();
+
+        });
+
+         /* Responsive Search functionality addons */
+        $( ".herald-responsive-header .herald-menu-popup-search span" ).click(function(e) {
+
+            e.preventDefault();
+           
+
+            $(this).next().toggle();
+            $(this).toggleClass('fa-times', 'fa-search');
+
+
+             if ($(window).width() < 1250) {
+                 $('.herald-responsive-header .herald-in-popup .herald-search-input').focus();
+                $('.herald-responsive-header .herald-in-popup').css('width',$(window).width());
+             }
+
 
         });
 
@@ -110,6 +138,7 @@
 
         $('body').imagesLoaded(function() {
            herald_sticky_sidebar();
+           herald_sidebar_switch();
         });
 
 
@@ -191,7 +220,7 @@
 
         /* Scroll to comments */
 
-         $('body').on('click','.herald-single .entry-meta-wrapper .herald-comments a, .herald-comment-action', function(e) {
+         $('body').on('click','.entry-meta-single .herald-comments a, .herald-comment-action', function(e) {
             
             e.preventDefault();
             var target = this.hash,
@@ -331,7 +360,7 @@
                         $('.herald-load-more').fadeOut('fast').remove();
                     }
 
-                    herald_sticky_sidebar();
+                    herald_sticky_sidebar(true);
 
                     if (page_url != window.location) {
                         window.history.pushState({
@@ -379,7 +408,7 @@
                                     $('.herald-infinite-scroll').fadeOut('fast').remove();
                                 }
 
-                                herald_sticky_sidebar();
+                                herald_sticky_sidebar(true);
 
                                 if (page_url != window.location) {
                                     window.history.pushState({
@@ -503,9 +532,11 @@
 
         /* Initialize sticky sidebar */
 
-        function herald_sticky_sidebar(){
-            if ($(window).width() > 1250) {
+        function herald_sticky_sidebar(fixed){
+            if ($(window).width() >= 1250) {
+                
                 if($('.herald-sticky').length){
+
                     $('.herald-sidebar').each(function() {
                         var $section = $(this).closest('.herald-section');
                         if( $section.find('.herald-ignore-sticky-height').length ){
@@ -516,20 +547,45 @@
                         
                         $(this).css('min-height', section_height);
                     });
+
+                   //Fix for load more button if sticky is at bottom
+                    if(fixed  && $(".herald-sticky").last().css('position') == 'absolute' ){
+                        $(".herald-sticky").last().css('position', 'fixed').css('top', 100);    
+                    }
+
+                    $(".herald-sticky").stick_in_parent({
+                        parent: ".herald-sidebar",
+                        offset_top: 100
+                    }); 
+
                 }
-            } else{
+
+            } else {
+
                 $('.herald-sidebar').each(function() {
                     $(this).css('height', 'auto');
                     $(this).css('min-height', '1px' );
-                });                
+                });   
+
+                $(".herald-sticky").trigger("sticky_kit:detach");             
             }
-            $(".herald-sticky").stick_in_parent({
-                parent: ".herald-sidebar",
-                offset_top: 100
+
+            
+
+            
+
+
+        }
+
+        /* Put sidebars below content in responsive mode */
+        function herald_sidebar_switch(){
+            $('.herald-sidebar-left').each(function() {
+                if ($(window).width() < 1250) {                
+                   $(this).insertAfter($(this).parent().find('.col-mod-main'));                
+                } else {
+                    $(this).insertBefore($(this).parent().find('.col-mod-main'));
+                }
             });
-            if ($(window).width() < 1250) {
-               $(".herald-sticky").trigger("sticky_kit:detach");
-            }
         }
 
 
@@ -592,9 +648,9 @@
 
         $('body').on('click', '.herald-responsive-header .herald-menu-popup-search span', function(e) {
             e.preventDefault();
+            e.stopPropagation();
 
              if ($(window).width() < 1250) {
-                $('.herald-responsive-header .herald-search-input').focus();
                 $('.herald-responsive-header .herald-in-popup').css('width',$(window).width());
              }
 

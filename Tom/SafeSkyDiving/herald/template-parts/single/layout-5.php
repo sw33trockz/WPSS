@@ -8,7 +8,7 @@
 	<?php get_sidebar(); ?>
 <?php endif; ?>
 		
-<div class="col-lg-9 col-md-9 col-mod-single">
+<div class="col-lg-9 col-md-9 col-mod-single col-mod-main">
 	
 	<div class="row">
 

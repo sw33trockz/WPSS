@@ -103,7 +103,7 @@ if ( !function_exists( 'herald_save_post_metaboxes' ) ) :
 			}
 
 
-			$display = array('fimg' ,'headline' ,'tags'	,'author' ,'sticky_bar' ,'related');
+			$display = array('fimg' ,'headline' ,'tags'	,'author' ,'sticky_bar' ,'related', 'ad_above', 'ad_below');
 			foreach($display as $key){
 				if( isset( $_POST['herald']['display'][$key] ) &&  $_POST['herald']['display'][$key] != 'inherit' ){
 					$herald_meta['display'][$key] = $_POST['herald']['display'][$key];
@@ -261,7 +261,9 @@ if ( !function_exists( 'herald_display_metabox' ) ) :
 					'tags'	=> esc_html( 'Tags', 'herald'),
 					'author' => esc_html( 'Author Area', 'herald'),
 					'sticky_bar' => esc_html( 'Sticky Bottom Bar', 'herald'),
-					'related' => esc_html( 'Related posts', 'herald')
+					'related' => esc_html( 'Related posts', 'herald'),
+					'ad_above' => esc_html( 'Ad above content', 'herald'),
+					'ad_below' => esc_html( 'Ad below content', 'herald'),
 			);
 
 		$values = array(
@@ -274,6 +276,9 @@ if ( !function_exists( 'herald_display_metabox' ) ) :
 		
 			<p><label><?php echo $option; ?>:</label> <select name="herald[display][<?php echo esc_attr($id); ?>]" class="alignright">
 				<?php foreach($values as $value => $title): ?>
+					<?php if( in_array( $id, array( 'ad_below', 'ad_above' ) ) && $value === 'inherit') { 
+						continue;
+					} ?>
 					<option value="<?php echo esc_attr($value); ?>" <?php selected($meta[$id], $value); ?>><?php echo $title; ?></option>
 				<?php endforeach; ?>
 			</select></p>

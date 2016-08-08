@@ -8,7 +8,7 @@
 	<?php get_sidebar(); ?>
 <?php endif; ?>
 		
-<div class="col-lg-9 col-mod-single">
+<div class="col-lg-9 col-mod-single col-mod-main">
 	<?php get_template_part('template-parts/page/content'); ?>
 	<?php get_template_part('template-parts/page/extras'); ?>
 </div>

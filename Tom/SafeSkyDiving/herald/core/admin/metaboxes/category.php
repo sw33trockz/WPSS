@@ -26,7 +26,7 @@ if ( !function_exists( 'herald_category_add_meta_fields' ) ) :
 	  			<?php $selected_class = herald_compare( $meta['fa_layout'], $id ) ? ' selected': ''; ?>
 	  			<img src="<?php echo esc_url($layout['img']); ?>" title="<?php echo esc_attr($layout['title']); ?>" class="herald-img-select<?php echo esc_attr($selected_class); ?>">
 	  			<span><?php echo $layout['title']; ?></span>
-	  			<input type="radio" class="herald-hidden" name="herald[fa_layout]" value="<?php echo esc_attr($id); ?>" <?php checked( $id, $meta['layout'] );?>/> </label>
+	  			<input type="radio" class="herald-hidden" name="herald[fa_layout]" value="<?php echo esc_attr($id); ?>" <?php checked( $id, $meta['fa_layout'] );?>/> </label>
 	  		</li>
 	  	<?php endforeach; ?>
 	   </ul>
@@ -199,7 +199,7 @@ if ( !function_exists( 'herald_category_edit_meta_fields' ) ) :
 		  			<?php $selected_class = herald_compare( $meta['fa_layout'], $id ) ? ' selected': ''; ?>
 		  			<img src="<?php echo esc_url($layout['img']); ?>" title="<?php echo esc_attr($layout['title']); ?>" class="herald-img-select<?php echo esc_attr($selected_class); ?>">
 		  			<span><?php echo $layout['title']; ?></span>
-		  			<input type="radio" class="herald-hidden" name="herald[fa_layout]" value="<?php echo esc_attr($id); ?>" <?php checked( $id, $meta['layout'] );?>/> </label>
+		  			<input type="radio" class="herald-hidden" name="herald[fa_layout]" value="<?php echo esc_attr($id); ?>" <?php checked( $id, $meta['fa_layout'] );?>/> </label>
 		  		</li>
 		  	<?php endforeach; ?>
 		   </ul>

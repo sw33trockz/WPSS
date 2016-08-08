@@ -1,4 +1,4 @@
-<div class="herald-module col-lg-<?php echo esc_attr( $module['columns']);?> col-md-<?php echo esc_attr( $module['columns']);?> col-sm-<?php echo esc_attr( $module['columns']);?>" id="herald-module-<?php echo esc_attr($s_ind.'-'.$m_ind); ?>" data-col="<?php echo esc_attr( $module['columns']);?>">
+<div class="herald-module <?php echo esc_attr( herald_get_module_class( $module ) ); ?>" id="herald-module-<?php echo esc_attr($s_ind.'-'.$m_ind); ?>" data-col="<?php echo esc_attr( $module['columns']);?>">
 
 	<?php echo herald_get_module_heading( $module ); ?>
 

@@ -461,6 +461,7 @@ if ( !function_exists( 'herald_get_meta_opts' ) ):
 		$options = array();
 
 		$options['date'] = esc_html__( 'Date', 'herald' );
+		$options['time'] = esc_html__( 'Time', 'herald' );
 		$options['comments'] = esc_html__( 'Comments', 'herald' );
 		$options['author'] = esc_html__( 'Author', 'herald' );
 		$options['views'] = esc_html__( 'Views', 'herald' );

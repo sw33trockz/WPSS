@@ -8,7 +8,7 @@
 
 		 <?php $i = 0; while( $fa_query->have_posts() ): $fa_query->the_post(); ?>
 		  	 
-		  	 <?php $category = get_the_category(); $cat_id = $category[0]->term_id; ?>
+		  	  <?php $category = get_the_category(); $cat_id = isset($category[0]) ? $category[0]->term_id : ''; ?>
 			  
 			  <?php if($i == 0) : ?>
 			  <article class="herald-fa-item herald-cat-<?php echo esc_attr($cat_id); ?>">	    

@@ -26,16 +26,16 @@ function herald_load_admin_scripts() {
  */
 
 function herald_load_admin_css() {
-	
+
 	global $pagenow, $typenow;
 
-	
+
 	//Load color picker for categories
-	if ( $pagenow == 'edit-tags.php' && isset( $_GET['taxonomy'] ) && $_GET['taxonomy'] == 'category' ) {
+	if ( in_array( $pagenow, array( 'edit-tags.php', 'term.php' ) ) && isset( $_GET['taxonomy'] ) && $_GET['taxonomy'] == 'category' ) {
 		wp_enqueue_style( 'wp-color-picker' );
 	}
 
-	if ( $typenow == 'page' && ($pagenow == 'post.php' || $pagenow == 'post-new.php') ) {
+	if ( $typenow == 'page' && ( $pagenow == 'post.php' || $pagenow == 'post-new.php' ) ) {
 		wp_enqueue_style ( 'wp-jquery-ui-dialog' );
 	}
 
@@ -56,7 +56,7 @@ function herald_load_admin_js() {
 	global $pagenow, $typenow;
 
 	//Load category js
-	if ( $pagenow == 'edit-tags.php' && isset( $_GET['taxonomy'] ) && $_GET['taxonomy'] == 'category' ) {
+	if ( in_array( $pagenow, array( 'edit-tags.php', 'term.php' ) ) && isset( $_GET['taxonomy'] ) && $_GET['taxonomy'] == 'category' ) {
 		wp_enqueue_script( 'herald-category', get_template_directory_uri().'/assets/js/admin/metaboxes-category.js', array( 'jquery', 'wp-color-picker' ), HERALD_THEME_VERSION );
 	}
 

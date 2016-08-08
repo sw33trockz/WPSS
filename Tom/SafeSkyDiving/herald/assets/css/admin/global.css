@@ -238,10 +238,7 @@ input.herald-radio{
 	height: 200px;
 }
 
-.modal-open .select2-drop{
-	z-index: 9999999999999999;
-}
 
-.herald-opt .herald-select2{
-	width: 300px;
+.herald-opt .howto{
+    max-width: 300px;
 }

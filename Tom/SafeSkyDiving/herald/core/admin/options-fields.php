@@ -526,6 +526,29 @@ Redux::setSection( $opt_name , array(
 /* Mega menu */
 Redux::setSection( $opt_name , array(
         'icon'      => '',
+        'title'     => esc_html__( 'Responsive Header', 'herald' ),
+        'desc'     => esc_html__( 'Manage settings for responsive header, used for mobiles, tablets and other smaller resolutions)', 'herald' ),
+        'subsection' => true,
+        'fields'    => array(
+
+        array(
+                'id'        => 'header_responsive_breakpoint',
+                'type'      => 'slider',
+                'title'     => esc_html__( 'Responsive header breakpoint', 'herald' ),
+                'subtitle'  => esc_html__( 'Choose exact width of the browser which will trigger responsive header', 'herald' ),
+                'desc'  => esc_html__( 'Note: value is in px', 'herald' ),
+                'default'   => 1249,
+                "min"       => 1024,
+                "step"      => 1,
+                "max"       => 1249,
+                'display_value' => 'text'
+        ),
+            
+)));
+
+/* Mega menu */
+Redux::setSection( $opt_name , array(
+        'icon'      => '',
         'title'     => esc_html__( 'Mega Menu', 'herald' ),
         'desc'     => esc_html__( 'Manage settings for mega menu', 'herald' ),
         'subsection' => true,
@@ -2765,6 +2788,18 @@ Redux::setSection( $opt_name , array(
             ),
 
             array(
+                'id' => 'single_comment_form',
+                'type' => 'radio',
+                'title' => esc_html__( 'Display comment form', 'herald' ),
+                'subtitle' => esc_html__( 'Check where do you want to display comment form', 'herald' ),
+                'options' => array( 
+                    'above' =>  esc_html__('Above comments list'),
+                    'below' =>  esc_html__('Below comments list'),
+                 ),
+                'default' => 'above'
+            ),
+
+            array(
                 'id'        => 'section_single_sticky',
                 'type'      => 'section',
                 'title'     => esc_html__( 'Sticky bar', 'herald' ),
@@ -2786,6 +2821,15 @@ Redux::setSection( $opt_name , array(
                 'subtitle'  => esc_html__( 'Check if you want to display previous and next post links in sticky bar', 'herald' ),
                 'default' => true,
                 'required'  => array( 'single_sticky_bar', '=', true )
+            ),
+
+            array(
+                'id' => 'single_prevnext_same_cat',
+                'type' => 'switch',
+                'title' => esc_html__( 'Get prev/next posts from the same category', 'herald' ),
+                'subtitle'  => esc_html__( 'Check if previous and next post will be pulled from the same category as current post', 'herald' ),
+                'default' => true,
+                'required'  => array( 'single_sticky_prevnext', '=', true )
             ),
 
             array(
@@ -2959,7 +3003,7 @@ Redux::setSection( $opt_name ,  array(
                 'subtitle'  => esc_html__( 'Specify your custom ratio ', 'herald' ),
                 'desc'      => esc_html__( 'Note: put 3:4 or 2:1 or any custom ratio you want', 'herald' ),
                 'default'   => '',
-                'required'  => array( 'img_size_lay_single_ratio', '=', 'custom' ),
+                'required'  => array( 'img_size_lay_page_ratio', '=', 'custom' ),
             ),
 
 
@@ -3015,6 +3059,14 @@ Redux::setSection( $opt_name ,  array(
                 'type'      => 'switch',
                 'title'     => esc_html__( 'Display child category navigation', 'herald' ),
                 'subtitle'  => esc_html__( 'Choose if you want to display links to child categories in category heading', 'herald' ),
+                'default'   => true
+            ),
+
+            array(
+                'id'        => 'category_desc',
+                'type'      => 'switch',
+                'title'     => esc_html__( 'Display category description', 'herald' ),
+                'subtitle'  => esc_html__( 'Choose if you want to display category description', 'herald' ),
                 'default'   => true
             ),
             
@@ -3646,18 +3698,6 @@ Redux::setSection( $opt_name , array(
                 )
             ),
 
-         array(
-                'id' => 'ad_below_header',
-                'type' => 'editor',
-                'title' => esc_html__( 'Header ad slot', 'herald' ),
-                'subtitle' => esc_html__( 'This ad will be displayed between your header and website content.', 'herald' ),
-                'default' => '',
-                'desc' => esc_html__( 'Note: If you want to paste HTML or JavaScript code, use "text" mode in editor. Suggested size of an ad banner is 728x90', 'herald' ),
-                'args'   => array(
-                    'textarea_rows'    => 5,
-                    'default_editor' => 'html'
-                )
-            ),
 
          array(
                 'id' => 'ad_below_header',
@@ -3865,6 +3905,14 @@ Redux::setSection( $opt_name , array(
                 'default'   => array( 'url' => '' ),
             ),
 
+            array(
+                'id'        => 'multibyte_rtime',
+                'type'      => 'switch',
+                'title'     => esc_html__( 'Enable "multibyte" support for reading time', 'herald' ),
+                'subtitle'  => esc_html__( 'Check this option if your site is using language with special characters (i.e. Japanese)', 'herald' ),
+                'default'   => false
+            ),
+
             
 
         )
@@ -4066,7 +4114,7 @@ Redux::setSection( $opt_name , array(
                 'id' => 'minify_js',
                 'type' => 'switch',
                 'title' => esc_html__( 'Use minified JS', 'herald' ),
-                'subtitle' => esc_html__( 'Load all theme css files combined and minified into a single file.', 'herald' ),
+                'subtitle' => esc_html__( 'Load all theme js files combined and minified into a single file.', 'herald' ),
                 'default' => true
             ),
 

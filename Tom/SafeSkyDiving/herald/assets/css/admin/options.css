@@ -93,13 +93,15 @@
 .redux-container #redux-header .display_header h2 {
 	width: 100%;
 	text-align: left;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
+	font-size: 1.4em;
 }
 
 .redux-container #redux-header .display_header h2 a{
 	float: right;
 	font-size: 14px;
 	margin-right: 10px;
+	font-weight: 400;
 }
 
 .redux-container-image_select .redux-image-select span{
@@ -120,10 +122,6 @@
 	background: #fff;
 	border: 1px solid #ccc;
 	border-radius: 2px;
-}
-
-.redux-container-slider .redux-slider-input {
-	vertical-align: bottom;
 }
 
 .select2-container { min-width: 300px; }

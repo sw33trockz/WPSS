@@ -94,7 +94,7 @@ add_filter( 'shortcode_atts_gallery', 'herald_gallery_atts', 10, 3 );
 if ( !function_exists( 'herald_gallery_atts' ) ):
 	function herald_gallery_atts( $output, $pairs, $atts ) {
 
-		if( herald_get_option('popup_img') ) {
+		if ( herald_get_option( 'popup_img' ) ) {
 			$atts['link'] = 'file';
 			$output['link'] = 'file';
 			add_filter( 'wp_get_attachment_link', 'herald_add_class_attachment_link', 10, 1 );
@@ -104,18 +104,18 @@ if ( !function_exists( 'herald_gallery_atts' ) ):
 			$output['columns'] = 1;
 		}
 
-		if( herald_get_option('auto_gallery_img_sizes') ) {
-			switch ($output['columns']){
-				case '1' : $output['size'] = 'herald-lay-a-full'; break;
-				case '2' : $output['size'] = 'herald-lay-a'; break;
-				case '3' : $output['size'] = 'herald-lay-c1'; break;
-				case '4' : $output['size'] = 'herald-lay-f1-full'; break;
-				case '5' : 
-				case '6' : $output['size'] = 'herald-lay-f1'; break;
-				case '7' : 
-				case '8' :
-				case '9' : $output['size'] = 'herald-lay-i1'; break;
-				default: $output['size'] = 'herald-lay-a-full'; break;
+		if ( herald_get_option( 'auto_gallery_img_sizes' ) ) {
+			switch ( $output['columns'] ) {
+			case '1' : $output['size'] = 'herald-lay-a-full'; break;
+			case '2' : $output['size'] = 'herald-lay-a'; break;
+			case '3' : $output['size'] = 'herald-lay-c1'; break;
+			case '4' : $output['size'] = 'herald-lay-f1-full'; break;
+			case '5' :
+			case '6' : $output['size'] = 'herald-lay-f1'; break;
+			case '7' :
+			case '8' :
+			case '9' : $output['size'] = 'herald-lay-i1'; break;
+			default: $output['size'] = 'herald-lay-a-full'; break;
 			}
 
 			//Check if has a matched image size
@@ -125,8 +125,8 @@ if ( !function_exists( 'herald_gallery_atts' ) ):
 				$output['size'] = $herald_image_matches[$output['size']];
 			}
 		}
-		
-		
+
+
 
 		return $output;
 	}
@@ -228,26 +228,26 @@ if ( !function_exists( 'herald_pre_get_posts' ) ):
 		if ( !is_admin() && $query->is_main_query() && $query->is_archive() ) {
 
 			$template = herald_detect_template();
-			
+
 			/* Check whether to change number of posts per page for specific archive template */
 			$ppp = herald_get_option( $template.'_ppp' );
-			
+
 			if ( $template == 'category' ) {
 				$obj = get_queried_object();
 				$cat_meta = herald_get_category_meta( $obj->term_id );
-				
-				if ( $cat_meta['layout'] == 'inherit' || $cat_meta['ppp'] == 'inherit') {
-					if($ppp == 'custom'){
+
+				if ( $cat_meta['layout'] == 'inherit' || $cat_meta['ppp'] == 'inherit' ) {
+					if ( $ppp == 'custom' ) {
 						$ppp_num = absint( herald_get_option( $template.'_ppp_num' ) );
 						$query->set( 'posts_per_page', $ppp_num );
 					}
 				} else {
-					if( $cat_meta['ppp'] == 'custom'){
+					if ( $cat_meta['ppp'] == 'custom' ) {
 						$query->set( 'posts_per_page', $cat_meta['ppp_num'] );
 					}
 				}
 			} else {
-				if ( $ppp == 'custom') {
+				if ( $ppp == 'custom' ) {
 					$ppp_num = absint( herald_get_option( $template.'_ppp_num' ) );
 					$query->set( 'posts_per_page', $ppp_num );
 				}
@@ -258,7 +258,7 @@ if ( !function_exists( 'herald_pre_get_posts' ) ):
 
 				$fa = herald_get_featured_area();
 
-				if ( !empty($fa) && herald_get_option( 'category_fa_unique' ) ) {
+				if ( !empty( $fa ) && herald_get_option( 'category_fa_unique' ) ) {
 
 					if ( isset( $fa['query'] ) && !is_wp_error( $fa['query'] ) && !empty( $fa['query'] ) ) {
 						$exclude_ids = array();
@@ -278,6 +278,7 @@ if ( !function_exists( 'herald_pre_get_posts' ) ):
 endif;
 
 
+
 /**
  * Modify WooCommerce Wrappers
  *
@@ -286,7 +287,6 @@ endif;
  * @return HTML output
  * @since  1.2
  */
-
 
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
@@ -298,7 +298,7 @@ if ( !function_exists( 'herald_woocommerce_wrapper_start' ) ):
 		global $herald_sidebar_opts;
 		$col_class = $herald_sidebar_opts['use_sidebar'] == 'none' ? 12 : 9;
 		$left_sid_mod_class = $herald_sidebar_opts['use_sidebar'] == 'left' ? 'herald-woo-mod-right' : '';
-		echo '<div class="herald-section container"><div class="row"><div class="herald-module herald-main-content '.$left_sid_mod_class.' col-lg-'.esc_attr($col_class).' col-md-'.esc_attr($col_class).'">';
+		echo '<div class="herald-section container"><div class="row"><div class="herald-module herald-main-content '.$left_sid_mod_class.' col-lg-'.esc_attr( $col_class ).' col-md-'.esc_attr( $col_class ).'">';
 	}
 endif;
 
@@ -308,13 +308,43 @@ if ( !function_exists( 'herald_woocommerce_wrapper_end' ) ):
 	}
 endif;
 
-add_action('herald_before_end_content', 'herald_woocommerce_close_wrap');
+add_action( 'herald_before_end_content', 'herald_woocommerce_close_wrap' );
 
 if ( !function_exists( 'herald_woocommerce_close_wrap' ) ):
 	function herald_woocommerce_close_wrap() {
-		if( herald_is_woocommerce_active() && herald_is_woocommerce_page() ) {
+		if ( herald_is_woocommerce_active() && herald_is_woocommerce_page() ) {
 			echo '</div></div>';
 		}
+	}
+endif;
+
+
+
+/**
+ * Support for WMPU Dev - Custom Sidebars Plugin
+ *
+ * If sidebar params are not entered in a plugin settings, it will inherit before and after params from our theme
+ *
+ * @return array of sidebar params
+ * @since  1.5
+ */
+
+add_filter( 'cs_sidebar_params', 'herald_cs_sidebar_params' );
+
+if ( !function_exists( 'herald_cs_sidebar_params' ) ):
+	function herald_cs_sidebar_params( $sidebar ) {
+
+		if ( empty( $sidebar['before_widget'] ) && empty( $sidebar['after_widget'] ) ) {
+			$sidebar['before_widget'] = '<div id="%1$s" class="widget %2$s">';
+			$sidebar['after_widget'] = '</div>';
+		}
+
+		if ( empty( $sidebar['before_title'] ) && empty( $sidebar['after_title'] ) ) {
+			$sidebar['before_title'] = '<h4 class="widget-title h6"><span>';
+			$sidebar['after_title'] = '</span></h4>';
+		}
+
+		return $sidebar;
 	}
 endif;
 

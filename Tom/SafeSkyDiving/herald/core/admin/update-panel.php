@@ -44,7 +44,7 @@
 				<div class="welcome-panel-column">
 				<h3>What's new?</h3>
 				<p>We do our best to keep our themes up-to-date. Take a few moments to see what's added in the latest version.</p>
-				<a href="http://demo.mekshq.com/herald/documentation/#changelog" target="_blank" class="button button-primary button-hero">View change log</a>
+				<a href="http://mekshq.com/docs/herald-change-log/" target="_blank" class="button button-primary button-hero">View change log</a>
 				</div>
 
 				<div class="welcome-panel-column">
